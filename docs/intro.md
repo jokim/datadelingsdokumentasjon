@@ -9,6 +9,8 @@ dokumentasjon. Denne skal på sikt over til https://docs.uninett.no/datadeling/.
 
 Sjå mappa [Datadeling](datadeling/) for dokumentasjonen.
 
+Kjelda finn du på https://github.com/jokim/datadelingsdokumentasjon, men dette
+vil bli flytta etterkvart.
 
 
 # Tutorial Intro
