@@ -7,126 +7,54 @@ title: Prinsippene for UH:IntArk
 
 # Prinsippene for UH:IntArk
 
-Kjernen i UH:IntArk er prinsippene for integrasjonsarkitektur. Resten av UH:IntArk er bygget opp rundt disse.
+Kjernen i UH:IntArk er prinsippene for integrasjonsarkitektur. Resten av UH:IntArk er bygget opp rundt disse. UH:IntArk følger generelt DigDirs arkitekturprinsipper, men de spesifikke prinsippene i UH:IntArk er krav som må oppfylles.
 
 
+## Brukerorientert arkitektur
 
-<div class="vrtx-row">
- <div class="vrtx-box">
-<h2>Brukerorientert: Arkitekturen skal endres i takt med brukerbehov</h2>  <div class="vrtx-box-picture">
-   <a href="/docs/datadeling/prinsippene/brukerorientert/">   <img src="/prosjekter/datadeling/arbeidsomrader/integrasjonsarkitektur/dokumentasjon/prinsippene/image-20201215132910-1.png" alt="Bildet kan inneholde: grafikk, svart og hvit, symbol, utklipp." />
-   </a>
-  </div>
- <div class="vrtx-box-content">
-<p>Arkitekturen må både være fleksibel og kunne endres fortløpende, så den kan kontinuerlig tilpasses brukermassens skiftende behov.</p>
-<p>Brukerinteressene ivaretas og prioriteres av et prioriteringsråd. TBD: Institusjonens eget prioriteringsråd - hva med noe felles for sektoren?</p>
+Arkitekturen er formgivende for tjeneste- og systemlandskapet, som igjen skal gjenspeile hva brukerne trenger. Stadige endringer er normaltilstanden. Derfor må arkitekturen være fleksibel, slik at den kontinuerlig kan tilpasses brukermassens skiftende behov.
 
-</div>
- </div>
-</div>
+Se også [Digitaliseringsdirektoratets arkitekturprinsipp 1: Ta utgangspunkt i brukernes behov og arkitekturprinsipp](https://www.digdir.no/digitalisering-og-samordning/prinsipp-1-ta-utgangspunkt-i-brukernes-behov/1055) og [5.3: Sørg for arkitektur som gir systemer og tjenester evne til endring og vedlikehold over tid](https://www.digdir.no/digitalisering-og-samordning/prinsipp-5-del-og-gjenbruk-losninger/1062).
 
-<div class="vrtx-row">
- <div class="vrtx-box">
-<h2>Tjenesteorientert: Integrasjoner skal benytte løse koblinger</h2>  <div class="vrtx-box-picture">
-   <a href="/docs/datadeling/prinsippene/tjenesteorientert/">   <img src="/prosjekter/datadeling/arbeidsomrader/integrasjonsarkitektur/dokumentasjon/prinsippene/image-20201215133103-3.png" alt="Bildet kan inneholde: sirkel, symmetri, grafikk, symbol." />
-   </a>
-  </div>
- <div class="vrtx-box-content">
-<p>Integrasjonsgrensesnitt skal utformes gjennom løse koblinger slik at tjenester og bakenforliggende systemer kan byttes med mindre risiko og kostnader.</p>
+## Tjenesteorientert arkitektur
 
-</div>
- </div>
-</div>
+Integrasjonsgrensesnitt skal utformes slik at tjenester og bakenforliggende systemer kan flyttes og byttes ut uten at konsumenter av tjenesten må gjøre endringer i sin ende, og omvendt.
+Dette prinsippet legger føringer på hvilken programvare vi kan anskaffe, hvilke grensesnitt som tilbys av egenutviklede applikasjoner, og hvordan vi kobler sammen egenutviklede applikasjoner.
 
-<div class="vrtx-row">
- <div class="vrtx-box">
-<h2>Tilgjengelig: Autoritative data skal tilbys gjennom åpne grensesnitt</h2>  <div class="vrtx-box-picture">
-   <a href="/docs/datadeling/prinsippene/tilgjengelig/">   <img src="/prosjekter/datadeling/arbeidsomrader/integrasjonsarkitektur/dokumentasjon/prinsippene/image-20201215133159-4.png" alt="Bildet kan inneholde: tekst, linje, skrift, rektangel." />
-   </a>
-  </div>
- <div class="vrtx-box-content">
-<p>Dataeiere har ansvar for at data som flere har behov for tilgjengeliggjøres gjennom åpne grensesnitt, og at delte data er komplette og riktig formatert.</p>
+Se også [Digitaliseringsdirektoratets arkitekturprinsipp 5.7: Ta hensyn til anerkjente designprinsipper for tjenesteorientert arkitektur, slik som løse koplinger, modularisering, standardiserte tjenestekontrakter med videre](https://www.digdir.no/digitalisering-og-samordning/prinsipp-5-del-og-gjenbruk-losninger/1062).
 
-</div>
- </div>
-</div>
 
-<div class="vrtx-row">
- <div class="vrtx-box">
-<h2>Oversiktlig: Tjenester skal registreres og dokumenteres</h2>  <div class="vrtx-box-picture">
-   <a href="/docs/datadeling/prinsippene/oversiktlig/">   <img src="/prosjekter/datadeling/arbeidsomrader/integrasjonsarkitektur/dokumentasjon/prinsippene/image-20201215133753-6.png" alt="Bildet kan inneholde: skrift, grafikk." />
-   </a>
-  </div>
- <div class="vrtx-box-content">
-<p>Institusjonen har oversikt over alle sine tjenester i en tjenesteportefølje (Service Portfolio). Dette gjør det enklere å integrere med tjenester, og forhindrer at vi skaffer flere tjenester som produserer til forveksling like autoritative data, uten at det er tydelig hva som er lagret hvor.</p>
-<p> </p>
+## Tilgjengelige data
 
-</div>
- </div>
-</div>
+Data skal være tilgjengelig for konsumenter. Tilgjengelighet manifesterer seg på flere plan:
+- Teknisk.
+- Forståelsesmessig.
+- Oppdagbare.
 
-<div class="vrtx-row">
- <div class="vrtx-box">
-<h2>Etterrettelig: Tilganger skal registreres</h2>  <div class="vrtx-box-picture">
-   <a href="/docs/datadeling/prinsippene/etterrettelig/">   <img src="/prosjekter/datadeling/arbeidsomrader/integrasjonsarkitektur/dokumentasjon/prinsippene/image-20201215133948-7.png" alt="Bildet kan inneholde: linje, utgangsenhet, symmetri, tilbehør til dataskjerm." />
-   </a>
-  </div>
- <div class="vrtx-box-content">
-<p>Tilganger til data avtales, registreres og kontrolleres sentralt. Dette må gjøres etterrettelig og brukervennlig.</p>
-<p>Sikker Datadeling (Access Manager) er programvare for å standardisere hvordan tilgangsforvaltere oppretter, fornyer og avvikler tilgang til data.</p>
+For at kravet om teknisk tilgjengelighet skal være oppfylt, må data tilbys gjennom åpne og robuste grensesnitt. For at data skal være tilgjengelige forståelsesmessig, må de være dokumentert. Oppdagbarhet forutsetter at definisjoner av grensesnitt og tilhørende teknisk og semantisk dokumentasjon er publisert.
 
-</div>
- </div>
-</div>
+Se gjerne:
+- [Digitaliseringsdirektoratets veileder for orden i eget hus](https://www.digdir.no/informasjonsforvaltning/veileder-orden-i-eget-hus/2716).
+- [Digitaliseringsdirektoratets arkitekturprinsipp 4: Del og gjenbruk data](https://www.digdir.no/digitalisering-og-samordning/prinsipp-4-del-og-gjenbruk-data/1061), spesielt:
+  - Prinsipp 4.2: Tilby data i tråd med regjeringens «[Retningslinjer ved tilgjengeliggjøring av offentlige data](https://www.regjeringen.no/no/dokumenter/retningslinjer-ved-tilgjengeliggjoring-av-offentlige-data/id2536870/)».
+  - Prinsipp 4.3: Gjenbruk data fra autoritative kilder. Bruk kopier kun der det er nødvendig, og sørg for at disse er oppdaterte.
+  - Prinsipp 4.5: Unngå innlåsing av data i systemer.
 
-<div class="vrtx-row">
- <div class="vrtx-box">
-<h2>Fleksibel: Avvik er tillatt, så lenge det følger IntArks formål</h2>  <div class="vrtx-box-picture">
-   <a href="/docs/datadeling/prinsippene/fleksibel/">   <img src="/prosjekter/datadeling/arbeidsomrader/integrasjonsarkitektur/dokumentasjon/prinsippene/image-20201215134145-8.png" alt="Bildet kan inneholde: linje, svart og hvit." />
-   </a>
-  </div>
- <div class="vrtx-box-content">
-<p>Tjenester og datadeling kan avvike fra IntArks krav og føringer hvis det er hensiktsmessig for sektoren eller institusjonen, <em>som helhet</em>.</p>
+## Gjenbruk av løsninger
 
-</div>
- </div>
-</div>
+Gjenbruk av løsninger forutsetter at det samarbeides i fagmiljøer på tvers av institusjoner om å homogenisere forretningsprosesser.
 
-<div class="vrtx-row">
- <div class="vrtx-box">
-<h2>Effektiv: Unngå dobbeltarbeid ved å gjenbruke tjenester og innføre fellestjenester</h2>  <div class="vrtx-box-picture">
-   <a href="/docs/datadeling/prinsippene/effektiv/">   <img src="/prosjekter/datadeling/arbeidsomrader/integrasjonsarkitektur/dokumentasjon/prinsippene/image-20201215134213-9.png" alt="Illustrasjonsbilde av et enkelt nettverk med en sentralt knutepunkt." />
-   </a>
-  </div>
- <div class="vrtx-box-content">
-<p>Sektoren og institusjonen bør gjenbruke tjenester, og vurdere innføring av nye fellestjenester når det kan forenkle integrasjonsarbeidet.</p>
+Se gjerne [Digitaliseringsdirektoratets arkitekturprinsipp 5: Del og gjenbruk løsninger, spesielt](https://www.digdir.no/digitalisering-og-samordning/prinsipp-5-del-og-gjenbruk-losninger/1062):
+- Prinsipp 5.1: Kartlegg eksisterende og planlagte løsninger som kan være aktuelle å gjenbruke.
+- Prinsipp 5.8: Tilgjengeliggjør informasjon om, og tilby gjenbruk av egne løsninger som kan være interessante for andre.
 
-</div>
- </div>
-</div>
+## Etterrettelig bruk av data
 
-<div class="vrtx-row">
- <div class="vrtx-box">
-<h2>Veiledet: Du skal få hjelp og veiledning i ditt integrasjonsarbeide</h2>  <div class="vrtx-box-picture">
-   <a href="/docs/datadeling/prinsippene/veiledet/">   <img src="/prosjekter/datadeling/arbeidsomrader/integrasjonsarkitektur/dokumentasjon/prinsippene/image-20201215134308-10.png" alt="Illustrasjonsbilde av et kompass, for å finne frem" />
-   </a>
-  </div>
- <div class="vrtx-box-content">
-<p>Du som er involvert i datadeling skal få nok hjelp og veiledning til å enkelt kunne følge IntArk og integrere.</p>
+Konsum av APIer skal skje gjennom API Manager. Dette medfører at institusjonen har oversikt over hvem som konsumerer hvilke data.
 
-</div>
- </div>
-</div>
+Se også [Digitaliseringsdirektoratets arkitekturprinsipp 7.3: Virksomhetene må ha styring og kontroll som sørger for at informasjonssikkerhet og personvern er ivaretatt i tjenestene](https://www.digdir.no/digitalisering-og-samordning/prinsipp-7-sorg-tillit-til-oppgavelosningen/1064).
 
-<div class="vrtx-row">
- <div class="vrtx-box">
- <div class="vrtx-box-content">
-<ul>
-<li><a href="/docs/datadeling/prinsippene/samlet">Samleside med alle prinsippene</a></li>
-<li><a href="https://www.digdir.no/digitalisering-og-samordning/overordnede-arkitekturprinsipper/1065">Digitaliseringsdirektoratets arkitekturprinsipper</a>, som IntArks prinsipper følger</li>
-</ul>
+## Avvik er tillatt
+Avvik fra prinsippene om Tjenesteorientert arkitektur og Tilgjengelige data er lov, så lenge det er hensiktsmessig for sektoren.
 
-</div>
- </div>
-</div>
-
+Et eksempel er at det kan være hensiktsmessig å bruke en leverandørspesifikk integrasjon, hvis kostnadene ved å innføre en løsere kobling blir høyere enn konsekvensene og risikoen for institusjonen ved å låse seg til en leverandør.
