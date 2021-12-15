@@ -18,7 +18,7 @@ Selvbetjeningsportalen for RabbitMQ gjør det enklere for datatilbydere og konsu
 ## Hva gjør Selvbetjeningsportalen for RabbitMQ?
 
 
-Oppsett av meldingskøer i RabbitMQ krever ofte god teknisk innsikt. Selvbetjeningsportalen for RabbitMQ er utviklet for IntArk, og forenkler arbeidet med meldingskøer så datatilbydere og konsumenter kan selv forvalte sine tilganger. Alt som gjøres i Selvbetjeningsportalen for RabbitMQ blir synkronisert med [RabbitMQ](/docs/datadeling/teknisk-plattform/rabbitmq) fortløpende.
+Oppsett av meldingskøer i RabbitMQ krever ofte god teknisk innsikt. Selvbetjeningsportalen for RabbitMQ er utviklet for IntArk, og forenkler arbeidet med meldingskøer så datatilbydere og konsumenter selv kan forvalte sine tilganger. Alt som gjøres i Selvbetjeningsportalen for RabbitMQ blir synkronisert med [RabbitMQ](/docs/datadeling/teknisk-plattform/rabbitmq) fortløpende.
 
 
 Det er to fordeler med å bruke Selvbetjeningsportalen for RabbitMQ:
@@ -48,7 +48,7 @@ Selvbetjeningsportalen støtter [Datadelingsprosessene](/docs/datadeling/hva-er/
 ### Tilganger
 
 
-Den som oppretter en tjeneste i Selvbetjeningsportalen for RabbitMQ kan gi andre tilgang til å administrer tjenesten. Dette gjøres enten ved å legge inn deres Feide-id, eller legge inn navnet på en Dataporten-gruppe. Selvbetjeningsportalen støtter både ad hoc- og entitlements-grupper fra Feide.
+Den som oppretter en tjeneste i Selvbetjeningsportalen for RabbitMQ kan gi andre tilgang til å administrere tjenesten. Dette gjøres enten ved å legge inn deres Feide-id, eller legge inn navnet på en Dataporten-gruppe. Selvbetjeningsportalen støtter både ad hoc- og entitlements-grupper fra Feide.
 
 
 ## Bakgrunnen for selvbetjeningsløsningen for RabbitMQ
@@ -124,7 +124,7 @@ Hva som skjer i RabbitMQ når noe skjer i Selvbetjeningsportalen for RabbitMQ. E
 
  Gruppen/brukerne får full tilgang til å administrere applikasjonen i Selvbetjeningsportalen. Dette inkluderer også tilgang til applikasjonens passord i RabbitMQ, som betyr at gruppen/brukerne også får tilgang til å administrere vhosten i RabbitMQ.
 * **Flere applikasjoner kan abonnere på hverandre sine meldinger.**  
-
+TODO?
   
 
 [![](/datadeling/img/brom-flow.svg)](/datadeling/img/brom-flow.svg)

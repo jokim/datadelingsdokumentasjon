@@ -34,7 +34,7 @@ RabbitMQ har et eget grensesnitt, som primært brukes av teknikere og driftere. 
 ## Tekniske detaljer
 
 
-TODO: Lage eiga side med meir tekniske detaljar, td. "routing topologi", tilkoblingsdetaljar, og forklaring til begrepa som brukast. (Hent frå uio:intark)
+TODO: Lage egen side med mer tekniske detaljer, td. "routing topologi", tilkoblingsdetaljer, og forklaring til begrepene som brukes. (Hent fra uio:intark)
 
 
 ## Lenker

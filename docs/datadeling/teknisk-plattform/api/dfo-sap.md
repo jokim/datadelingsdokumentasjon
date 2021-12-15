@@ -38,7 +38,7 @@ DFØ er en fellestjeneste, og må/bør derfor settes opp likt hos alle institusj
 	1. TODO: Dette registrerer du i API manager slik tjenester kan bruke det, men bare administratorer har tilgang til selve virksomhetssertifikatet. Se veiledning.
 2. Last ned standardoppsettet over, og opprett tjenesten i API manager. Se [veileder for å registrere en tjeneste i API manager via fil](/docs/datadeling/veiledere/api-manager/importer-api).
 3. Registrer DFØ SAP som tjeneste i *Selvbetjeningsportalen for RabbitMQ* (se [veileder for å registrere tjenesten](/docs/datadeling/veiledere/meldingsk%C3%B8/opprett-tjeneste)). Hent ut tilkoblingsdetaljene som det blir opplyst om.
-4. Du som er lokal tjenesteier for DFØ må kontakte DFØ om API-et. Vanligvis gjøres dette ved å sende en e-post til integrasjon@dfo.no med:
+4. Du som er lokal tjenesteeier for DFØ må kontakte DFØ om API-et. Vanligvis gjøres dette ved å sende en e-post til integrasjon@dfo.no med:
 	1. Be om å få API-nøkkel som gir full tilgang til din institusjons data i DFØs API-er.
 	2. Send med tilkoblingsdetaljene for publisering av notifikasjoner fra selvbetjeningsportalen. Passordet bør sendes på andre måter enn via e-post.
 5. Når du har fått API-nøkler, må du legge de inn i API manager. (TODO: Lag veileder for dette?)

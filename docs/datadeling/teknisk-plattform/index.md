@@ -19,7 +19,7 @@ Teknisk plattform hjelper deg med integrasjonsarbeidet, og utvides ved behov. Ve
   </div>
  <div class="vrtx-box-content">
 <p><strong>Administrasjon av dine API og tilganger</strong></p>
-<p>Per nå bruker vi <a href="/docs/datadeling/teknisk-plattform/gravitee">Gravitee</a> som API Manager, og hver institusjon får sin egen, isolerte Gravitee-instans.</p>
+<p>Vi bruker <a href="/docs/datadeling/teknisk-plattform/gravitee">Gravitee</a> som API Manager, og hver institusjon får sin egen, isolerte Gravitee-instans.</p>
 <p>Mer detaljer om API manager:</p>
 <ul>
 <li><a href="/docs/datadeling/teknisk-plattform/api-plan-applikasjon">Hvordan vi bruker Gravitee</a></li>
@@ -41,7 +41,7 @@ Teknisk plattform hjelper deg med integrasjonsarbeidet, og utvides ved behov. Ve
  <div class="vrtx-box-content">
 <p><strong>Tilgangskontroll for dine API</strong></p>
 <p>API gateway er en proxy for ditt API, som brukes for tilgangskontroll og logging. API gateway styres av API manager.</p>
-<p>Per nå bruker vi <a href="/docs/datadeling/teknisk-plattform/gravitee">Gravitee</a> som API Gateway.</p>
+<p>Vi bruker <a href="/docs/datadeling/teknisk-plattform/gravitee">Gravitee</a> som API Gateway.</p>
 <ul>
 <li><a href="/docs/datadeling/teknisk-plattform/oversikt">Tilkoblingsdetaljer</a></li>
 </ul>
