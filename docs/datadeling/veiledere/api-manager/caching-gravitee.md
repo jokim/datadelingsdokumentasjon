@@ -1,81 +1,54 @@
 ---
-description: "Hvordan du kan cache responser i Gravitee, for \xE5 redusere belastningen\
+description: "Hvordan du kan cache responser i Gravitee for \xE5 redusere belastningen\
   \ mot API-et ditt."
 title: Caching i gravitee
 ---
 
 # Caching i gravitee
 
-Hvordan du kan cache responser i Gravitee, for å redusere belastningen mot API-et ditt.
+Hvordan du kan cache responser i Gravitee for å redusere belastningen mot API-et ditt.
 
-
- 
-
-
-For å sette på caching må man opprette en eller flere cache-ressuser, og deretter legge på en policy som benytter denne
-
+For å sette på caching må man opprette en eller flere cache-ressuser, og deretter legge på en policy som benytter denne.
 
 ### Opprette en cache-ressurs
 
+[![Designmeny](/datadeling/img/image-20201021141543-1.png)](/datadeling/img/image-20201021141543-1.png)
 
-[![](/datadeling/img/image-20201021141543-1.png)](/datadeling/img/image-20201021141543-1.png)
+Naviger til API-et hvor du skal konfigurere en cache. Velg Design i den venstre sidemenyen under API-ets navn, og deretter Resources under "GENERAL". Trykk på sirkelen med et pluss-tegn for å opprette en ny ressurs. Fyll inn navn og vel Cache som Type.
 
+Du må skrive inn navn to steder. Det første feltet, "Name", er slik cachen vil være synlig når man ser på tilgjengelige ressurser. Det andre feltet, "cache name", er navnet som brukes på den tilhørende policyen. Bruk gjerne samme navn begge steder.
 
- 
+Configuration:
 
+* Cache name: navn på tilhørende policy
+* Time to idle: hvor lenge et svar bli cachet uten at det blir spurt på
+* Time to live: hvor lenge et svar blir cachet uavhengig av om det blir spurt på eller ikke
+* Max entries on heap: hvor mange svar som kan bli lagret i denne cachen
 
-Naviger til APIet hvor du skal konfigurere cache. Velg Design og deretter Resources. Trykk på +-tegnet for å opprette. Fyll inn navn og vel Caching resource som Type.
+[![Cache-ressurs](/datadeling/img/image-20201021145429-2.png)](/datadeling/img/image-20201021145429-2.png)
 
+### Opprette en cache policy
 
-Man blir bedt om å skrive inn navn 2 steder. De første feltet er hva cachen blir hetende når man ser på ressurser. Det andre navnet brukes å policy-en. Bruk gjerne samme navn begge steder.
+Gå til Design, trykk deretter på Policies under "GENERAL". Dra ønsket cache-policy fra tilgjengelige policies over til riktig path.  Fyll inn informasjon for å fullføre konfigurasjonen.
 
+* Cache name: navn nr. 2 om du brukte forskjellige navn på ressursen og cachen i opprettelsen av cachen i forrige steg.
+* Key: dette er det viktigste valget, se konfigurasjon lenger ned. Som oftest er dette ett eller flere parameter.
+* Time to live: kan settes lavere enn det som ble valgt for cache-ressursen i forrige steg
+* Scope: velg mellom API eller Application
 
-"Time to idle" er hvor lenge et svar blir cachet uten at det blir spurt på
+Cachen lagres som en key-value-store , dvs. én nøkkel gir ett svar. Key kan f.eks. være et parameter. For å bruke parameteren "status" skriv:
 
-
-"Time to live" er hvor lenge et svar blir cachet uavhengig av om det blir spurt på eller ikke
-
-
-"Max entries on heap" er hvor mange svar som kan bli lagret i denne cachen
-
-
-[![](/datadeling/img/image-20201021145429-2.png)](/datadeling/img/image-20201021145429-2.png)
-
-
- 
-
-
-### Opprett cache policy
-
-
-Gå til design -\> policy og legg cache-policy ved å "dra" den inn på riktig path.
-
-
-Fyll inn
-
-
-* cache name (dvs. navn nr. 2 om du brukte forskjellige navn på ressursen og cachen i forrige steg)
-* Key. Dette er det viktigste valget, se nedenfor. Som oftest er dette et elelr flere parametre
-* Time to live. Kan være lavere enn i det som ble valgt for cache-ressursen i forrige steg
-* max entries
-
-
-Cachen lagres som en key-values-store , dvs. en nøkkel gir et svar. Key kan f.eks. være et parameter. For å bruke parameteret status skriv inn
-
-```
-
+```Text
 {#request.params['status']}
 ```
 
-Da vil svare blir cachen med key lik verdien til parameteret, f.eks. sold, available eller en tom streng. Merk at om det er flere parametre som er mulig å bruke kan det bli tull. Det kan unngås ved å bruke en kombinasjon av parametre, f.eks.
+Da vil svaret bli cachen med en nøkkel lik verdien i parameteret, f.eks. "sold", "available" eller en tom streng. Merk at om det er flere parameter som er mulig å bruke kan det bli tull. Det kan unngås ved å bruke en kombinasjon av parametre, f.eks. ved å bruke en kombinasjon av de to parameterene "status" og "tags" slik:
 
-```
-
+```Text
 {#request.params['status']}-{#request.params['tags']}
 ```
 
-for å bruke kombinasjonen av de 2 parameterne status og tags
- 
-Expression Language-uttrykk
-{#request.params['status']} er et eksemple på et Expression Language-uttrykk. De er basert på Spring Exression Language (SpEL) og blir brukt som variable i API Manager.
-For å lese mer om disse se [offisiell dokumentasjon fra leverandøren.](https://offisiell dokumentasjon fra leverandøren.)
+### Expression Language-uttrykk
+
+{#request.params['status']} er et eksempel på et Expression Language-uttrykk. De er basert på Spring Exression Language (SpEL), og blir brukt som variabler i API Manager.
+For å lese mer om dette, se [offisiell dokumentasjon fra leverandøren.](https://xn--offisiell%20dokumentasjon%20fra%20leverandren-6se./)

@@ -11,89 +11,67 @@ Oppskrift for hvordan man registrerer et enkelt API i Gravitee. I tillegg til å
 Logg inn i API manager og gå på siden for API. For å kunne registrere API her må man ha rollen API Publisher. Kontakt adminstrator ved din enhet om du ikke har denne rollen.
 
 
-Gå først til oversikten over API ved å enten klikke på administration i menyen oppe til høyre eller APIs i menyen til venstre. Klikk så på  +-tegnet. Om du ikke ser dette har du ikke tilgang til å registrere API.
+Gå først til oversikten over API ved å enten trykke på brukerikonet øverst til høyre, for så å velge "Administration" eller ved å trykke på APIs i sidemenyen til venstre. Klikk så på sirkelen med pluss-tegnet. Om du ikke ser dette har du ikke tilgang til å registrere API.
 
 
- 
+![Ny API](/datadeling/img/image-20200924095643-2.png)
 
 
-![](/datadeling/img/image-20200924095643-2.png)
+På neste side kan man velge om man vil importere API definisjonen eller opprette fra bunnen av. Om man har en eksport av API-et fra en annen Gravitee-installasjon eller har en API-definisjon i Open API-format/Swagger-fil, kan man bruke denne. Dette gjør registreringen raskere, men krever ofte at man gjør endringer eller retter opp i etterkant.
 
 
- 
+I denne veiledningen oppretter vi API-et fra bunnen av ved å trykke på den blå pilen.
+
+### General
+
+Fyll inn navn, versjonsnummer, beskrivelse og context-path for API-et. Bruk et godt beskrivende navn, og gi en utfyllende beskrivelse av funksjonen til API-et. Dette vil gjøre API-et mye mer nyttig for andre.
 
 
-På neste side kan man velge om man vil importere API definisjonen eller opprette fra bunn av. Om man har en eksport av APIet fra en annen Gravitee-installasjon eller har en API-definisjon i Open API-format/Swagger-fil kan men bruke denne. Dette gjør registreringen mye raskene, men man må som oftest endre eller rette opp litt i etterkant.
+Context-path er en del av URL-en til APIet. Eksempelet over som fører til for UiOs gateway vil være tilgjengelig på URLen https://gw-uio.intark.uh-it.no/my-first-echo-api
+
+TODO: Legg til riktig link
+
+Merk at disse path-ene er en begrenset ressurs. Registrerer man f.eks. et utviklings-API under /personer , vil en ikke ha mulighet til å registrere test-miljø under /personer/test. Da kan det være bedre å bruke f.eks. /personer/utv/v1
+
+![Context path example](/datadeling/img/image-20200924102426-3.png)
 
 
-I denne rettledningen oppretter vi APIet fra bunn av ved å trykke på den blå pilen.
+### Gateway
+Skriv inn URL til backend. Om API-et skal være åpent for alle er dette alt som trengs. Dersom API gateway må autentisere seg, konfigurerer vi dette senere.
+
+![Legge til backend](/datadeling/img/image-20200924114923-2.png)
+
+### Plan
+
+Hvis det er ønskelig, kan man her opprette en plan. Det er også mulig å utsette dette ved å trykke "SKIP". I denne veiledningen er det kun mulig å opprette åpne planer eller planer som bruker API-nøkler. Vil man bruke OAuth 2 og/eller JWTs for autentisering må disse opprettes etterpå.
 
 
- 
+Her er et eksempel på en enkel plan. Den gir lese-tilgang til alle ressurser i APIet hvis man har en API-nøkkel. Siden dette er et echo-API er det ikke nødvendig å ha noe sikring. For å gjøre APIet helt åpent, velg Keyless (Public). For å kunne se hvem som bruker et API, men fortsatt tillate alle som ønsker å bruke det, kan man velge "auto-subscribe".
 
 
-Fyll så inn Navn, versjonsnummer, beskrivelse og context-path for APIet. Et beskrivende navn og bra beskrivelse vil gjøre APIet mye mer nyttig for andre.
+Under Path Authorization kan man hviteliste eller svarteliste tilgang til ressurser. For denne planen har vi valgt at alle kan kjøre oppslag ( GET http-verb ) for alle ressurser/"under-URLer" (/).
+
+![Opprette plan](/datadeling/img/image-20200924132314-3.png)
+
+### Doc
+
+Her kan man laste opp dokumentasjon. Dette kan være html-sider (med f.eks. overordnet dokumentasjon) eller OpenAPI/swagger filer (brukes ofte som teknisk dokumentasjon). Det er også mulig å importere dokumentasjon fra nett (åpne websider eller git-repositories), eller skrive dokumentasjon direkte etter at API-et er opprettet.
 
 
-context-path vil være en del av URL-en til APIet. Eksempelet over til for UiOs gateway være tilgjengelig på URLen https://gw-uio.intark.uh-it.no/my-first-echo-api
+![Legge til dokumentasjon](/datadeling/img/image-20200924133645-4.png)
 
 
-Mek at disse patth-ene er en begrenset ressurs. Om man f.eks. registrerer et utviklings-API under /personer , vil ikke ha mulighet til å registrere test-miljø under /personer/test. Da kan det være bedre å bruke f.eks. /personer/utv/v1
+### Deployment
 
 
- 
+På siste side kan du velge om du vil opprette API-et uten å starte det, eller opprette og starte med en gang.
+
+- - -
+
+Etter å ha gått gjennom veiledningen for å opprette API må man gjerne finpusse litt før API-et er helt klar til bruk.
 
 
-![](/datadeling/img/image-20200924102426-3.png)
-
-
- 
-
-
- 
-
-
-På neste side skriv inn URL til backend. Om API-et er åpent for alle er dette alt som trengs, om API gateway må autentisere seg konfigurere vi dette etterpå.
-
-
-![](/datadeling/img/image-20200924114923-2.png)
-
-
- 
-
-
-På neste side kan man opprette en plan om man vil. Man kan utsette oppretting av planer ved å velge SKIP. I denne veiviseren er det kun mulig å opprette åpne planer eller planer som bruker API-nøkler. Vil man bruke OAuth 2 og/eller JWTs for autentisering må disse opprettes etterpå
-
-
-Her er et eksempel på en enkel plan. Den gir lese-tilgang til alle ressurser i APIet om man har en API-nøkkel. Siden dette er et echo-API er det ikke nødvendig å ha noe sikring. For å gjøre APIet helt åpent, velg Keyless (Public). For å kunne se hvem som bruker et API, men alle kan få tilgang kan man velge "auto-subscribe"
-
-
-Under Path Authorization kan man hvite-liste eller svarte-liste tilgang til ressurser. For denne planen har vi valgt at alle kan kjøre oppslag ( GET http-verb ) for alle ressurser/"under-URLer" (/)
-
-
-![](/datadeling/img/image-20200924132314-3.png)
-
-
- 
-
-
-På neste side kan man laste opp dokumentasjon. Dette kan være html-sider (med f.eks. overordnet dokumentasjon) eller OpenAPI/swagger filer ( brukes ofte som teknisk dokumentasjon). Det er også mulig å importere dokumentasjon fra nett (åpne web-sider eller git-repositories) eller skrive dokumentasjon direkte etter at APIet er opprettet.
-
-
-![](/datadeling/img/image-20200924133645-4.png)
-
-
- 
-
-
-På siste side kan de velge om du vil opprette APIet uten å starte det, eller opprette og starte
-
-
-Etter å ha gått gjennom veiviseren for å opprette API må man gjerne gjøre litt mer arbeid før APIet er helt klart til bruk.
-
-
-Les mer om hvordan
-
+Les mer om hvordan:
 
 * [Opprette flere planer](/docs/datadeling/veiledere/api-manager/opprette-plan)
 * [Autentisering mot backend](/docs/datadeling/veiledere/api-manager/backend)
