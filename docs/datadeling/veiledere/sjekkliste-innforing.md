@@ -10,14 +10,12 @@ title: "Sjekkliste for innf\xF8ring av UH:IntArk"
 
 En hjelp til de som jobber med å innføre UH:IntArk hos sin institusjon, relatert til [Kom i gang med UH:IntArk](/docs/datadeling/veiledere/innforing).
 
-
 TBD: Er denne lista riktig? Noe som mangler, td. relatert til forvaltning og rollene i intark?
 
 |  | Kategori | Sjekkpunkt |
 | --- | --- | --- |
 |  | Institusjonseier | Er rollen som overordnet ansvarlig for Datadeling hos institusjonen plassert? (For eksempel hos IT-leder) |
 |  | Prioriteringsråd | Er prioriteringsrådet plassert i organisasjonsen?
-
 
 TBD: Korleis er dette i den komande forvaltinga?
 
