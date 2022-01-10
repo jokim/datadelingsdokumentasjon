@@ -39,6 +39,7 @@ Ulemper ved å tilby åpne data for alle uten autentisering:
 
 Søknader på tilgang til API/planer med åpne data godkjennes uten videre krav til autentisering.
 
+
 Merk at selv om noe av denne informasjonen skal være *tilgjengelig* for alle, skal informasjonens integritet likevel sikres ved at kun riktige applikasjoner har tilgang til å *endre* informasjonen.
 
 ## Tilgang til persondata for system-til-system-integrasjoner
@@ -47,11 +48,11 @@ Applikasjoner og system som behandler *personopplysninger* faller innunder perso
 
 Før man gir tilgang til API-er med personopplysninger må dataforvalter vurdere om det skal gis tilgang til API-et og personopplysningene til søker, og hvorvidt søker har de nødvendige hjemler etc. for å behandle opplysningene.
 
-Rent praktisk gjøres det ved at opplysninger om bruk og formål (f.eks. link til webside eller referanse-nummer i arkivsystem) legges ved søknaden for tilgang. Når man registrerer API bør planer som gir tilgang til persondata [kreve kommentar og en kort beskjed om krav til referanse.]([/docs/datadeling/veiledere/api-manager/opprette-plan](https://www.usit.uio.no/prosjekter/datadeling/arbeidsomrader/integrasjonsarkitektur/dokumentasjon/veiledere/api-manager/opprette-plan.html#toc2))
+Rent praktisk gjøres det ved at opplysninger om dette (f.eks. link til webside eller referanse-numre i arkivsystem) legges ved søknaden. Når man registrerer API bør planer som gir tilgang til persondata [kreve kommentar og en kort beskjed om krav til referanse](/docs/datadeling/veiledere/api-manager/opprette-plan)
 
 Dataeier skal sjekke at opplysningene det gis tilgang til er oppdatert og i orden før tilgang blir gitt.
 
-## TBD: Tilgang til APIer basert på samtykke
+## TBD: Tilgang til API-er basert på samtykke
 
 Det er mulig å sette opp API slik at hver enkelt person som bruker en tjeneste interaktivt må autentisere og godkjenne at tjenesten får tilgang til deres data, ofte kalt brukersentrisk datadeling. Dataeier setter opp API-ene slik at de kun gir ut informasjon til personer som samtykker til dette.
 
@@ -76,3 +77,15 @@ Dette er informasjon som institusjonen er pålagt å begrense tilgangen til i lo
 Tilgang på data i denne kategorien kan kun gis til interne. Rutiner for tilgang til API-er med fortrolige data er i utgangspunktet lik som for de med begrenset tilgang, men dataansvarlig må nødvendigvis gjøre en grundigere vurdering. Tilgang til fortrolige data som inkluderer personopplysninger vil utløse [krav om DPIA](https://www.uio.no/for-ansatte/arbeidsstotte/personvern/meir-om-personvern/meldeplikt#toc5).
 
 API-er som tilbyr data som faller inn under graden *fortrolig* må beskyttes ekstra, helst med asymmetrisk nøkkel, OAuth2 eller tilsvarende. Om det ikke er mulig kan det f.eks. brukes IP-filter i tillegg til API-nøkkel.
+
+
+# Oppsummering
+
+| Kategori | Ved søknad |  |
+| --- | --- | --- |
+| API med åpne data |  |  |
+| API med personopplysninger og åpne data |  |  |
+| API med data med begrenset tilgang |  |  |
+| API med personopplysninger og data med begrenset tilgang |  |  |
+| API med fortrolige data |  |  |
+| API med personopplysninger og fortrolige data |  |  |

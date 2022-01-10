@@ -1,19 +1,16 @@
 ---
-description: 'TODO: Placeholder for "meta" om Datadelingsplattformen
-
-
-
-  Se [Hva er UH:IntArk](/docs/datadeling/hva-er) for en introduksjon.'
+description: "Mer detaljer om bakgrunnen og f\xF8ringer for UH:IntArk.\n\n\nSe [Hva\
+  \ er UH:IntArk](/docs/datadeling/hva-er) for en enklere introduksjon."
 slug: /datadeling/om/
-title: Bakgrunnen for UH:IntArk
+title: Om UH:IntArk
 ---
 
-# Bakgrunnen for UH:IntArk
+# Om UH:IntArk
 
-TODO: Placeholder for "meta" om Datadelingsplattformen
+Mer detaljer om bakgrunnen og føringer for UH:IntArk.
 
 
-Se [Hva er UH:IntArk](/docs/datadeling/hva-er) for en introduksjon.
+Se [Hva er UH:IntArk](/docs/datadeling/hva-er) for en enklere introduksjon.
 
 Datadelingsplattformen baserer seg på referansearkitekturen Datadeling - TODO.
 

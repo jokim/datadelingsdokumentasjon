@@ -21,7 +21,7 @@ Vi bruker open source versjonen av [Gravitee API management.](https://gravitee.i
 Per idag bruker vi versjon 1, og oppgraderer til siste underversjon omtrent en gang i måneden. Ved hjelp av *rolling upgrades* kan vi oppgradere helt uten nedetid for *API gateway*.
 
 
-Alle containere som brukes av Gravitee kjører 2 eller 3 av for å få redundans.
+Alle containere som brukes av Gravitee kjører det 2 eller 3 av for å få redundans.
 
 
 ## RabbitMQ
@@ -30,7 +30,7 @@ Alle containere som brukes av Gravitee kjører 2 eller 3 av for å få redundans
 RabbitMQ kjører versjon 3.8.6, og vi benytter i hovedsak AMQPS-protokollen for å sende og motta meldinger. De fleste trenger ikke tilgang til RabbitMQ direkte, men bruker det via [Selvbetjeningsportalen for RabbitMQ](/docs/datadeling/teknisk-plattform/brom).
 
 
-For å likevel få tilgang til RabbitMQ sitt management-grensesnitt kan du kontakte integrasjon@uio.no for å få opprettet en bruker og tildelt nødvendige rettigheter.
+For å få tilgang til RabbitMQ sitt management-grensesnitt kan du kontakte integrasjon@uio.no for å få opprettet en bruker og tildelt nødvendige rettigheter.
 
 
 RabbitMQ kjører som et cluster med 3 noder. Du må ta høyde for at en av nodene kan være nede, det anbefales å bruke HA-mode i produksjon.

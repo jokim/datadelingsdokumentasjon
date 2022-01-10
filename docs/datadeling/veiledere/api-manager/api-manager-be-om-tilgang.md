@@ -50,11 +50,8 @@ Du kan velge å enten abonnere på API-er nå, eller trykke "SKIP" for å abonne
 Fullfør ved å trykke på "CREATE THE APPLICATION". Applikasjonen er nå registrert i API Manager, og du kan søke om tilgang til API-er med denne applikasjonen. Du kan og gi rettigheter til dine kollegaer slik at flere kan søke om tilganger, hente ut API-nøkler, se gjennom tilganger og feilsøke.
 
 
- 
 
-
-### Opprette en applikasjon som kan abbonnere på JWT og OAuth2-planer
-
+### Opprett en applikasjon som kan abbonnere på JWT og OAuth2-planer
 
 Følg samme fremgansgsåte som ved oppretting av enkel applikasjon ovenfor frem til vinduet for Security.  Her må man i tillegg registrere en client\_id. Denne blir ofte autogenerert av OAuth 2 autorisasjon-serveren og kan kopieres derfra. 
 
@@ -118,10 +115,11 @@ Trykk på sirkelen med pluss-tegn for å legge til en ny bruker. Søk opp riktig
 Eiere kan søke om tilgang til API-er på vegne av applikasjonen, samt hente ut API-nøkler.
 
 
+
 ### Finne API-nøkkel
 
-
 Etter at tilgang er blitt innvilget kan du se hvilke API og planer du abonnerer på under "Subscriptions" i den venstre sidemenyen.
+
 
 
 ![](/datadeling/img/image-20200915151605-4.png)
@@ -132,5 +130,4 @@ Etter at tilgang er blitt innvilget kan du se hvilke API og planer du abonnerer 
 
 ![](/datadeling/img/image-20200915151631-5.png)
 
-
-Herfra kan du kopiere API-nøkkelen over krypterte forbindelser. Pass på at ingen uvedkommende kan lese nøkkelen der den blir lagret. Om API-nøkkelen er gammel, har kommet på avveie eller ønskes byttet, trykke på "RENEW API KEY". Det blir da laget en ny nøkkel for API-et. Den gamle nøkkelen vil fortsette å være gyldig i to timer, og vil deretter bli ugydlig.
+Herfra kan du kopiere API-nøkkelen over krypterte forbindelser. Pass på at ingen uvedkommende kan lese nøkkelen der den blir lagret. Om API-nøkkelen er gammel, har kommet på avveie eller ønskes byttet, trykk på "RENEW API KEY". Det blir da laget en ny nøkkel for API-et. Den gamle nøkkelen vil fortsette å være gyldig i to timer, og vil deretter bli ugydlig.

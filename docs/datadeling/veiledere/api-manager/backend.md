@@ -81,4 +81,4 @@ Fyll inn type sertificat (PKCS#12,PFX, Java key store/PEM-sertifikat/nøkkel-par
 
 Hvis man opplever problemer med at koblingen mellom Gravitee og endepunktet får en timeout kan man endre innstillingene til timeout som er satt i Gravitee ved å endre på feltene under "HTTP Configuration". Hvert felt har egen beskrivelse for sin funksjon, og de må alle fylles ut.
 
-![Timeout oppsett]()
+![Illustrasjon over hvor man setter timeout verdiene i gravitee](/datadeling/img/2021-11-19-13.33.01-api-qa.intark.uh-it.no-b0f451af01f7.jpg)

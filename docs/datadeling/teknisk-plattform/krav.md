@@ -8,7 +8,7 @@ title: "F\xF8ringer for bruk av teknisk plattform i UH:IntArk"
 
 # Føringer for bruk av teknisk plattform i UH:IntArk
 
-Hver institusjon kan stort sett bruke datadelingsplattformen slik de selv ønsker, men UH:IntArk setter noen føringer. Dette er gjort for å primært samkjøre bruken, slik at det blir enklere å dele data på tvers av sektoren, og eksternt.
+Hver institusjon kan stort sett bruke datadelingsplattformen slik de selv ønsker, men UH:IntArk setter noen føringer. Dette er primært gjort for å samkjøre bruken, slik at det blir enklere å dele data på tvers av sektoren, og eksternt.
 
 ## For API manager
 

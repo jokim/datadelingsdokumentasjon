@@ -30,7 +30,7 @@ FS API er en fellestjeneste, og må/bør derfor settes opp likt hos alle institu
 
 1. Last ned standardoppsettet over, og opprett tjenesten i API manager. Se [veileder for å registrere en tjeneste i API manager via fil](/docs/datadeling/veiledere/api-manager/importer-api).
 2. Registrer FS som tjeneste i *Selvbetjeningsportalen for RabbitMQ* (se [veileder for å registrere tjenesten](/docs/datadeling/veiledere/meldingsk%C3%B8/opprett-tjeneste)). Hent ut tilkoblingsdetaljene som det blir opplyst om.
-3. Du som er lokal tjenesteier for FS må be FS sentralt om tilgangsdata. Vanligvis gjøres dette ved å sende en e-post til TODO@fellesstudentsystem.no med:
+3. Du som er lokal tjenesteeier for FS må be FS sentralt om tilgangsdata. Vanligvis gjøres dette ved å sende en e-post til TODO@fellesstudentsystem.no med:
 	1. Be om å få API-nøkkel som gir full tilgang til din institusjons data i FS API.
 	2. Send med tilkoblingsdetaljene for publisering av notifikasjoner. Passordet bør sendes på andre måter enn via e-post.
 4. Når du har fått API-nøkkel for FS, må du legge den inn i API manager. (TODO: Lag veileder for dette?)
