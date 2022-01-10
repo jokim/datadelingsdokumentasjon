@@ -1,153 +1,84 @@
 ---
-description: "For av API gatewayen skal kunne snakke med APIet p\xE5 backend-serveren\
+description: "For at API gatewayen skal kunne snakke med APIet p\xE5 backend-serveren\
   \ m\xE5 API-gatewayen som oftest autentisere seg."
 title: Konfigurere backend
 ---
 
 # Konfigurere backend
 
-For av API gatewayen skal kunne snakke med APIet på backend-serveren må API-gatewayen som oftest autentisere seg.
+For at API gatewayen skal kunne snakke med APIet på backend-serveren må API gatewayen som oftest autentisere seg.
 
+For å konfigurere hvordan API gatewayen skal koble seg til API-et i bakgrunnen bruker du Gravitee.
 
- 
+Naviger til ditt API:
+1. Velg "Proxy" i den venstre sidemenyen
+2. Under "BACKEND SERVICES" velger du "Endpoints"
+3. Trykk deretter på tannhjulet og menyen for "Endpoint configuration" vil åpnes
 
+![Konfigurere endpoints](/datadeling/img/image-20200925142430-1.png)
 
- 
+Har du flere backend-servere koblet til en gitt API kan du velge å redigere dem som en gruppe slik at de har like innstillinger som vist i punkt 3. Ønsker du heller å redigere kun én aktuell backend-server kan du velge tannhjulet direkte bak denne for å legge inn unike innstillinger.
 
+### Autentisering med API-nøkkel eller brukernavn og passord
 
-For å konfigurere hvordan API Gatewayen skal koble seg til APIet i bak-kant gjør man det under "Backend services endpoint"
+For å konfigurere autentisering med enten API-nøkkel eller brukernavn og passord må dette legges inn som en HTTP-header.
 
+1. Fra "Endpoint configuration" menyen, velg "CONFIGURATION"
+2. Trykk på sirkelen med plusstegn ved siden av Headers
+3. Fyll inn navnet til headeren og verdien (nøkkelen) som skal brukes
 
-Naviger til ditt API, deretter Proxy, Endpoints (under Backend services" og trykk på tannhjulet
+![Legg til header](/datadeling/img/image-20200925143000-3.png)
 
+Er det en annen Gravitee-installasjon i bakgrunnen kan det f.eks. se slik ut:
 
-![](/datadeling/img/image-20200925142430-1.png)
+![Eksempel header](/datadeling/img/image-20200925143832-4.png)
 
+Andre systemer bruker ofte andre navn for Headers, f.eks, bare "X-API-Key".
 
- 
+Ved bruk av "Basic Access Authentication (BA)" autentiserer man med brukernavn og passord. Navnet på headeren settes til Authorization og inneholder teksten Basic + mellomrom + brukernavn/passord. Brukernavnet og passordet legges inn som en base64-encodet streng, skilt med : (kolon). F.eks. "brukernavn:passord". 
 
+Det finnes mange verktøy for å skifte mellom vanlig tekst og base64. I linux kan man f.eks. bruke følgende kommando i et terminalvindu for å enkode:
 
-Om du har flere backend-servere som skal ha ulik konfigurasjon er det også mulig. Bruk da tannhjuet som står etter det aktuelle backend-serveren eller opprett flere grupper.
-
-
- 
-
-
- 
-
-
-### Autentisering med API-nøkkel eller brukernavn/passord
-
-
-API-nøkkel eller brukernavn/passord legges som oftest inn som HTTP-header
-
-
- 
-
-
-![](/datadeling/img/image-20200925143000-3.png)
-
-
-Trykk på det lysegra +tegnet for å legge til en header. Fyll inn hva headeren heter og verdien (nøkkelen). Er det en annen gravitee-installasjon i bak-kant vil det f.eks. være slik:
-
-
- 
-
-
-![](/datadeling/img/image-20200925143832-4.png)
-
-
-Andre systemer kaller ofte headeren noe annet, f.ekss bare "X-API-Key"
-
-
-Ved bruk av"Basic auth" autentiserer man med brukernavn/passord. Navnet på headeren er Authorization og inneholder teksten Basic + mellomrom + brukernavn/passord. Brukernavnet og passordet legges inn som en base64-encodet streng, skilt med : (kolon).
-
-
-Det finnes mange verktøy for å skifte mellom vanlig tekst og base64, i linux kan man f.eks. bruke følgende kommando i en terminalvindu:
-
-
-
-```
-
+```text
 echo -n brukernavn:passord | base64
 ```
 
-Man kan sjekke at det ble riktig ved å bruke :
+Man kan sjekke at det ble riktig ved å legge inn den genererte koden etter echo med denne kommandoen:
 
-
-
-```
-
+```text
 echo YnJ1a2VybmF2bjpwYXNzb3JkCg== | base64 -d
 ```
 
-For dette eksempelet vil det se slik ut i Gravitee:
+For dette eksempelet vil Header se slik ut i Gravitee:
 
-
-![](/datadeling/img/image-20200925145447-5.png)
-
-
- 
-
+![Ferdig header eksempel](/datadeling/img/image-20200925145447-5.png)
 
 ### Få alle requests fra samme IP-adresse
 
+Gravitee er installert på en kubernetes-klynge. Den kan derfor kjøre på hvilken som helst server i klyngen, og klyngen kan endre seg (utvides/erstattes). I tillegg kjører vi alltid med minst to gatewayer åpent for å unngå nedetid. API gatewayen vil derfor kunne ha forskjellig ip-adresser. Mange backend-thenester ligger på sperrede nett eller åpner kun for enkelt-IP-adresser. For å unngå å eksponere backend-tjenester mer enn nødvendig kan man konfigurere et API til å bruke en HTTP-proxy. Forespørsler vil da først gå til proxy-serveren, og deretter omdirigerer proxy-serveren forespørselen videre til riktig server. For backend-serveren ser det derfor ut som om forespørselen kom fra ip-adressen til proxy-serveren.
 
- 
+For å kunne gjøre dette må man ha en proxy-server. Denne bør være sikret slik at ikke alle kan bruke denne. Den kan f.eks. sikres med brukernavn og passord, og kun tillate din bruker å ta kontakt med den aktuelle backend-serveren.
 
+Proxy-konfigurasjon gjøres ogå under HTTP-konfigurasjon. I "CONFIGURATION" menyen, huk av for "HTTP proxy" slik at den markeres i grønt som "active", og fyll inn nødvendig informasjon. Felter som må fylles ut er markert med * (stjerne).
 
-Gravitee er installert på en kubernetes-kluster. De kan derfor kjøre på hvilken som helst  server i clusteret og clusteret kan endre seg (utvides/erstattes). I tillegg kjører vi alltid med minst 2 gateway-er for å unngå nedetid. API Gatewayen vil derfor kunne ha forskjellig ip-adresser. Mange backend-servicer ligger på sperrede nett eller åpner kun for enkelt-IP-adresser. For å slippe å eksponere backend-services mer enn nødvendig kan man konfigurere et API til å bruke en HTTP-proxy. Requesten vil da først gå til proxy-serveren og proxy-serveren ruter deretter requesten til riktig server. For backend-serveren ser det ut som requesten kom fra ip-adressen til proxy-serveren.
-
-
-For å kunne gjøre dette må man ha en proxy-server. Denne bør være sikret slik at ikke alle kan bruke denne, f.eks. kan den sikres med brukernavn og passord, og kun tillate din bruker å kontakte den aktuelle backend-serveren.
-
-
- 
-
-
-Proxy-konfigurasjon gjøres ogå under HTTP-konfiguration. Huk av for HTTP proxy og fyll inn nødvedig informasjon
-
-
-![](/datadeling/img/image-20200925151029-6.png)
-
+![HTTP proxy oppsett](/datadeling/img/image-20200925151029-6.png)
 
 ### Token-basert
 
+Ved token-basert autentisering menes som oftest autentisering med Java Web Tokens (JWTs). Disse er oftest kortvarige og må genereres med jevne mellomrom, f.eks. hver time eller hvert tiende minutt. De kan også være for engangsbruk. Som oftest må man lage et en-gangs-token, kontakte en Authorization Server med det genererte en-gangs-tokenet, og få tilbake et token som er gyldig i en kort stund.
 
-Ved token-basert autentisering menes som oftest autentisering med Java web tokens (JWTs). Disse er oftest kort-levede og må generesres med jevne mellomrom, f.eks. hver time eller hvert ti-ende minutt. De kan også være for engangsbruk. Som oftest må man lage et  en-gangs-token, kontakte en Authorization Server med dette en-gangs-tokenet og man får tilbake et token som er gyldig i en kort stund.
-
-
-Dette er for komplisert til å kunne konfigurere her. Dette gjøres ved hjelp av policies eller et annet API.
-
-
-Dette høres komplisert ut, men er både sikkert og fleksibelt.
-
-
-[Se egen veiledning](/docs/datadeling/veiledere/api-manager/jwt-mot-backend)
-
-
- 
-
+Token-basert autentisering er sikkert og fleksibelt å ta i bruk, om enn litt mer komplisert å konfigurere. Dette gjøres ved hjelp av policies eller et annet API. [Se egen veiledning](https://www.usit.uio.no/prosjekter/datadeling/arbeidsomrader/integrasjonsarkitektur/dokumentasjon/veiledere/api-manager/jwt-mot-backend.html) for detaljert fremgangsmåte.
 
 ### Sertifikater
 
-
- 
-
-
-Gateway-en kan autentisere seg med klient-sertifikat. Dette er (som token-basert autentisering) mye sikrere enn ved bruk av API-nøkkel eller brukernavn/passord. Konfigureres under
-
-
-
+Gatewayen kan autentisere seg med et klient-sertifikat. Dette er, som token-basert autentisering, mye sikrere enn ved bruk av API-nøkkel eller brukernavn og passord. Konfigureres under. 
 
 SSL - Client Authentication
 [TODO-\> teste dette]
 Fyll inn type sertificat (PKCS#12,PFX, Java key store/PEM-sertifikat/nøkkel-par) samt lim inn sertifikat-fila (eller path til denne om den er gjort tilgjengelig på filsystemet til API gateway-en) og evt. passord
- 
+
 ### Timeouts
 
-
-Hvis man opplever problemer med at koblingen mellom gravitee og endepunktet får en timeout så kan man øke timeouten satt i gravitee ved å endre på feltene du ser i bildet under
-
+Hvis man opplever problemer med at koblingen mellom Gravitee og endepunktet får en timeout kan man endre innstillingene til timeout som er satt i Gravitee ved å endre på feltene under "HTTP Configuration". Hvert felt har egen beskrivelse for sin funksjon, og de må alle fylles ut.
 
 ![Illustrasjon over hvor man setter timeout verdiene i gravitee](/datadeling/img/2021-11-19-13.33.01-api-qa.intark.uh-it.no-b0f451af01f7.jpg)

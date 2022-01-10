@@ -15,56 +15,33 @@ title: Filtrere bort innhold i responsen fra et API
 
 Om responsen fra et API inneholder informasjon som er beskyttelsesverdig og som ikke alle konsumenter trenger kan man legge på en enkel policy som fjerner felt fra responsen.
 
+Om det er et eget-utviklet API er det bedre å endre i selve API-et. Og selv om man ikke kan endre på et API: er det behov for større endringer i responsen til et API er det bedre å gjøre dette utenfor API manageren, feks. ved å ha en liten mikrotjeneste mellom API manager og backend-API-et.
 
-Om der er et eget-utviklet API er det bedre å endre i APIet. Og selv om man ikke kan endre på et API: er det  behov for større endringer i responsen til et API er det oftest bedre å gjøre dette utenfor API manageren, feks. ved å ha en liten mikrotjeneste mellom API manager og backend-APIet.
+Med mindre endringer, f.eks. for å fjerne enkelte felt, egner policyen JSON to JSON transformation seg godt. Dette er en rask og enkel måte å filtere bort innhold man vil beskytte.
 
+## Introduksjon
 
-Men mindre endringer, f.eks. for å fjerne enkelte felt, er policy-en  JSON to JSON transformation en rask og enkel måte å filtere bort innhold man vil beskytte
+Her konfigureres policyen JSON to JSON transformation. Hvis filtreringen skal gjelde alle som benytter APIet, [legg på policy som beskrevet her.](/docs/datadeling/veiledere/api-manager/legge-pa-enkel-policy)
 
-Legg på policy-en JSON to JSON transformation. Om filtreringen skal gjelde alle som benytter APIet, [legg på policy som beskrevet her.](/docs/datadeling/veiledere/api-manager/legge-pa-enkel-policy)
+Om filtreringen skal gjelde en enkel plan, slik at man kan ha en plan som gir all informasjon i svaret og en annen plan som kun gir åpen informasjon i svar, legg til policyen på siste side i veiviseren, punkt 4 "Policies", for å opprette/endre plan.
 
-
-Om filtreringen skal gjelde en enkel plan, slik at man kan ha en plan som gir all informasjon i svaret og en annen plan som kun gir åpen informasjon i svar, legg på policy-en i siste siden i veiviseren for å opprette/endre plan.
-
-
-I nedtrekksmenyen hvor det står "Choose a policy", velg JSON to JSON transformation og trykk ADD
-
+I nedtrekksmenyen hvor det står "Select policy", velg JSON to JSON transformation og trykk "ADD".
 
 ![Legge policy på plan i gravitee](/datadeling/img/image-20210126164247-1.png)  
 
- 
-
-
- 
-
-
 ![json to json policy](/datadeling/img/image-20210126175724-2.png)
 
+For Scope, velg "RESPONSE".
 
-I Scope, velg RESPONSE.
+I feltet for JOLT spesification spesifiserer du hva som skal endres i JSON filen.
 
+Denne policyen benytter [open source-prosjektet JOLT](https://github.com/bazaarvoice/jolt)
 
-I feltet for JOLT Spesification spesifiserer du hva som skal endres i JSONen.
+Dette kan [testes på denne web-siden](http://jolt-demo.appspot.com) om det er ønskelig.
 
+### Eksempel 1: Respons fra et API med ett objekt
 
-Denne policy-en benytter [open source-prosjektet JOLT](https://github.com/bazaarvoice/jolt)
-
-
-Det finnes en [web-side hvor man kan teste dette her](http://jolt-demo.appspot.com)
-
-
- 
-
-
- 
-
-
-Eksempel 1 på en respons fra et API
-
-
-
-```
-
+```Text
 {
   "ansatt": {
     "id": "00102099",
@@ -82,10 +59,9 @@ Eksempel 1 på en respons fra et API
 }
 ```
 
-For å fjerne nøkkelel "fnr" og dens verdi konfigurer vi policy-en slik:
+For å fjerne nøkkelel "fnr" og tilknyttet verdi konfigurer vi policyen slik:
 
-```
-
+```Text
 [
   {
     "operation": "remove",
@@ -98,15 +74,9 @@ For å fjerne nøkkelel "fnr" og dens verdi konfigurer vi policy-en slik:
 ]
 ```
 
- 
+Kaller man API-et etter at denne policyen er lagt på, får man i stedet denne responsen:
 
-
-Kaller man APIet etter at denne policy-en er lagt på, vil man få denne responsen
-
-
-
-```
-
+```Text
 {
   "ansatt": {
     "id": "00102099",
@@ -123,50 +93,40 @@ Kaller man APIet etter at denne policy-en er lagt på, vil man få denne respons
 }
 ```
 
- 
+### Eksempel 2: Respons fra et API med flere objekt
 
+Mange API-er gir enkeltsvar tilbake som et enkelt objekt, men kall som finner flere objekter gir tilbake en liste med objekter:
 
-Mange APIer gir enkelt-svar tilbake som et enkelt objekt, men kall som finner flere objekter gir tilbake en liste med objekter. For å filtrere bort fnr fra denne:
-
-
-Eksempel 2
-
-
-
-```
-
+```Text
 {
-  "ansatt": [
-    {
-      "id": "00102099",
-      "brukerident": null,
-      "dfoBrukerident": null,
-      "eksternIdent": null,
-      "fornavn": "Kjell-Arne",
-      "etternavn": "Testesen",
-      "annenId": [
-        null
-      ],
-      "fdato": "1987-07-29"
-    },
-    {
-      "id": "00100982",
-      "brukerident": null,
-      "fornavn": "Martin",
-      "etternavn": "Martinsen",
-      "fnr": "23456789",
-      "fdato": "1973-11-06"
-    }
-  ]
+  "ansatt": [
+    {
+      "id": "00102099",
+      "brukerident": null,
+      "dfoBrukerident": null,
+      "eksternIdent": null,
+      "fornavn": "Kjell-Arne",
+      "etternavn": "Testesen",
+      "annenId": [
+         null
+      ],
+      "fdato": "1987-07-29"
+    },
+    {
+      "id": "00100982",
+      "brukerident": null,
+      "fornavn": "Martin",
+      "etternavn": "Martinsen",
+      "fnr": "23456789",
+      "fdato": "1973-11-06"
+    }
+  ]
 }
 ```
 
-kan følgende spesifisering benyttes:
+For å filtrere bort "fnr" fra denne kan man benytte følgende spesifisering:
 
-
-
-```
-
+```Text
 [
   {
     "operation": "remove",
@@ -182,42 +142,27 @@ kan følgende spesifisering benyttes:
 ]
 ```
 
-Den vil fungere både på det første og andre eksemplet
+Denne spesifiseringen vil fungere både på det første og andre eksemplet.
 
+### Eksempel 3: respons fra et API gitt en spesifikk verdi
 
- 
+Noen ganger vil man kun returnere svar ut i fra et API dersom det i svaret forekommer en spesifikk verdi. Gitt at API-et gir følgende respons:
 
-
-Eksempel 3
-
-
-Noen ganger vil man kun returnere svar ut i fra en verdi i svaret. Gitt at APIet gir følgende respons:
-
-
-
-```
-
+```Text
 {
-  "id": "5001234",
-  "navn": "Ola Nordmann",
-  "info": "Informasjon som noen ganger er unntatt offentligheten",
-  "unntattOff": "False"
+  "id": "5001234",
+  "navn": "Ola Nordmann",
+  "info": "Informasjon som noen ganger er unntatt offentligheten",
+  "unntattOff": "False"
 }
 
 ```
 
- 
+Og vi vil returnere denne responsen, men kun dersom feltet "unntattOff" ikke har verdien "True".
 
+Følgende JOLT-spesifikasjon vil kun tillate svar der hvor verdien i "unntattOff" er "False":
 
-og vi vil returnere denn responen, men ikke om feltet "unntattOff" er "True"
-
-
-Denne JOLT-spesifikasjonen vil kun tillate svar der hvor  svaret er False
-
-
-
-```
-
+```Text
 [
   {
     "operation": "shift",
@@ -232,12 +177,9 @@ Denne JOLT-spesifikasjonen vil kun tillate svar der hvor  svaret er False
 ]
 ```
 
-Om responsen fra APIet er som følger
+Om responsen fra API-et er som følger:
 
-
-
-```
-
+```Text
 {
   "id": "5001234",
   "navn": "Ola Nordmann",
@@ -246,30 +188,19 @@ Om responsen fra APIet er som følger
 }
 ```
 
-vil svaret fra Gravitee med denne policy-en på planen/APIet være
+Da vil svaret fra Gravitee med denne policyen på planen/API-et være:
 
-
-
-```
-
+```Text
 null
 ```
 
- 
+Merk at slik som vi har konfigurert JOLT-spesifikasjonen så tar vi med svaret kun hvis "unntattOff" er "False". Om det har verdien "Nei" eller er tomt vil det ikke bli tatt med. Det er også mulig å erstatte innholdet med en tom verdi om "unntattOff" er "True", og returnere svar om det har en hvilken som helst annen verdi, eller ingen verdi, men da risikerer man å returnere svar som ikke skulle vært med om "unntattOff" ved en feil eller en kodeendring er tomt, får verdien "Ja" eller har endret stor/liten bokstav til TRUE eller true.
 
+Merk at spesifikasjonen ikke vil returnere svar om nøkkelen "unntattOff" mangler helt.
 
-Merk at slik som vi har laget JOLT-spesifikasjonen så tar vi med svaret om UnntattOff er False. Om det har verdien "Nei" eller er tomt vil det ikke bli tatt med. Det er og mulig å erstatte inholdet med en tom verdi om UnntattOff er True, og returnere svar om det har en hvilken som helst annen verdi (eller ingen verdi), men da risikerer man i returnere svar som ikke skulle vært med om  UnntattOff ved feil eller kodeendring er tomt, får verdien "Ja" eller endret stor/liten bokstav til TRUE eller true.
+### Eksempel 4: Svar med default-verdi
 
-
-Merk at denne ikke vil returnere svar om nøkkelen "unntattOff" mangler helt.
-
-
- 
-
-
-
-```
-
+```Text
 [
   {
     "operation": "shift",
@@ -285,21 +216,9 @@ Merk at denne ikke vil returnere svar om nøkkelen "unntattOff" mangler helt.
 ]
 ```
 
- 
+Om en nøkkel kun er med hvis den har en verdi vil ikke dette eksempelet returnere noe svar. Feks. om "unntattOff" kun er med i svaret om det har verdien "true" eller om det kun er med om noen eksplisitt har valgt "true" eller "false". I disse tilfellene vil ingen av konfigurasjonene i dette eksempelet fungere. Det man kan gjøre i en slik situasjon er å sette en default-verdi først, og deretter shift-operasjonen:
 
-
-Eksempel med default-verdi
-
-
-Om en nøkkel kun er med når det har en verdi vil ikke dette eksempele fungere. Feks. om "unntattOff" kun er med i svaret om det har verdien "true" eller om det kun er med om noen eksplisitt har valgt "true" eller "false". I disse tilfelene vil ingen av konfigurasjonene i dette eksempelet fungere. Det man kan gjøre er å sette en default-verdi først, og deretter shift-operasjonen:
-
-
- 
-
-
-
-```
-
+```Text
 [
   {
     "operation": "default",
@@ -321,18 +240,11 @@ Om en nøkkel kun er med når det har en verdi vil ikke dette eksempele fungere.
 ]
 ```
 
-Merk at nøkkel/verdien som blir lagt til vil bli med i svaret som går til mottakeren
+Merk at nøkkel/verdien som blir lagt til vil bli med i svaret som går til mottakeren.
 
+Disse eksemplene vil, i likhet med eksempel 1, ikke fungere om man får svar med flere objekter i en liste. For slike tilfeller kan man heller bruke:
 
-Eksemplene over vil (i likhet med eksempel 1) ikke fungere om man får liste med svar. For slike tilfeller kan man bruke:
-
-
- 
-
-
-
-```
-
+```Text
 [
   {
     "operation": "shift",
@@ -354,18 +266,9 @@ Eksemplene over vil (i likhet med eksempel 1) ikke fungere om man får liste med
 ]
 ```
 
- 
+For å sette inn default-verdier i et array må det spesifiseres at det er et array ved å legge på [] i slutten av navnet.
 
-
-For å sette inn defeult-verdier i en array må det spesifiseres at det er en array ved å legge på [] i slutten av navnet.
-
-
-f eks.
-
-
-
-```
-
+```Text
 {
   "ressurser": 
  [
@@ -384,18 +287,9 @@ f eks.
 }
 ```
 
- 
-
-
 Bruk
 
-
- 
-
-
-
-```
-
+```Text
 [
     {
     "operation": "default",
