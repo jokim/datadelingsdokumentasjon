@@ -143,3 +143,11 @@ Gateway-en kan autentisere seg med klient-sertifikat. Dette er (som token-basert
 SSL - Client Authentication
 [TODO-\> teste dette]
 Fyll inn type sertificat (PKCS#12,PFX, Java key store/PEM-sertifikat/nøkkel-par) samt lim inn sertifikat-fila (eller path til denne om den er gjort tilgjengelig på filsystemet til API gateway-en) og evt. passord
+ 
+### Timeouts
+
+
+Hvis man opplever problemer med at koblingen mellom gravitee og endepunktet får en timeout så kan man øke timeouten satt i gravitee ved å endre på feltene du ser i bildet under
+
+
+![Illustrasjon over hvor man setter timeout verdiene i gravitee](/datadeling/img/2021-11-19-13.33.01-api-qa.intark.uh-it.no-b0f451af01f7.jpg)

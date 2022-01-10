@@ -53,9 +53,6 @@ Velg APIer du vil abonnere på om du vet det nå, eller «skip» for å abonnere
 Trykk på "Create the application" Applikasjonen er nå registrert i API Manager og du kan søke om tilgang til APIer me denne applikasjonen. Du kan og gi rettigheter til dine kollegaer slik at flere kan søke om tilganger, hente ut API-nøkler, se gjennom tilganger og feilsøke.
 
 
- 
-
-
 ### Opprett applikasjon som kan abbonnere på JWT og OAuth2-planer
 
 
@@ -121,13 +118,13 @@ Gå til applikasjonen du vil legge til eller fjerne eiere eller brukere fra, og 
 
 Trykk på det ble +-tegnet for å legge til bruker. Søk om riktig person, velg om brukeren skal være eier (owner) eller bare se applikasjonen (user) og velg Add  
 
-Eiere kan søke om tilgang til APIer på vegne av applikasjonen og hente ut API-nøkler
+Eiere kan søke om tilgang til API-er på vegne av applikasjonen og hente ut API-nøkler
 
 
 ### Finne API-nøkkel
 
 
-Etter at tilgang er innvilget kan du se på siden med subscription for din applikasjon, og velge det riktige APIet
+Etter at tilgang er innvilget kan du se på siden med subscription for din applikasjon, og velge det riktige API-et
 
 
 ![](/datadeling/img/image-20200915151605-4.png)
@@ -139,4 +136,4 @@ Etter at tilgang er innvilget kan du se på siden med subscription for din appli
 ![](/datadeling/img/image-20200915151631-5.png)
 
 
-Herfra kan du kopiere API-nøkkelen over krypterte forbindelser. Pass på at ingen uvedkomne kan lese nøkkelen der den blir lagret. Om API-nøkkelen er gammel, kan ha kommet på avveie eller du vil bytte den av andre grunner, velg "renew API key". Det blir da laget en ny du kans kifte til. Den gamle vil fortsette å være gyldig i 2 timer til, deretter vil den gå ut.
+Herfra kan du kopiere API-nøkkelen over krypterte forbindelser. Pass på at ingen uvedkommende kan lese nøkkelen der den blir lagret. Om API-nøkkelen er gammel, kan ha kommet på avveie eller du vil bytte den av andre grunner, velg "renew API key". Det blir da laget en ny du kan skifte til. Den gamle vil fortsette å være gyldig i 2 timer til, deretter vil den gå ut.

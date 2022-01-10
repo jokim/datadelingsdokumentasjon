@@ -189,10 +189,10 @@ TODO: oppdater når referanseakritektur er klar.
 | Applikasjon | En applikasjon er vanligvis definert som en samling programvare som tilbyr *tjenester*.
 
 
-Gravitee bruker begrepet for entiteter som får tilgang til API, altså konsumentene. En applikasjon har en eier, og kan bli gitt tilganger. Du søker om tilganger til API via applikasjonen du registrerer.
+I Gravitee brukes dette begrepet for entiteter som får tilgang til API, altså konsumentene. En applikasjon har en eier, og kan bli gitt tilganger. Du søker om tilganger til API via applikasjonen du registrerer.
 
 
-Se også: Konsument.
+Se også: Konsument, Tjeneste.
 
  |
 | Application | Se: Applikasjon |
@@ -415,3 +415,27 @@ Hvis et kall mot et endepunkt i et API er garantert å gi samme resultat ved gje
 
  |
 | API-eier | TODO: Skal denne rolla brukast? Kven er API-eier? Tjenesteeier? |
+| Løs kobling | Et prinsipp om at en integrasjon bør være mest mulig uavhengig av systemet, tjenesten eller leverandøren. En kobling mellom to system er løs hvis det er enkelt å bytte ut det ene systemet, uten at det andre systemet må endres.
+
+
+Se mer utdypende forklaring i [Løs kobling](/docs/datadeling/begreper/los-kobling).
+
+ |
+| Tett kobling | Det omvendte av en løs kobling. For integrasjoner ønsker du som regel ikke tette koblinger, da det gjør det vanskeligere eller mer kostbart å bytte ut systemer.
+
+
+Se: Løs kobling.
+
+ |
+| Datasett | En samling av data-elementer.
+
+
+Se: Kildedata
+
+ |
+| Kildedata | Datasett som er autoritativt.
+
+
+Se: Autoritativt kildesystem.
+
+ |
