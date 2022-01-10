@@ -12,28 +12,22 @@ Her finner du informasjon om hva universitets- og høgskolesektoren sin integras
 ## Hva er UH:IntArk?
 
 
-UH:IntArk er et sett med prinsipper, retningslinjer og anbefalinger for hvordan data skal gjøres tilgjengelig, og hvordan integrasjoner skal fungere i universitets- og høgskolesektoren. UH:IntArk gjelder både internt hos institusjoner, mellom institusjoner, og mot eksterne utenfor sektoren. Merk at UH:IntArk ikke bare handler om integrasjonene, men også om informasjonsforvaltningen.
+UH:IntArk er et sett med [prinsipper](/docs/datadeling/prinsippene/), [styringsregler](/docs/datadeling/styringsregler/) og [anbefalinger](/docs/datadeling/god-praksis/) for hvordan data skal gjøres tilgjengelig, hvordan integrasjoner skal fungere, og hvordan informasjon skal forvaltes. UH:IntArk gjelder både internt hos institusjoner, mellom institusjoner, og mot eksterne utenfor sektoren.
 
 
- 
+**Fellestjenesten for Datadeling** inneholder UH:IntArk, inkludert support, rådgivning og teknisk datadelingsplattform.
 
 
-[ TODO: Kort video som introduserer UH:IntArk ]
-
-
- 
-
-
-UH:IntArk er som trafikkreglene: IntArk setter krav til bilen, veien og hvordan du kjører, men du bestemmer selv hvilken bil og vei du kjører. I trafikken har du også støtteverktøy, for eksempel trafikklys og kollektivtransport, som hjelper deg å nå ditt mål - disse er i ulik grad valgfrie å bruke. UH-sektoren er som ett land - du må forholde deg til våre kjøreregler om du skal inn til oss, men vi ønsker å samkjøre oss med hvordan resten av verden gjør det.
+TBD: Må bli einige i prosjektet om begrepsbruken.
 
 
 ## Hvorfor UH:IntArk?
 
 
-Digitaliseringen krever mer datadeling og flere integrasjoner. En felles integrasjonsarkitektur i universitets- og høgskolesektoren gjør det enklere å dele data, både internt og mellom institusjoner.
+Digitaliseringen krever mer datadeling og flere integrasjoner. En felles integrasjonsarkitektur i universitets- og høgskolesektoren gjør det enklere å dele data, både internt hos en institusjon, mellom institusjoner og med resten av verden.
 
 
-UH:IntArk fokuserer på det som gir mest verdi for UH-sektoren som helhet. Hensikten er at forskjellige institusjoner, eller enheter internt hos en institusjon, kan gjøre endringer uavhengig av hverandre. Løsninger vil kunne samhandle uavhengig av leverandør og lokasjon. Prinsippene bidrar til at sektoren henger med i utviklingen og kan tilby tidsriktige løsninger av høy kvalitet.
+UH:IntArk fokuserer på det som gir mest verdi for UH-sektoren som helhet. Løsninger skal kunne samhandle, uavhengig av leverandør og lokasjon. Prinsippene bidrar til at sektoren henger med i utviklingen og kan tilby tidsriktige løsninger av høy kvalitet.
 
 
 ## Hvordan henger UH:IntArk sammen?
@@ -52,38 +46,19 @@ TODO: Et nytt forsøk på å forklare IntArk:
 			
 			
 			Retningslinjer er ikke bindende, men kan langt på vei være styrende for de valg som skal tas. Om du velger løsninger som i vesentlig grad avviker fra retningslinjene, bør du dokumentere dette og være forberedt på å begrunne ditt valg, og gi tilbakemelding til oss så vi får mulighet til å justere våre retningslinjer. (fritt omskreve etter [Helsebiblioteket si beskriving](https://www.helsebiblioteket.no/retningslinjer/lar/3-metode-i-retningslinjearbeidet/3.1-hva-er-faglige))
-	* **Teknisk plattform** - verktøy som hjelper deg å følge IntArk.
+	* **Teknisk datadelingsplattform** - verktøy som hjelper deg å følge IntArk.
 
 
 ![Bildet kan inneholde: rektangel, skråningen, font, materiell eiendom, elektrisk blå.](/datadeling/img/skjermbilde-2021-06-15-132909.png)
 
 
-## Elementene i UH:IntArk
-
-
-TODO: Endre dette når referansearkitekturen er på plass.
-
-
-[![Elementene i IntArk: Øverst er førende (prinsipper og styringsmodell), som er realisert i neste nivå, som inneholder prosesser, retningslinjer og gode praksiser. Det nederste nivået er de tekniske elementene, som RabbitMQ og Gravitee, som støtter opp modellen.](/datadeling/img/intark-elementene.svg)](/datadeling/img/intark-elementene.svg)
-
-
-En forklaring til de forskjellige nivåene i UH:IntArk:
-
-
-1. **Førende - kjernen av UH:IntArk** (gul boks): Her finner du alt som resten av UH:IntArk bygger opp rundt, som [integrasjonsprinsippene](/docs/datadeling/prinsippene) og [styringsmodellen](/docs/datadeling/om/styringsmodellen) som ligger til grunn for resten.
-2. **Funksjonelt** (blå boks): Dette nivået er realiseringen av UH:IntArk. Her finner du [prosessene](/docs/datadeling/hva-er/prosessene), [komponentene](/docs/datadeling/hva-er/komponenter) og [gode praksiser og anbefalinger](/docs/datadeling/god-praksis).
-3. **Teknisk** (grønn boks): For å kunne ta i bruk UH:IntArk effektivt, tilbyr vi en [teknisk plattform](/docs/datadeling/teknisk-plattform) og andre tekniske verktøy for å gjøre datadeling enklere. Hvilke verktøy vi tilbyr vil endre seg mer etterhvert som verden og gode praksiser forandrer seg.
-
-
-UH:IntArk **defineres** i forretningsnivået, **realiseres** i funksjonelt nivå, og **støttes opp** av teknisk nivå.
-
-
-Se mer om [elementene i UH:IntArk](/docs/datadeling/hva-er/elementene), og [begrepene brukt i UH:IntArk](/docs/datadeling/begreper/).
+UH:IntArk inneholder sentraliserte føringer som vi alle i sektoren må bli enige om og følge, men det legges likevel opp til lokale tilpasninger.
 
 
 ## Mer informasjon
 
 
+* Se [begrepene brukt i UH:IntArk](/docs/datadeling/begreper/).
 * [Om UH:IntArk](/docs/datadeling/om) gir mer bakgrunnsdetaljer om integrasjonsarkitekturen, inkludert føringer for rammeverket.
 * [Referansearkitekturen for Datadeling](/docs/datadeling/om/referansearkitektur), som rammeverket bygger på.
 * [Bakgrunnen for UH:IntArk](/docs/datadeling/om/bakgrunn) gir historikken til integrasjonsarkitekturen.

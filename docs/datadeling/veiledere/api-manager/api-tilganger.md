@@ -12,114 +12,80 @@ title: Forvaltning av tilganger til API
 
 TODO: Dette er foreløpig kun et forslag
 
+Informasjonen som er lagret i ulike systemer og som finnes tilgjengelige bak f.eks. API er ofte nyttig for andre. De bør få tilgang til denne informasjonen. Samtidig må vi sikre at informasjon som er fortrolig eller sensitiv ikke kommer på avveie.
 
-Informasjonen som er lagret i ulike systemer og som er tilgjengelige f.eks. bak API er ofte nyttig for mange andre. De bør få tilgang til denne informasjonen. Samtidig må vi sikre at informasjon som er fortrolig eller sensitiv ikke kommer på avveie.
-
-
-Det er derfor viktig å ha rutiner for hvem som skal få og ikke få tilgang til informasjon og data.
+Det er derfor viktig å ha rutiner for hvem som skal ha og ikke ha tilgang til informasjon og data.
 
 TODO: Dette er foreløpig kun et forslag
 
-
- 
-
-
- 
-
-
 ${resource:toc title=[Innholdsfortegnelse:]}
-I API manager spør man om tilgang ved å opprette en applikasjon, og søker om å abonnere på en plan for et API som er gjort tilgjengelig. For deg som skal behandle disse søknadene og avgjøre om applikasjoner skal få tilgang eller ikke er det en fordel om rutiner og vilkår er klargjort på forhånd.
+I API manager spør man om tilgang ved å [opprette en applikasjon](https://www.usit.uio.no/prosjekter/datadeling/arbeidsomrader/integrasjonsarkitektur/dokumentasjon/veiledere/api-manager/api-manager-be-om-tilgang.html#toc2), og søker om å [abonnere på en plan](https://www.usit.uio.no/prosjekter/datadeling/arbeidsomrader/integrasjonsarkitektur/dokumentasjon/veiledere/api-manager/api-manager-be-om-tilgang.html#toc4) for et API som er gjort tilgjengelig. For deg som forvalter tilgang til et API, og skal behandle søknader og avgjøre om applikasjoner skal få tilgang eller ikke, er det en fordel om rutiner og vilkår er klargjort på forhånd.
 
-
-Det er derfor lurt å kartlegge, dokumentere og gjerne merke APIer og planer med hvilken kategori informasjonen bak APIet gir tilgang til.
-
+Det er derfor lurt å kartlegge, dokumentere og gjerne merke API-er og planer med hvilken kategori informasjonen bak API-et gir tilgang til.
 
 ## Åpne data
 
+Informasjon som *kan* eller *skal* være tilgjengelig for alle uten særskilte tilgangsrettigheter. Tilgang til å lese denne type informasjon kan gis til alle, og bør i størst mulig grad være helt åpent slik at alle kan bruke API-et uten autentisering.
 
-Informasjon som *kan* eller *skal* være tilgjengelig for alle uten særskilte tilgangsrettigheter. Tilgang til å lese disse kan gis til alle og bør i størst mulig grad være helt åpne, slik at alle kan bruke APIet uten autentisering.
+Fordeler ved å tilby åpne data helt tilgjengelige:
 
-
-Fordele ved å tilby åpne data helt tilgjengelige:
-
-
-* Enklere for 3dje-parter, bidrar til økt bruk
-
+* Enklere for tredjeparter å ta i bruk
+* Bidrar til økt bruk av informasjonen
 
 Ulemper ved å tilby åpne data for alle uten autentisering:
 
+* Økt belastning på API-er uten forvarsel. Kan omgås ved å legge kvoter og/eller rate-limiting på åpen plan, og tilby tilgang med API-nøkkel for systemer som har avtalt dette
+* Informasjonen ligger lagret i flere system, uten at dette systemet er dataens masterkilde.
 
-* Økt last på APIer uten forvarsel. Dette kan løse ved å legge kvoter og/eller rate-limiting på åpen plan, og  tilby tilgang med API-nøkkel for systemer som har avtalt dette
-
-
- 
-
-
-Andre grunner til å ikke ha åpne data tilgjengelige for alle uten authentisering kan være:
+Søknader på tilgang til API/planer med åpne data godkjennes uten videre krav til autentisering.
 
 
-* informasjonen ligger lagret i flere systemen, men dette systemer er ikke masterdatakilde.
-* 
+Merk at selv om noe av denne informasjonen skal være *tilgjengelig* for alle, skal informasjonens integritet likevel sikres ved at kun riktige applikasjoner har tilgang til å *endre* informasjonen.
 
+## Tilgang til persondata for system-til-system-integrasjoner
 
-Søknader på tilgang til API/planer med åpne data godkjennes uten videre krav
+Applikasjoner og system som behandler *personopplysninger* faller innunder personopplysningsloven og personvernforordningen. All informasjon som skal behandles må ha formåls- og hjemmelsvurdering, samt ha gjennomført risiko og sårbarhetsanalyse før behandlingen finner sted. For systemer som driftes av eksterne må det i tillegg være skrevet en [databehandleravtale](https://www.uio.no/for-ansatte/arbeidsstotte/personvern/gdpr/aktuelt/oppdatert-databehandleravtale.html), og for utenlandske (under)leverandører skal det skrives et overføringsgrunnlag.
 
-
-Merk at selv om noe av denne informasjonen skal være *tilgjengelig* for alle, skal likevel informasjonens integritet sikres ved at kun riktige applikasjoner har tilgang til å *endre* informasjonen.
-
-
-## Tilgang til persondata ~~hjemlet i lov~~ (bedre å skrive system-til-system?)
-
-
-Applikasjoner / systemer  som behandler *personvopplysninger* faller innunder personopplysningsloven og personvernforordningen. Alle behandler må ha formåls og hjemmelsvurdering, samt ha gjennomført risiko og sårbarhetsanalyse før behandlingen finner sted. For systemer som driftes av eksterne må det i tillegg være skrevet databehandleravtale og for utenlandske (under)leverandører overføringsgrunnlag.
-
-
-Før man gir tilgang til APIer med personopplysninger må data-eier vurdere om det er greit at det gis tilgang til APIet og personopplysningene.
-
+Før man gir tilgang til API-er med personopplysninger må dataforvalter vurdere om det skal gis tilgang til API-et og personopplysningene til søker, og hvorvidt søker har de nødvendige hjemler etc. for å behandle opplysningene.
 
 Rent praktisk gjøres det ved at opplysninger om dette (f.eks. link til webside eller referanse-numre i arkivsystem) legges ved søknaden. Når man registrerer API bør planer som gir tilgang til persondata [kreve kommentar og en kort beskjed om krav til referanse](/docs/datadeling/veiledere/api-manager/opprette-plan)
 
+Dataeier skal sjekke at opplysningene det gis tilgang til er oppdatert og i orden før tilgang blir gitt.
 
-Data-eier sjekker at opplysningene er oppdaterte og i orden før tilgang blir gitt.
+## TBD: Tilgang til API-er basert på samtykke
 
+Det er mulig å sette opp API slik at hver enkelt person som bruker en tjeneste interaktivt må autentisere og godkjenne at tjenesten får tilgang til deres data, ofte kalt brukersentrisk datadeling. Dataeier setter opp API-ene slik at de kun gir ut informasjon til personer som samtykker til dette.
 
-## TBD: Tilgang til APIer basert på samtykke
-
-
- 
-
-
-Det er mulig å sette opp API slik at hver enkelt person som bruker en tjeneste må interaktivt autentisere og godkjenne at tjenesten får tilgang til sine data (ofte kalt brukersentrisk datadeling) Data-eier setter opp APIene slik at de kun gir ut informasjon til tilhører personen som godkjenner.
-
-
-Tilgang til data må uansett godkjennes av data-eier (samme krav til persondata som over?)
-
+Tilgang til data må uansett godkjennes av dataeier.
 
 ## Data med begrenset tilgang
 
+Informasjon som verken skal være *åpen* eller er regnet som *fortrolig* havner gjerne i denne mellomkategorien. Tilgang på data i denne kategorien kan deles med både interne og eksterne etter en konkret vurdering. Søknad om tilgang til disse API-ene/planene må inneholde en begrunnelse og/eller beskrivelse av hva dataene skal brukes til. Hvis dataen det gis tilgang til inkluderer personopplysninger må informasjon om formål/hjemmelsvurdering etc. være lagt ved i tillegg. Applikasjonen skal ha et beskrivende navn og en utfyllende beskrivelse.
 
-Informasjon som ikke skal være åpen og som ikke er regnet som fortrolig havner gjerne i denne mellomkategorien. Tilgang på data i denne kategorien kan deles med både både eksterne og interne etter en konkret vurdering. Søknad om tilgang til disse APIene/planen må inneholde en begrunnelse og/eller beskrivelse av hva dataene skal brukes til. Er det personopplysninger må informasjon om formål/hjemmelsvurdering etc. være lagt ved i tillegg (se forrige punkt). Applikasjonen må ha et godt navn og beskrivelse 
+Dataeier må bestemme på forhånd om det er tilstrekkelig at det står beskrevet hva dataen skal brukes til i kommentarfeltet til søknaden sendt gjennom Gravitee, eller om det må opprettes sak i ticket-system e.l. Dette bør dokumenteres på første siden med dokumentasjon som legges sammen med API-et.
 
+Alternativ. 1) Begrunnelse for tilgang gis i kommentar til søknad om abonnement. Har det vært relevant kommunikasjon rundt tilgang legges referanse til dette med i API manager, enten av konsument når de ber om tilgang eller som en beskjed som dataeier skriver når tilgang godkjennes.
 
-Data-eier må bestemme på forhånd om det er nok med holder å skrive i søknaden i kommentar-feltet i gravitee eller om det må opprettes sak i ticket-system e.l. Dette dokumenteres på første siden med doumentasjon som legges sammen med APIet
+Alternativ. 2) Det opprettes sak i ticket-system/saksbehandligssystem. Om det er behov for mer informasjon fra søker legges den i så fall inn i saken. Det samme gjelder lenker til referater fra møter, bestillinger og avtaler som lagres om nødvendig. Ved søknad om eller behandling av om tilgang til API manger, oppgis alle referanser til saker i kommentar når søknaden godkjennes.
 
-
-Alt. 1) Begrunnelse for tilgang gis i kommentar til søknad om abonnement. Har det vært relevant kommunikasjon rundt tilgang legges referanse til dette med i API manager, enten av konsument når denne ber om tilgang eller som beskjed som data-eier skriver når tilgang godkjennes /
-
-
-Alt 2) Det opprettes sak i ticket-system/saksbehandligsystem. Om det er behov for mer informasjon fra søker legges den inn i saken. Det samm gjelder lenker til referater fra møter, bestillinger og avtaler lagres om nødveldig. Ved søknad om eller behandling av om tilgang til API manger oppgis alle referanser til saker i kommantar når søknaden godkjenes
-
-
-Det er selvfølgelig mulig å bruke en blanding, f.eks. alt1 om dataeier har bestilt integrasjon eller om det er intern søker og alt2 ellers
-
+Det er selvfølgelig mulig å bruke en blanding, f.eks. alternativ 1 om dataeier har bestilt integrasjon eller om det er intern søker, og alternativ 2 ellers.
 
 ## Fortrolige data
 
+Dette er informasjon som institusjonen er pålagt å begrense tilgangen til i lov, forskrift, avtaler, reglementer og annet regelverk. Dette tilsvarer graden ***fortrolig*** i den offentlige Beskyttelsesinstruksen.
 
-Dette enformasjon  som institusjonen er pålagt å begrense tilgangen til i lov, forskrift, avtaler, reglementer og annet regelverk. Dette tilsvarer graden **fortrolig** i den offentlige Beskyttelsesinstruksen.
+Tilgang på data i denne kategorien kan kun gis til interne. Rutiner for tilgang til API-er med fortrolige data er i utgangspunktet lik som for de med begrenset tilgang, men dataansvarlig må nødvendigvis gjøre en grundigere vurdering. Tilgang til fortrolige data som inkluderer personopplysninger vil utløse [krav om DPIA](https://www.uio.no/for-ansatte/arbeidsstotte/personvern/meir-om-personvern/meldeplikt#toc5).
+
+API-er som tilbyr data som faller inn under graden *fortrolig* må beskyttes ekstra, helst med asymmetrisk nøkkel, OAuth2 eller tilsvarende. Om det ikke er mulig kan det f.eks. brukes IP-filter i tillegg til API-nøkkel.
 
 
-~~Tilgang på data i denne kategorien kan deles med både både eksterne og interne. /~~ Tilgang på data i denne kategorien kan kun gis til interne
+# Oppsummering
 
-
-APIer som tilbyr data som faller innunder graden fortrolig må beskyttes ekstra, helst med assymetrisk nøkkel / OAuth2 eller tilsvarende. Om det ikke er mulig ~~må~~ kan det f.eks. brukes IP-filter i tillegg.
+| Kategori | Ved søknad |  |
+| --- | --- | --- |
+| API med åpne data |  |  |
+| API med personopplysninger og åpne data |  |  |
+| API med data med begrenset tilgang |  |  |
+| API med personopplysninger og data med begrenset tilgang |  |  |
+| API med fortrolige data |  |  |
+| API med personopplysninger og fortrolige data |  |  |

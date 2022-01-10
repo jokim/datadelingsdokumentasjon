@@ -53,7 +53,7 @@ Forklaringer og utdypninger av terminologi og begreper brukt i UH:IntArk og Data
 | Datatilbyder | Se: Tilbyder |
 | Datakonsument | Se: Konsument |
 | API gateway | En tjeneste som tar seg av selve tilgangskontrollen til API på systemnivå. Hvem som skal ha tilgang styres i API manager, og API gateway overholder dette.<br><br><br>Dette begrepet har forskjellige definisjoner. TODO<br><br><br>TODO: oppdater når referanseakritektur er klar.|
-| Applikasjon | En applikasjon er vanligvis definert som en samling programvare som tilbyr *tjenester*.<br><br><br>Gravitee bruker begrepet for entiteter som får tilgang til API, altså konsumentene. En applikasjon har en eier, og kan bli gitt tilganger. Du søker om tilganger til API via applikasjonen du registrerer.<br><br><br>Se også: Konsument.|
+| Applikasjon | En applikasjon er vanligvis definert som en samling programvare som tilbyr *tjenester*.<br><br><br>Gravitee bruker begrepet for entiteter som får tilgang til API, altså konsumentene. En applikasjon har en eier, og kan bli gitt tilganger. Du søker om tilganger til API via applikasjonen du registrerer.<br><br><br>Se også: Konsument, Tjeneste.|
 | Application | Se: Applikasjon |
 | Authorization server | En rolle i Oauth 2-protokollen, som tar seg av tilgangskontroll.<br><br><br>Se: Autorisasjonstjeneste|
 | Meldingskø | En tjeneste for å behandle meldinger og sikre at disse meldingene blir distribuert videre til tjenester som abonnerer på valgt type melding. For tiden brukes systemet [RabbitMQ i UH:IntArk](/docs/datadeling/teknisk-plattform/rabbitmq).<br><br><br>Merk: I IntArk-sammenheng snakker vi bare om meldingskø som tjenesten som behandler notifikasjoner og andre meldinger som skal bruker **mellom tjenester**. IntArk sier ingenting om meldingskøer som brukes internt i systemer.<br><br><br>Se også: [Notifikasjon](/docs/datadeling/begreper/notifikasjon)|
@@ -91,5 +91,9 @@ Forklaringer og utdypninger av terminologi og begreper brukt i UH:IntArk og Data
 | Uttrekk | Resultatet man får etter en *spørring* mot en *webservice.*<br><br><br>Se også: Spørring|
 | Datakvalitet | Kvaliteten på data. God kvalitet er vesentlig for å kunne gjenbruke data, og med det ha en god og effektiv datadeling. Dataeier er ansvarlig for god datakvalitet for sine autoritative data. Noen kriterier til datakvalitet:<br><br><br>* At data er komplette<br>* At data er maskinlesbare<br>* At data er riktig formaterte<br>* At data er oppdaterte|
 | Tilstandsløs | TODO: Jo legger til |
-| Idempotent håndtering | TODO: Jo legger til<br><br><br>Hvis et kall mot et endepunkt i et API er garantert å gi samme resultat ved gjentagende kall, er det idempotent. Dette er sentralt i hendingsbasert provisjonering.|
+| Idempotent håndtering | Hvis et kall mot et endepunkt i et API er garantert å gi samme resultat ved gjentagende kall, er det idempotent. Dette er sentralt i hendelsesdrevet provisjonering.|
 | API-eier | TODO: Skal denne rolla brukast? Kven er API-eier? Tjenesteeier? |
+| Løs kobling | Et prinsipp om at en integrasjon bør være mest mulig uavhengig av systemet, tjenesten eller leverandøren. En kobling mellom to system er løs hvis det er enkelt å bytte ut det ene systemet, uten at det andre systemet må endres. Se mer utdypende forklaring i [Løs kobling](/docs/datadeling/begreper/los-kobling).|
+| Tett kobling | Det omvendte av en løs kobling. For integrasjoner ønsker du som regel ikke tette koblinger, da det gjør det vanskeligere eller mer kostbart å bytte ut systemer. Se: Løs kobling.|
+| Datasett | En samling av data-elementer. Se: Kildedata |
+| Kildedata | Datasett som er autoritativt. Se: Autoritativt kildesystem. |
