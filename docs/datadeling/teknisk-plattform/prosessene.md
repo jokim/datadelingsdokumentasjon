@@ -70,7 +70,7 @@ Sette opp FS API:
 BROM er på samme måte som API manager.
 
 
-1. Tjenesteeier må registrere datatilbyders system i BROM (kallast applikasjon i BROM)
+1. Tjenesteeier må registrere datatilbyders system i BROM (kalles applikasjon i BROM)
 	* Fyll inn dokumentasjon etc
 	* (Dette påvirker RabbitMQ direkte - setter opp en vhost ferdig satt opp)
 2. Tjenesteeier/datatilbyder registrerer i BROM at systemet sitt publiserer notifikasjoner.
