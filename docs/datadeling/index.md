@@ -5,20 +5,13 @@ title: "UH:IntArk - Datadeling i universitets- og h\xF8gskolesektoren"
 
 # UH:IntArk - Datadeling i universitets- og høgskolesektoren
 
+![UH:IntArk](/datadeling/img/logo.png)
 
 
-<div class="vrtx-row">
- <div class="vrtx-box">
- <div class="vrtx-box-content">
-<figure><img alt="UH:IntArk" src="/datadeling/img/logo.png"/></figure><p><strong>Merk: Denne dokumentasjonen er under arbeid, og produseres av <a href="https://www.unit.no/prosjekter/datadeling-i-hoyere-utdanning-og-forskning">prosjekt Datadeling</a>. Både større og mindre endringer vil forekomme. Sjå <a href="/docs/datadeling/status">arbeidsdokument</a> for status.</strong></p>
+**Merk: Denne dokumentasjonen er under arbeid, og produseres av <a href="https://www.unit.no/prosjekter/datadeling-i-hoyere-utdanning-og-forskning">prosjekt Datadeling</a>.**
 
-</div>
- </div>
-</div>
+## Kom i gang med UH:IntArk!
 
-<div class="vrtx-row">
- <div class="vrtx-box">
-<h2>Kom i gang med UH:IntArk!</h2> <div class="vrtx-box-content">
 <ul>
 <li><a href="/docs/datadeling/veiledere/innforing">Hvordan kommer min institusjon i gang med UH:IntArk</a></li>
 <li><a href="/docs/datadeling/teknisk-plattform/oversikt">Kom i gang med API manager</a></li>
@@ -27,10 +20,8 @@ title: "UH:IntArk - Datadeling i universitets- og h\xF8gskolesektoren"
 <li><a href="/docs/datadeling/god-praksis">Gode praksiser og anbefalinger</a></li>
 </ul>
 
-</div>
- </div>
- <div class="vrtx-box">
-<h2>Hva er UH:IntArk</h2> <div class="vrtx-box-content">
+## Hva er UH:IntArk
+
 <ul>
 <li><a href="/docs/datadeling/hva-er/">Introduksjon: Hva er UH:IntArk</a></li>
 <li><a href="/docs/datadeling/prinsippene">Integrasjonsprinsippene</a></li>
@@ -40,17 +31,7 @@ title: "UH:IntArk - Datadeling i universitets- og h\xF8gskolesektoren"
 <li><a href="/docs/datadeling/begreper">Begreper</a></li>
 </ul>
 
-</div>
- </div>
-</div>
-
-<div class="vrtx-row">
- <div class="vrtx-box">
-<h2>Informasjon for deg</h2> <div class="vrtx-box-content">
- 
-</div>
- </div>
-</div>
+## Informasjon for deg
 
 <div class="vrtx-row">
  <div class="vrtx-box">
