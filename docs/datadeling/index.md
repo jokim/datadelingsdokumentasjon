@@ -1,6 +1,6 @@
 ---
 slug: /datadeling/
-title: "UH:IntArk - Datadeling i universitets- og h\xF8gskolesektoren"
+title: "UH:IntArk - Datadeling i universitets- og høgskolesektoren"
 sidebar_label: "UH:IntArk"
 sidebar_position: 1
 ---
@@ -9,6 +9,9 @@ sidebar_position: 1
 
 ![UH:IntArk](/datadeling/img/logo.png)
 
+UH:IntArk er en fellestjeneste for datadeling i høyere utdanning og forsking,
+levert av [Sikt](https://sikt.no/). Se også [Sikt sine sider om
+Datadeling](https://www.uninett.no/Intark).
 
 **Merk: Denne dokumentasjonen er under arbeid, og produseres av [prosjekt Unit
 Datadeling](https://www.unit.no/prosjekter/datadeling-i-hoyere-utdanning-og-forskning).**
