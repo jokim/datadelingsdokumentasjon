@@ -51,7 +51,7 @@ module.exports = {
             // TODO: feil URL, lenk heller til repoet med rådata, og ikkje den
             // ferdigbygde frå build, som ser ut itl å innehalde ferdige
             // html-sider...
-            'https://github.com/jokim/datadelingsdokumentasjon',
+            'https://github.com/jokim/datadelingsdokumentasjon/tree/master',
         },
         blog: {
           showReadingTime: true,
