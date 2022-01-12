@@ -1,13 +1,12 @@
 ---
-description: Kjernen i UH:IntArk er prinsippene for integrasjonsarkitektur. Resten
-  av UH:IntArk er bygget opp rundt disse.
-slug: /datadeling/prinsippene/
+slug: /datadeling/prinsippene
 title: Prinsippene for UH:IntArk
 ---
 
-# Prinsippene for UH:IntArk
-
-Kjernen i UH:IntArk er prinsippene for integrasjonsarkitektur. Resten av UH:IntArk er bygget opp rundt disse. UH:IntArk følger generelt DigDirs arkitekturprinsipper, men de spesifikke prinsippene i UH:IntArk er krav som må oppfylles.
+Kjernen i UH:IntArk er prinsippene for integrasjonsarkitektur. Resten av
+UH:IntArk er bygget opp rundt disse. UH:IntArk følger generelt DigDirs
+arkitekturprinsipper, men de spesifikke prinsippene i UH:IntArk er krav som må
+oppfylles.
 
 
 ## Brukerorientert arkitektur

@@ -1,21 +1,21 @@
 ---
-description: "Beskrivelse av hva vi i IntArk kaller \"notifikasjon\".\n\n\nTBD: Vert\
-  \ dette riktig? Passer det med eNotifikasjon, eller er de noko anna? B\xF8r vi kalle\
-  \ det noko anna, td. tynne meldingar?"
 title: Notifikasjon
 ---
 
-# Notifikasjon
+I UH:IntArk bruker vi ordet "notifikasjon" for "tynne meldinger". Dette er
+eNotifikasjon, som fokuserer på at noe har skjedd. 
 
-Beskrivelse av hva vi i IntArk kaller "notifikasjon".
+En "notifikasjon" er en *tynn melding* som sendes ut av kildesystemet når
+kildedata endres, og brukes primært i [hendelsesbasert
+provisjonering](/docs/datadeling/god-praksis/integrasjonsmonster/hendelsesbasert).
+Notifikasjonen skal kunne bli mottatt av konsumenter, så de kan vurdere om de
+skal reagere på endringen. IntArk bruker en meldingskø for å hjelpe
+kildesystemet med å sikre at notifikasjonen når fram til alle konsumenter, uten
+at tilbyderen trenger å forholde seg til alle konsumentene.
 
-
-TBD: Vert dette riktig? Passer det med eNotifikasjon, eller er de noko anna? Bør vi kalle det noko anna, td. tynne meldingar?
-
-En "notifikasjon" er en *tynn melding* som sendes ut av kildesystemet når kildedata endres, og brukes primært i [hendelsesbasert provisjonering](/docs/datadeling/god-praksis/integrasjonsmonster/hendelsesbasert). Notifikasjonen skal kunne bli mottatt av konsumenter, så de kan vurdere om de skal reagere på endringen. IntArk bruker en meldingskø for å hjelpe kildesystemet med å sikre at notifikasjonen når fram til alle konsumenter, uten at tilbyderen trenger å forholde seg til alle konsumentene.
-
-
-Produsenter er ansvarlige for å produsere notifikasjoner for endringer i sine autoritative data, som kan fås ut av produsenten sitt API.
+Produsenter er ansvarlige for å produsere notifikasjoner for endringer i sine
+autoritative data, som kan fås ut av produsenten sitt API. Se
+[styringsreglene](/docs/datadeling/styringsregler) for mer om dette.
 
 
 ## Se også
