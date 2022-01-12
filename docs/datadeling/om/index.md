@@ -1,72 +1,83 @@
 ---
 slug: /datadeling/om/
-title: Om IntArk
+title: Hva er IntArk?
+sidebar_position: 1
 ---
 
-Detaljer om bakgrunnen og føringer for IntArk. Se [Hva er
-IntArk](/docs/datadeling/hva-er) for en enklere introduksjon.
+IntArk er både en integrasjonsarkitektur og en plattform, som muliggjør og
+forenkler samarbeidet rundt integrasjoner og deling av data i
+kunnskapssektoren. IntArk setter felles føringer for hvordan dele data
+enklere og likere, og gir deg verktøy og hjelp til å gjøre dette. Arkitekturen
+fokuserer per nå på integrasjoner, men inkluderer også informasjonsforvaltning.
 
-IntArk er en integrasjonsarkitektur som bygger på [referansearkitekturen for
-deling av data i høyere utdanning og
-forskning](https://unit-norge.github.io/unit-ra/main/B%C3%B8ker/Referansearkitektur%20for%20deling%20av%20data%20i%20h%C3%B8yere%20utdanning%20og%20forsking.html).
+Arkitekturen baserer seg på [referansearkitekturen for deling av data i høyere
+utdanning og
+forskning](https://unit-norge.github.io/unit-ra/main/B%C3%B8ker/Referansearkitektur%20for%20deling%20av%20data%20i%20h%C3%B8yere%20utdanning%20og%20forsking.html),
+som er et målbilde for sektoren. IntArk er også bygget opp rundt noen
+[prinsipper](/docs/datadeling/prinsippene/).
 
-Den tekniske plattformen til IntArk inneholder verktøy for å oppfylle
-behovene til arkitekturen.
+IntArk er ment å både brukes mellom institusjoner og mot eksterne utenfor
+kunnskapssektoren, men den kan også brukes for datadeling internt hos hver
+institusjon.
 
-TODO: Innhold på dette området:
+## Fellestjeneste for Datadeling
+
+Sikt leverer IntArk som en fellestjeneste for Datadeling. Fellestjenesten
+inkluderer:
+
+| Hva | Inneholder |
+| --- | --- |
+| Føringer for hvordan dele likt | [Referansearkitektur] og [styringsregler] |
+| Hjelp til å dele | Support, rådgivning og [anbefalinger] |
+| Verktøy for å dele | [Teknisk plattform] |
+
+<!-- TODO: sjekk om detaljane stemmer med tidlegare presentasjonar. Vurder å lage figur av det - vert finare. -->
+
+[teknisk plattform]: /docs/datadeling/teknisk-plattform
+[styringsregler]: /docs/datadeling/styringsregler
+[referansearkitektur]: https://unit-norge.github.io/unit-ra/main/B%C3%B8ker/Referansearkitektur%20for%20deling%20av%20data%20i%20h%C3%B8yere%20utdanning%20og%20forsking.html
+[anbefalinger]: /docs/datadeling/god-praksis
 
 
-* Styringsmodellen - altså hvorfor elementer er satt opp som det er
-* Prosessene og komponentene - mulig dette ikke er nødvendig, avhengig av hva som står i referansearkitekturen.
-* Bakgrunn og historikk - veien fram til Datadelingsplattformen. Prøver gi konteksten for hvorfor ting er som de er, og hvilke behov som er ønsket løst.
+## Hvorfor IntArk?
+
+Digitaliseringen krever mer datadeling og flere integrasjoner. En felles
+integrasjonsarkitektur i universitets- og høgskolesektoren gjør det enklere og
+mer effektivt å dele data, både internt hos en institusjon, mellom
+institusjoner og med resten av verden.
+
+IntArk fokuserer på det som gir mest verdi for UH-sektoren som helhet.
+Løsninger skal kunne samhandle, uavhengig av leverandør og lokasjon.
+Prinsippene bidrar til at sektoren henger med i utviklingen og kan tilby
+tidsriktige løsninger av høy kvalitet.
+
+Noen gevinster med bruk av IntArk:
+
+* Enklere å samarbeide med andre om datadeling, både internt hos hver
+institusjon og mellom institusjonene.
+
+* Enklere å finne og ta i bruk data i andre tjenester.
+
+* Enklere å bytte ut tjenester, siden de er løsere koblet.
+
+* Bruk av anbefalte integrasjonsmønster gir raskere oppdaterte tjenester, som
+gjør de mer brukervenlige.
 
 
 ## Føringer for rammeverket
 
-
 Rammeverket forholder seg til føringer fra:
-
 
 * [Digitaliseringsstrategien for offentlig sektor 2019-2025](https://www.regjeringen.no/no/dokumenter/en-digital-offentlig-sektor/id2653874/)
 * [Digitaliseringsdirektoratets overordnede arkitekturprinsipper](https://www.digdir.no/digitalisering-og-samordning/overordnede-arkitekturprinsipper/1065)
-* [Rammeverk for digital samhandling](https://www.digdir.no/nasjonal-arkitektur/rammeverk-digital-samhandling/2148)
-* [Nasjonale føringer for datadeling](https://doc.difi.no/nasjonal-arkitektur/nab_arkitekturlandskap_segmentarkitektur_datadeling/)
-* [Referansearkitektur for datautveksling](https://doc.difi.no/nasjonal-arkitektur/nab_referanse_arkitekturer_datautveksling/)
-* [Units Ledelsessystem for informasjonssikkerhet - TBD: riktig lenke?](https://www.unit.no/en/node/694)
-* [Kapabilitetsmodell i høyere utdanning i EUNIS](https://app.powerbi.com/view?r=eyJrIjoiMThhNjkzNmItOGQ4NC00MDkzLWI3MDQtNzY0ZjA1MjQ5MzViIiwidCI6ImFlMWE3NzI0LTQwNDEtNDQ2Mi1hNmRjLTUzOGNiMTk5NzA3ZSIsImMiOjh9)
+* [Digitaliseringsdirektoratets rammeverk for digital samhandling](https://www.digdir.no/nasjonal-arkitektur/rammeverk-digital-samhandling/2148)
 * [Digitaliseringsdirektoratets rammeverk for informasjonsforvaltning](https://www.digdir.no/informasjonsforvaltning/informasjonsforvaltning/2113)
 
 
- 
+## Mer informasjon
 
-
-## Andre føringer - TODO: Flytt til riktig stad
-
-
-De domenespesifikke prinsippene for IntArk skal presisere og komplementere retningslinjer fra høyere nivå:
-
-
-* [DigDirs overordnede arkitekturprinsipper](https://www.digdir.no/digitalisering-og-samordning/overordnede-arkitekturprinsipper/1065)
-* TODO: [UH-sektorens arkitekturprinsipper](https://www.uninett.no/arkitektur)
-* TODO: [UiOs ledelsessystem for informasjonssikkerhet (ISMS)](https://www.uio.no/tjenester/it/sikkerhet/lsis/)
-
-
-### IT-arkitekturprinsipper for offentlig sektor
-
-
-IntArk ble bygget utfra de felles arkitekturprinsippene for offentlig sektor som ble lagt frem som en del av [St. meld nr. 19 (2008-2009) - Ei forvaltning for demokrati og fellesskap](https://www.regjeringen.no/nb/dokumenter/stmeld-nr-19-2008-2009-/id552811/). Her besluttet regjeringen syv overordnede prinsipper som skal fungere som et sett med felles retningslinjer for alt arbeid med IT i offentlig sektor:
-
-
-* Tjenesteorientering
-* Interoperabilitet
-* Tilgjengelighet
-* Sikkerhet
-* Åpenhet
-* Fleksibilitet
-* Skalerbarhet
-
-
-[Beskrivelse av prinsippene og hvordan de skal forstås [PDF]](http://www.difi.no/sites/difino/files/arkitekturprinsipper-2.1.pdf)
-
-
-Merk at etter dette har [DigDir kommet med nye, mer overordnede arkitekturprinsipper](https://www.digdir.no/digitalisering-og-samordning/overordnede-arkitekturprinsipper/1065).
+* Se [begrepene brukt i IntArk](/docs/datadeling/begreper/).
+* [Om IntArk](/docs/datadeling/om) gir mer bakgrunnsdetaljer om integrasjonsarkitekturen, inkludert føringer for rammeverket.
+* [Referansearkitekturen for Datadeling](/docs/datadeling/om/referansearkitektur), som rammeverket bygger på.
+* [Bakgrunnen for IntArk](/docs/datadeling/om/bakgrunn) gir historikken til integrasjonsarkitekturen.
+* [Styringsmodellen til IntArk](/docs/datadeling/om/styringsmodellen) beskriver modellen som ligger bak oppsettet av IntArk.
