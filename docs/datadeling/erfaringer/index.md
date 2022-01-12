@@ -1,7 +1,7 @@
 ---
 slug: /datadeling/erfaringer/
-title: 'Erfaringer fra bruk av UH-IntArk'
+title: 'Erfaringer fra bruk av IntArk'
 ---
 
-For å hjelpe institusjoner med innføringen av UH-IntArk samler vi opp
+For å hjelpe institusjoner med innføringen av IntArk samler vi opp
 erfaringer og publiserer de på dette området.

@@ -1,12 +1,8 @@
 ---
 author:
 - Mathias Meisfjordskar
-description: En beskrivelse av hvordan UiOs integrasjonsarkitektur ble satt opp, fra
-  2017.
 title: Teknisk beskrivelse av UiOs integrasjonsarkitektur
 ---
-
-# Teknisk beskrivelse av UiOs integrasjonsarkitektur
 
 En beskrivelse av hvordan UiOs integrasjonsarkitektur ble satt opp, fra 2017.
 

@@ -1,17 +1,9 @@
 ---
-description: "UH:IntArk inneholder noen komponenter som bidrar til \xE5 oppfylle behovene.\
-  \ St\xF8ttetjenestene baserer seg blant annet p\xE5 integrasjonsprinsippene.\n\n\
-  \nVidere beskrives funksjonaliteten til disse komponentene. For mer tekniske detaljer\
-  \ om de konkrete systemene som er valgt, se egne sider om [de tekniske komponentene](/docs/datadeling/teknisk-plattform)\
-  \ som implementerer funksjonene beskrevet her. TODO: Vert det vanskelegare \xE5\
-  \ dele det opp slik?"
 slug: /datadeling/hva-er/komponenter/
-title: Komponentene i UH:IntArk
+title: Komponentene i IntArk
 ---
 
-# Komponentene i UH:IntArk
-
-UH:IntArk inneholder noen komponenter som bidrar til å oppfylle behovene. Støttetjenestene baserer seg blant annet på integrasjonsprinsippene.
+IntArk inneholder noen komponenter som bidrar til å oppfylle behovene. Støttetjenestene baserer seg blant annet på integrasjonsprinsippene.
 
 
 Videre beskrives funksjonaliteten til disse komponentene. For mer tekniske detaljer om de konkrete systemene som er valgt, se egne sider om [de tekniske komponentene](/docs/datadeling/teknisk-plattform) som implementerer funksjonene beskrevet her. TODO: Vert det vanskelegare å dele det opp slik?
@@ -73,7 +65,7 @@ TODO: Funksjonalitet TODO Skriv meir frå funksjonell side. Dette vert fort tekn
 ## Meldingskø
 
 
-For å gjøre hendelsesbaserte oppdateringer enklere, tilbyr UH:IntArk en sentralisert meldingskø som produsenter kan publisere notifikasjoner i.
+For å gjøre hendelsesbaserte oppdateringer enklere, tilbyr IntArk en sentralisert meldingskø som produsenter kan publisere notifikasjoner i.
 
 
 Meldingskøen oppfyller behovene:

@@ -1,9 +1,9 @@
 ---
 slug: /datadeling/malgrupper/utvikler/
-title: UH:IntArk for utviklere
+title: IntArk for utviklere
 ---
 
-Informasjon om UH:IntArk for deg som utvikler tjenester for UH-sektoren.
+Informasjon om IntArk for deg som utvikler tjenester for UH-sektoren.
 
 
 

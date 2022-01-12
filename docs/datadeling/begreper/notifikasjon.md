@@ -2,7 +2,7 @@
 title: Notifikasjon
 ---
 
-I UH:IntArk bruker vi ordet "notifikasjon" for "tynne meldinger". Dette er
+I IntArk bruker vi ordet "notifikasjon" for "tynne meldinger". Dette er
 eNotifikasjon, som fokuserer på at noe har skjedd. 
 
 En "notifikasjon" er en *tynn melding* som sendes ut av kildesystemet når

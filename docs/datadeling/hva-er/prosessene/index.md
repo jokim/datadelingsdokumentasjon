@@ -1,10 +1,7 @@
 ---
-description: "TBD: Er prosessene klare nok til \xE5 beskrives?"
 slug: /datadeling/hva-er/prosessene/
-title: Prosessene i UH:IntArk
+title: Prosessene i IntArk
 ---
-
-# Prosessene i UH:IntArk
 
 TBD: Er prosessene klare nok til å beskrives?
 
@@ -29,7 +26,7 @@ Taktiske prosesser:
 Strategiske prosesser:
 
 
-* Justere prinsipper og føringene til UH:IntArk
+* Justere prinsipper og føringene til IntArk
 * Revidere anbefalinger og gode praksiser
 
 
@@ -48,7 +45,7 @@ TODO: Gammel:
 ## Funksjoner og prosesser
 
 
-I UH:IntArk har du noen prosesser som må ivaretas:
+I IntArk har du noen prosesser som må ivaretas:
 
 
 * Forvaltningen av et API:

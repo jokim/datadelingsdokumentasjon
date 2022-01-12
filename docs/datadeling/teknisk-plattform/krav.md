@@ -1,14 +1,8 @@
 ---
-description: "Hver institusjon kan stort sett bruke datadelingsplattformen slik de\
-  \ selv \xF8nsker, men UH:IntArk setter noen f\xF8ringer. Dette er gjort for \xE5\
-  \ prim\xE6rt samkj\xF8re bruken, slik at det blir enklere \xE5 dele data p\xE5 tvers\
-  \ av sektoren, og eksternt."
-title: "F\xF8ringer for bruk av teknisk plattform i UH:IntArk"
+title: "Føringer for bruk av teknisk plattform i IntArk"
 ---
 
-# Føringer for bruk av teknisk plattform i UH:IntArk
-
-Hver institusjon kan stort sett bruke datadelingsplattformen slik de selv ønsker, men UH:IntArk setter noen føringer. Dette er primært gjort for å samkjøre bruken, slik at det blir enklere å dele data på tvers av sektoren, og eksternt.
+Hver institusjon kan stort sett bruke datadelingsplattformen slik de selv ønsker, men IntArk setter noen føringer. Dette er primært gjort for å samkjøre bruken, slik at det blir enklere å dele data på tvers av sektoren, og eksternt.
 
 ## For API manager
 

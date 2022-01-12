@@ -1,16 +1,11 @@
 ---
-description: "Forklaringer og utdypninger av terminologi og begreper brukt i UH:IntArk.
-  \ Oversikten inkluderer også begreper brukt andre steder, og hvordan de relateres
-  \ til UH:IntArk, for å unngå misforståelser."
 slug: /datadeling/begreper/
-title: Begreper i UH:IntArk
+title: Begreper i IntArk
 ---
 
-# Begreper i UH:IntArk
-
-Forklaringer og utdypninger av terminologi og begreper brukt i UH:IntArk og
+Forklaringer og utdypninger av terminologi og begreper brukt i IntArk og
 teknisk plattform. Oversikten inkluderer også begreper brukt andre steder, og
-hvordan de relateres til UH:IntArk, for å unngå misforståelser.
+hvordan de relateres til IntArk, for å unngå misforståelser.
 
 Se også [data.norge.no](https://data.norge.no) for relaterte begreper.
 
@@ -55,25 +50,25 @@ Se også: Autoritativt kildesystem
 | --- | --- |
 | Konsument | Rollen til en tjeneste eller system som ønsker å motta data fra en tilbyder. Avhengig av kontekst, kan dette også være snakk om en person, gruppe, enhet, utvikler eller sluttbruker. |
 | Tjenesteportefølje | En oversikt over tjenester.<br/><br/><br/>Tjenesteportefølje (Service Portfolio) er opprinnelig et oppslagsverk definert i [ITIL](http://wiki.en.it-processmaps.com/index.php/Service_Portfolio_Management#Service_Portfolio) for planlagte, aktive og nedlagte tjenester i virksomheten. Teknisk plattform gir en oversikt tjenesters integrasjoner.|
-| Konnektor | En tjeneste som integrerer mellom to systemer som ikke kan integreres direkte. Ofte gjøres dette med mikrotjenester. Konnektorer inneholder ofte forretningslogikk.<br/><br/><br/>Konnektorer bør følge UH:IntArk, ved at de blant annet bruker åpne grensesnitt, har så løse koblinger som mulig, og at forretningslogikk og målsystem-spesifikke hensyn ikke legges i produserende system. Se mer under prinsippet [Tjenesteorientert](/docs/datadeling/prinsippene/tjenesteorientert/).<br/><br/><br/>Merk at andre kan bruke begrepet "konnektor" også for direkte-integrasjoner.|
+| Konnektor | En tjeneste som integrerer mellom to systemer som ikke kan integreres direkte. Ofte gjøres dette med mikrotjenester. Konnektorer inneholder ofte forretningslogikk.<br/><br/><br/>Konnektorer bør følge IntArk, ved at de blant annet bruker åpne grensesnitt, har så løse koblinger som mulig, og at forretningslogikk og målsystem-spesifikke hensyn ikke legges i produserende system. Se mer under prinsippet [Tjenesteorientert](/docs/datadeling/prinsippene/tjenesteorientert/).<br/><br/><br/>Merk at andre kan bruke begrepet "konnektor" også for direkte-integrasjoner.|
 | Målsystem | Rollen til et system, når det **henter** data fra et kildesystem.<br/><br/><br/>Se også: Konsument.|
 | Endesystem | Se: Målsystem, Konsument. |
 | Autoritativt kildesystem | Rollen til et system som institusjonen har bestemt skal være kildesystemet for spesifikke dataelementer.<br/><br/><br/>Se også: Tilbyder.|
 | Kildesystem | Se: Autoritativt kildesystem. |
 | System | Et IT-system. I denne konteksten brukes begrepet "system" for teknisk nivå, mens "tjeneste" brukes i brukersammenheng. Definisjonen er vag og brukes forskjellig, så begrepet bør unngås.<br/><br/><br/>Se også: Tjeneste.|
 | Tjeneste | En tjeneste er noe som tilbyr funksjonalitet for noen. Tjenesten kan tilbys av et system, eller i samspillet mellom flere system.<br/><br/><br/>Se også: System.|
-| API | Application Programming Interface: Maskinlesbart grensesnitt for en tjeneste eller system. UH:IntArk setter noen føringer og anbefalinger for hvordan API til kildesystem skal fungere, for eksempel at vi bruker *Web Service*<br/><br/><br/>Se blant annet [utforming av API](/docs/datadeling/god-praksis/api-design).<br/><br/><br/>Se også: Web Service|
+| API | Application Programming Interface: Maskinlesbart grensesnitt for en tjeneste eller system. IntArk setter noen føringer og anbefalinger for hvordan API til kildesystem skal fungere, for eksempel at vi bruker *Web Service*<br/><br/><br/>Se blant annet [utforming av API](/docs/datadeling/god-praksis/api-design).<br/><br/><br/>Se også: Web Service|
 | Sikker Datadeling | En tjeneste for å håndtere avtaler om tilganger til data. I tjenesten kan du som dataeier ha oversikt over hvem som har tilgang til hva i dine systemer, og du kan opprette, fornye og avvikle tilganger til data.<br/><br/><br/>Se også: API Manager|
 | Notifikasjon | Vi bruker begrepet i IntArk om **tynne meldinger** som sendes til og fra meldingskøen, primært i integrasjonsmønsteret [hendelsesbasert oppdatering](/docs/datadeling/god-praksis/integrasjonsmonster/hendelsesbasert). Se [eget dokument som beskriver notifikasjoner i mer detalj](/docs/datadeling/begreper/notifikasjon).|
-| API manager | En tjeneste som gir dataeiere kontroll over tilganger til sine API, og konsumenter mulighet for å få tilgang. API manager er et system som realiserer de funksjonelle. API manager er en sentral komponent i UH:IntArks tekniske plattform.<br/><br/><br/>Se også: Sikker Datadeling|
+| API manager | En tjeneste som gir dataeiere kontroll over tilganger til sine API, og konsumenter mulighet for å få tilgang. API manager er et system som realiserer de funksjonelle. API manager er en sentral komponent i IntArks tekniske plattform.<br/><br/><br/>Se også: Sikker Datadeling|
 | API-katalog | En tjeneste som gir deg oversikt over alle API-er for en institusjon. I praksis inneholder ofte en API Manager også ein API-katalog.<br/><br/><br/>Se også: API Manager, Datakatalog|
 | Datatilbyder | Se: Tilbyder |
 | Datakonsument | Se: Konsument |
-| API gateway | En tjeneste som tar seg av selve tilgangskontrollen til API på systemnivå. Hvem som skal ha tilgang styres i API manager, og API gateway overholder dette. Dette er en sentral komponent i UH:IntArks tekniske plattform.|
+| API gateway | En tjeneste som tar seg av selve tilgangskontrollen til API på systemnivå. Hvem som skal ha tilgang styres i API manager, og API gateway overholder dette. Dette er en sentral komponent i IntArks tekniske plattform.|
 | Applikasjon | En applikasjon er vanligvis definert som en samling programvare som tilbyr *tjenester*.<br/><br/><br/>Gravitee bruker begrepet for entiteter som får tilgang til API, altså konsumentene. En applikasjon har en eier, og kan bli gitt tilganger. Du søker om tilganger til API via applikasjonen du registrerer.<br/><br/><br/>Se også: Konsument, Tjeneste.|
 | Application | Se: Applikasjon |
 | Authorization server | En rolle i Oauth 2-protokollen, som tar seg av tilgangskontroll.<br/><br/><br/>Se: Autorisasjonstjeneste|
-| Meldingskø | En tjeneste for å behandle meldinger og sikre at disse meldingene blir distribuert videre til tjenester som abonnerer på valgt type melding. For tiden brukes systemet [RabbitMQ i UH:IntArk](/docs/datadeling/teknisk-plattform/rabbitmq).<br/><br/><br/>Merk: I IntArk-sammenheng snakker vi bare om meldingskø som tjenesten som behandler notifikasjoner og andre meldinger som skal bruker **mellom tjenester**. IntArk sier ingenting om meldingskøer som brukes internt i systemer.<br/><br/><br/>Se også: [Notifikasjon](/docs/datadeling/begreper/notifikasjon)|
+| Meldingskø | En tjeneste for å behandle meldinger og sikre at disse meldingene blir distribuert videre til tjenester som abonnerer på valgt type melding. For tiden brukes systemet [RabbitMQ i IntArk](/docs/datadeling/teknisk-plattform/rabbitmq).<br/><br/><br/>Merk: I IntArk-sammenheng snakker vi bare om meldingskø som tjenesten som behandler notifikasjoner og andre meldinger som skal bruker **mellom tjenester**. IntArk sier ingenting om meldingskøer som brukes internt i systemer.<br/><br/><br/>Se også: [Notifikasjon](/docs/datadeling/begreper/notifikasjon)|
 | API portal | Se: API-katalog |
 | Autentiseringstjeneste | En tjeneste som kan autentisere sluttbrukeren og/eller systemet som ønsker å konsumere data.<br/><br/><br/>I Oauth2 blir autentiseringstjenesten spesifisert i mer detalj.|
 | Datakatalog | En oversikt over alle data, spesielt kildedata, som er tilgjengelig, og hvordan du kan få tilgang til dette. Dette er relatert til DigDirs "Orden i eget hus". En datakatalog kan være en API-katalog, men det kan også være to uavhengige tjenester som kan relatere til hverandre. Det er planer om en felles datakatalog for sektoren i fremtiden.<br/><br/><br/>Se også: API-katalog.|
@@ -82,10 +77,10 @@ Se også: Autoritativt kildesystem
 | Event streaming | Se: Hendelsesstrømming |
 | Hendelsesstrømming | Når du behandler mange meldinger under ett, kalles dette gjerne hendelsesstrømming.<br/><br/><br/>Se også: Meldingskø, Notifikasjoner|
 | Galvanisk skille | Opprinnelig et elektronikk-begrep, men som er tatt inn for å beskrive tjenester som har et strengt skille mellom innlogging i applikasjonen og ikke i operativsystemet. Det er da et "galvanisk skille", så innloggingshemmeligheter er isolert til applikasjonen. Et eksempel er webapplikasjoner som bruker Feide-pålogging.<br/><br/><br/>Se mer informasjon under [forvaltningsveilederen](/docs/datadeling/veiledere/annet/anskaffelse/galvanisk-skille).|
-| Retrofit | Retrofit handler om å forlenge levetiden til gammel teknologi ved å legge på ny teknologi utenpå. I UH:IntArk-sammenheng handler dette som oftest om å lage egne mikrotjenester som oversetter og forenkler integrasjon med et gammelt system, slik at den kan bli IntArk-kompatibelt.<br/><br/><br/>Se mer informasjon under [forvaltning](/docs/datadeling/malgrupper/anskaffer/).|
+| Retrofit | Retrofit handler om å forlenge levetiden til gammel teknologi ved å legge på ny teknologi utenpå. I IntArk-sammenheng handler dette som oftest om å lage egne mikrotjenester som oversetter og forenkler integrasjon med et gammelt system, slik at den kan bli IntArk-kompatibelt.<br/><br/><br/>Se mer informasjon under [forvaltning](/docs/datadeling/malgrupper/anskaffer/).|
 | Masterdata | Se: Autoritativt kildesystem |
 | Web Service | Web Service (WS) er en type API (integrasjonsgrensesnitt), som er den vanligste måten å dele data på internett i dag. WS er en sekkebetegnelse, som inneholder blant annet RESTfulle API.<br/><br/><br/>[IntArk anbefaler bruk av webservice for API](/docs/datadeling/god-praksis/bruk-av-webservice).<br/><br/><br/>Se også: API|
-| Åpent grensesnitt | Et åpent grensesnitt er et grensesnitt som alle skal kunne utvikle integrasjoner mot, i motsetning til proprietære, lukkede grensesnitt.<br/><br/><br/>Åpent grensesnitt er et krav i UH:IntArk, og følger integrasjonsprinsippet om [Tilgjengelighet: Autoritative data skal tilbys gjennom åpne grensesnitt](/docs/datadeling/prinsippene/tilgjengelig). Grensenitt som er bransjestandard foretrekkes ofte, siden det reduserer faren for lock in.|
+| Åpent grensesnitt | Et åpent grensesnitt er et grensesnitt som alle skal kunne utvikle integrasjoner mot, i motsetning til proprietære, lukkede grensesnitt.<br/><br/><br/>Åpent grensesnitt er et krav i IntArk, og følger integrasjonsprinsippet om [Tilgjengelighet: Autoritative data skal tilbys gjennom åpne grensesnitt](/docs/datadeling/prinsippene/tilgjengelig). Grensenitt som er bransjestandard foretrekkes ofte, siden det reduserer faren for lock in.|
 | Autorisasjon | Autorisasjon er prosessen med å bestemme om en autentisert entitet er berettiget å få en tilgang. Dette betyr at en tjeneste verifiserer, vha. regler som er satt for tjenesten, om entiteten skal gis en tilgang eller ikke. Tilgang kan for eksempel være om entiteten skal slippes inn i tjenesten, om de skal få ekstra funksjonalitet i tjenesten eller endret utseende på tjenesten. Tjenester som sjekker tilganger bedriver *tilgangskontroll.* |
 | Autoritativ | Autoritativ refererer til hvem som bestemmer (autoritær). I IntArk-sammenheng er dette hvilket system eller tjeneste som er en autoritær kilde for data.<br/><br/><br/>Se: Autoritativt kildesystem|
 | Integrasjon | Det å integrere tjenester i konteksten IT og arkitektur er det å påse at tjenester kommuniserer. Dette kan foregå som en dialog mellom tjenestene eller som monolog fra en tjeneste til en annen. Hensikten er å sikre at data blir kjent i de tjenester som trenger dem.<br/><br/><br/>Begrepet integrasjon brukes om selve den tekniske kommunikasjonen, mens begrepet *datadeling* er bredere og inkluderer også det utenfor det tekniske, for eksempel datakvalitet, ansvarsplassering og informasjonsforvaltning.<br/><br/><br/>Se også: Datadeling|

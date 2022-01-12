@@ -1,17 +1,12 @@
 ---
-description: "Punkt til hjelp i vurderingen av IT-tjenester eller -systemer.\n\n\n\
-  TBD: M\xE5 diskuterast t.d. med innkj\xF8psfolk i Unit. Eller noen i Uninett? Andre\
-  \ p\xE5 USIT?"
-title: "Hjelpesp\xF8rsm\xE5l ved anskaffelser av IT-tjenester"
+title: "Hjelpespørsmål ved anskaffelser av IT-tjenester"
 ---
-
-# Hjelpespørsmål ved anskaffelser av IT-tjenester
 
 Punkt til hjelp i vurderingen av IT-tjenester eller -systemer.
 
 TBD: Må diskuterast t.d. med innkjøpsfolk i Unit. Eller noen i Uninett? Andre på USIT?
 
-Punktene er utledet av [integrasjonsprinsippene](/docs/datadeling/prinsippene), [vedtak](/docs/datadeling/vedtak) og [anbefalingene](/docs/datadeling/god-praksis) i UH:IntArk.
+Punktene er utledet av [integrasjonsprinsippene](/docs/datadeling/prinsippene), [vedtak](/docs/datadeling/vedtak) og [anbefalingene](/docs/datadeling/god-praksis) i IntArk.
 
 IT-tjenesten må/bør ha et API vi kan integrere med:
 
@@ -30,7 +25,7 @@ Hvis systemet blir kildesystem for visse data, eller vil inneholde data som pote
 * Hvor godt dokumentert er API-et?
 * Kan systemet gi ut data til alle mulige konsumenter, eller har leverandøren begrensinger? For eksempel maks antall spørringer over en periode eller maks antall konsumenter.
 * Støtter systemet å sende ut notifikasjoner eller andre former for meldinger ved endringer i kildedata? Dette er nødvendig for å kunne støtte oppdateringer i sanntid.
-  * Per i dag bruker UH:IntArk meldingskøen RabbitMQ, med protokollen AMQP 0.91. Støttes alternativer bør kostnadene av konvertering vurderes. TODO: Lenke.
+  * Per i dag bruker IntArk meldingskøen RabbitMQ, med protokollen AMQP 0.91. Støttes alternativer bør kostnadene av konvertering vurderes. TODO: Lenke.
 
 Hvis sluttbrukere skal logge på tjenesten:
 

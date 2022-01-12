@@ -1,6 +1,6 @@
 ---
 slug: /datadeling/malgrupper/anskaffer/
-title: "UH:IntArk for anskaffere/innkj\xF8pere"
+title: "IntArk for anskaffere/innkj\xF8pere"
 ---
 
 Relevante detaljer for deg som jobber med innkjøp/anskaffelse av systemer og
@@ -12,7 +12,7 @@ TODO: Mulig å få Csaba eller andre med erfaring av innkjøp av IT-tenester til
 
 Hvis du skal kjøpe inn digitale løsninger, vil de mest sannsynlig måtte
 integrere med andre løsninger, nå eller i fremtiden. Det er derfor viktig å
-vite hvilke krav UH:IntArk setter til integrasjoner, for å kunne vektlegge
+vite hvilke krav IntArk setter til integrasjoner, for å kunne vektlegge
 dette i innkjøpet.
 
 Som anskaffer trenger du:

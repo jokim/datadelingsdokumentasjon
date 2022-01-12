@@ -1,20 +1,16 @@
 ---
-description: "En veileder for deg som er ansvarlig for \xE5 innf\xF8re UH:IntArk hos\
-  \ din institusjon."
-title: Kom i gang med UH:IntArk
+title: Kom i gang med IntArk
 ---
 
-# Kom i gang med UH:IntArk
-
-En veileder for deg som er ansvarlig for å innføre UH:IntArk hos din institusjon.
+En veileder for deg som er ansvarlig for å innføre IntArk hos din institusjon.
 
 ## Hva gjør jeg?
 
 1. **Forberedelser**
-    1. Sett deg inn i [hva UH:IntArk er](/docs/datadeling/hva-er), og [konsekvensene ved UH:IntArk](/docs/datadeling/hva-er/konsekvenser).
-    2. Plasser [roller og ansvar](/docs/datadeling/hva-er/roller) i din institusjon. Se [Sjekkliste for innføring av UH:IntArk](/docs/datadeling/veiledere/sjekkliste-innforing) for hjelp.
+    1. Sett deg inn i [hva IntArk er](/docs/datadeling/hva-er), og [konsekvensene ved IntArk](/docs/datadeling/hva-er/konsekvenser).
+    2. Plasser [roller og ansvar](/docs/datadeling/hva-er/roller) i din institusjon. Se [Sjekkliste for innføring av IntArk](/docs/datadeling/veiledere/sjekkliste-innforing) for hjelp.
 2. **Administrativt**
-    1. Registrer din institusjon ved å fylle ut [nettskjema for registrering i UH:IntArk](https://nettskjema.no/a/180547).
+    1. Registrer din institusjon ved å fylle ut [nettskjema for registrering i IntArk](https://nettskjema.no/a/180547).
     2. Vi avtaler formalia, som tjenesteavtale og databehandleravtale.
     3. TBD: Mer som må/bør på plass?
 3. **Ta i bruk Datadelingsplattformen**
@@ -24,4 +20,4 @@ En veileder for deg som er ansvarlig for å innføre UH:IntArk hos din institusj
     * TODO: Start på kartlegging av oversikt over alle systemer.
     * Institusjonen trenger å få "orden i eget hus", som betyr å få oversikt over sine data. For IntArk betyr det også at alle API må registreres i API manager, og datakilder som ikke har API må registreres i en oversikt over "unntak fra IntArk" TBD: korleis vert dette?  
     TBD: Hva skal vi/bør vi si her? Hva kan vi forvente?
-    * Se gjerne [oversikten over alle veiledere](/docs/datadeling/veiledere) for å komme i gang med UH:IntArk.
+    * Se gjerne [oversikten over alle veiledere](/docs/datadeling/veiledere) for å komme i gang med IntArk.

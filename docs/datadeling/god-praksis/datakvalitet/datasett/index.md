@@ -1,13 +1,9 @@
 ---
-description: "Kildedata m\xE5 beskrives. Her beskrives hvordan du gj\xF8r dette i\
-  \ UH-IntArk."
 slug: /datadeling/god-praksis/datakvalitet/datasett/
-title: Beskrivelser av datasett i UH-IntArk
+title: Beskrivelser av datasett i IntArk
 ---
 
-# Beskrivelser av datasett i UH-IntArk
-
-Kildedata må beskrives. Her beskrives hvordan du gjør dette i UH-IntArk.
+Kildedata må beskrives. Her beskrives hvordan du gjør dette i IntArk.
 
 I utgangspunktet følger vi de nasjonale standardene, DCAT-AP-NO versjon 2, i hva og hvordan kildedataene skal beskrives, men med noen tilføyinger.
 
@@ -21,7 +17,7 @@ Se [Felles datakatalog sin veileder for beskrivelser av datasett](https://data.n
 Den nasjonale standarden har oversikt over hvilke felt som er påkrevd, anbefalte og valgfrie i beskrivelsen av datasett.
 
 
-Felt som er påkrevd i UH-IntArk:
+Felt som er påkrevd i IntArk:
 
 
 * Hvis kildedataen er autoritative, skal feltet `dqvno:isAuthoritative` brukes.

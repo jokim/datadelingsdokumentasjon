@@ -1,32 +1,30 @@
 ---
 slug: /datadeling/
-title: "UH:IntArk - Datadeling i universitets- og høgskolesektoren"
-sidebar_label: "UH:IntArk"
+title: "IntArk - Datadeling i universitets- og høgskolesektoren"
+sidebar_label: "IntArk"
 sidebar_position: 1
 ---
 
-# UH:IntArk - Datadeling i universitets- og høgskolesektoren
+![IntArk](/datadeling/img/logo.png)
 
-![UH:IntArk](/datadeling/img/logo.png)
-
-UH:IntArk er en fellestjeneste for datadeling i høyere utdanning og forsking,
+IntArk er en fellestjeneste for datadeling i høyere utdanning og forsking,
 levert av [Sikt](https://sikt.no/). Se også [Sikt sine sider om
 Datadeling](https://www.uninett.no/Intark).
 
 **Merk: Denne dokumentasjonen er under arbeid, og produseres av [prosjekt Unit
 Datadeling](https://www.unit.no/prosjekter/datadeling-i-hoyere-utdanning-og-forskning).**
 
-## Kom i gang med UH:IntArk!
+## Kom i gang med IntArk!
 
-* [Hvordan kommer min institusjon i gang med UH:IntArk](/docs/datadeling/veiledere/innforing)
+* [Hvordan kommer min institusjon i gang med IntArk](/docs/datadeling/veiledere/innforing)
 * [Kom i gang med API manager](/docs/datadeling/teknisk-plattform/oversikt)
 * [Alle veiledere](/docs/datadeling/veiledere)
 * [Kurs og webinar](/docs/datadeling/kurs/)
 * [Gode praksiser og anbefalinger](/docs/datadeling/god-praksis)
 
-## Hva er UH:IntArk
+## Hva er IntArk
 
-* [Introduksjon: Hva er UH:IntArk](/docs/datadeling/hva-er/)
+* [Introduksjon: Hva er IntArk](/docs/datadeling/hva-er/)
 * [Integrasjonsprinsippene](/docs/datadeling/prinsippene)
 * [Teknisk plattform for datadeling](/docs/datadeling/teknisk-plattform)
 * [Om forvaltningen](/docs/datadeling/forvaltning)
@@ -39,7 +37,7 @@ Datadeling](https://www.unit.no/prosjekter/datadeling-i-hoyere-utdanning-og-fors
 
 [![Institusjon](/datadeling/img/illustrasjon-institusjonseier.png)](/docs/datadeling/malgrupper/institusjonsansvarlig/)
 
-For deg som er ansvarlig for at institusjonen følger UH:IntArk.
+For deg som er ansvarlig for at institusjonen følger IntArk.
 
 ### [Anskaffer](/docs/datadeling/malgrupper/anskaffer/)
 
@@ -69,7 +67,7 @@ For deg som leverer eller ønsker å levere IT-tjenester til UH-sektoren.
 
 [![Sluttbruker](/datadeling/img/illustrasjon-sluttbruker.png)](/docs/datadeling/malgrupper/sluttbruker/)
 
-For deg som er sluttbruker av UH:IntArk, for eksempel forsker eller student.
+For deg som er sluttbruker av IntArk, for eksempel forsker eller student.
 
 ## Kontakt og hjelp
 

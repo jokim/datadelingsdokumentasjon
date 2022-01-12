@@ -1,16 +1,16 @@
 ---
 slug: /datadeling/om/
-title: Om UH:IntArk
+title: Om IntArk
 ---
 
-Detaljer om bakgrunnen og føringer for UH:IntArk. Se [Hva er
-UH:IntArk](/docs/datadeling/hva-er) for en enklere introduksjon.
+Detaljer om bakgrunnen og føringer for IntArk. Se [Hva er
+IntArk](/docs/datadeling/hva-er) for en enklere introduksjon.
 
-UH-IntArk er en integrasjonsarkitektur som bygger på [referansearkitekturen for
+IntArk er en integrasjonsarkitektur som bygger på [referansearkitekturen for
 deling av data i høyere utdanning og
 forskning](https://unit-norge.github.io/unit-ra/main/B%C3%B8ker/Referansearkitektur%20for%20deling%20av%20data%20i%20h%C3%B8yere%20utdanning%20og%20forsking.html).
 
-Den tekniske plattformen til UH-IntArk inneholder verktøy for å oppfylle
+Den tekniske plattformen til IntArk inneholder verktøy for å oppfylle
 behovene til arkitekturen.
 
 TODO: Innhold på dette området:
@@ -43,7 +43,7 @@ Rammeverket forholder seg til føringer fra:
 ## Andre føringer - TODO: Flytt til riktig stad
 
 
-De domenespesifikke prinsippene for UH:IntArk skal presisere og komplementere retningslinjer fra høyere nivå:
+De domenespesifikke prinsippene for IntArk skal presisere og komplementere retningslinjer fra høyere nivå:
 
 
 * [DigDirs overordnede arkitekturprinsipper](https://www.digdir.no/digitalisering-og-samordning/overordnede-arkitekturprinsipper/1065)

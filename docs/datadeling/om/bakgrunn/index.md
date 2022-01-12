@@ -1,13 +1,9 @@
 ---
-description: "TODO: Placeholder for en beskrivelse av historikken til hvordan UH:IntArk\
-  \ ble til, for \xE5 gi kontekst.\n\n\nTODO: En kronologisk oversikt."
 slug: /datadeling/om/bakgrunn/
-title: Bakgrunnen for UH:IntArk
+title: Bakgrunnen for IntArk
 ---
 
-# Bakgrunnen for UH:IntArk
-
-TODO: Placeholder for en beskrivelse av historikken til hvordan UH:IntArk ble til, for å gi kontekst.
+TODO: Placeholder for en beskrivelse av historikken til hvordan IntArk ble til, for å gi kontekst.
 
 
 TODO: En kronologisk oversikt.
@@ -21,13 +17,13 @@ TODO: Universitetet i Oslo startet i XXXX et forprosjekt for å definere sin int
 TODO: meir info
 
 
-Se UiO sin integrasjonsarkitektur på [Universitetet i Oslo sin integrasjonsarkitektur (UiO:IntArk)](https://www.uio.no/tjenester/it/sikkerhet/integrasjonsarkitektur/). TODO: Denne vert arkivert når UH:IntArk er klar, så oppdater lenka.
+Se UiO sin integrasjonsarkitektur på [Universitetet i Oslo sin integrasjonsarkitektur (UiO:IntArk)](https://www.uio.no/tjenester/it/sikkerhet/integrasjonsarkitektur/). TODO: Denne vert arkivert når IntArk er klar, så oppdater lenka.
 
 
 ## TODO: Andre påverknader?
 
 
-TODO: Nemne Uninett sin Dataporten, og deira bakgrunn som har påvirka UH:IntArk.
+TODO: Nemne Uninett sin Dataporten, og deira bakgrunn som har påvirka IntArk.
 
 
 Andre?
@@ -36,7 +32,7 @@ Andre?
 ## Prosjekt Unit Datadeling - 2020-2022
 
 
-Opprettingen av UH:IntArk ble gjort i prosjektet Datadeling, med Unit som prosjekteier.
+Opprettingen av IntArk ble gjort i prosjektet Datadeling, med Unit som prosjekteier.
 
 
 * Tjestedesignanalysen Muliggjørende økosystem - TODO: Lenke

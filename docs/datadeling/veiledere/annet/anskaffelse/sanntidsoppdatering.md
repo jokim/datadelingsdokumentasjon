@@ -2,9 +2,7 @@
 title: Sanntidsoppdatering
 ---
 
-# Sanntidsoppdatering
-
-Meldingskøer kan benyttes til forskjellige formål, men i utgangspunktet skiller vi mellom tynne og tykke meldinger. Det vil si om innholdet i meldingen er informasjonsbærende, eller om innholdet i meldingen bare er en peker til der informasjonen er å finne. I UH:IntArk har vi valgt å gå for tynne meldinger, slik at mange typer meldinger kan gå til samme kø. Granulert tilgangskontroll gjøres i WS. Alternativet (litt satt på spissen) er en kø per meldingstype, per konsument, noe som vil øke kompleksiteten.
+Meldingskøer kan benyttes til forskjellige formål, men i utgangspunktet skiller vi mellom tynne og tykke meldinger. Det vil si om innholdet i meldingen er informasjonsbærende, eller om innholdet i meldingen bare er en peker til der informasjonen er å finne. I IntArk har vi valgt å gå for tynne meldinger, slik at mange typer meldinger kan gå til samme kø. Granulert tilgangskontroll gjøres i WS. Alternativet (litt satt på spissen) er en kø per meldingstype, per konsument, noe som vil øke kompleksiteten.
 
 Akkurat som med WS, er det aspekter rundt sanntidsoppdatering og meldingskø man må ta i betraktning når man skal anskaffe eller integrere.
 

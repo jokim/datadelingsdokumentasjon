@@ -1,12 +1,9 @@
 ---
-description: Oversikt over alle veiledninger for UH:IntArk.
 slug: /datadeling/veiledere/
-title: Veiledere i UH:IntArk
+title: Veiledere i IntArk
 ---
 
-# Veiledere i UH:IntArk
-
-Oversikt over alle veiledninger for UH:IntArk.
+Oversikt over alle veiledninger for IntArk.
 
 <div class="vrtx-row">
  <div class="vrtx-box">

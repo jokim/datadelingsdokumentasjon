@@ -1,14 +1,11 @@
 ---
-description: "Detaljer om integrasjonsm\xF8nsteret \"fullstendig provisjonering\"."
 slug: /datadeling/god-praksis/integrasjonsmonster/gammeldags-batch/
 title: Gammeldags fullstendig provisjonering
 ---
 
-# Gammeldags fullstendig provisjonering
-
 Detaljer om integrasjonsmønsteret "fullstendig provisjonering".
 
-Dette er muligens det simpleste integrasjonsmønsteret som i noen tilfeller kan anbefales som integrasjonsmønster i UH:IntArk. Styrken til mønsteret er at det er enkelt, og derfor relativt rimelig å utvikle, og kan derfor vurderes for enkle, mindre tjenester.
+Dette er muligens det simpleste integrasjonsmønsteret som i noen tilfeller kan anbefales som integrasjonsmønster i IntArk. Styrken til mønsteret er at det er enkelt, og derfor relativt rimelig å utvikle, og kan derfor vurderes for enkle, mindre tjenester.
 
 
 TODO: Figur

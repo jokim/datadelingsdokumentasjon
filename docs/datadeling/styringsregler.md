@@ -1,22 +1,22 @@
 ---
 slug: /datadeling/styringsregler
-title: Styringsreglene til UH:IntArk
+title: Styringsreglene til IntArk
 ---
 
-UH-IntArk inneholder noen overordnede føringer som vi kaller *styringsregler*.
-Følger du styringsreglene, så følger du UH-IntArk.
+IntArk inneholder noen overordnede føringer som vi kaller *styringsregler*.
+Følger du styringsreglene, så følger du IntArk.
 
 ## Om styringsreglene
 
-Formålet med styringsreglene for UH-IntArk er å oppsummere de viktigste
+Formålet med styringsreglene for IntArk er å oppsummere de viktigste
 implikasjonene og kravene fra [formålet til
-UH-IntArk](/docs/datadeling/hva-er/styringsreglene-kategorisering),
+IntArk](/docs/datadeling/hva-er/styringsreglene-kategorisering),
 [integrasjonsprinsippene](/docs/datadeling/prinsippene) og
 [referansearkitekturen for
 datadeling](https://unit-norge.github.io/unit-ra/main/B%c3%b8ker/Referansearkitektur%20for%20deling%20av%20data%20i%20h%c3%b8yere%20utdanning%20og%20forsking.html).
-Styringsreglene er altså minimumskravene institusjoner som bruker UH-IntArk må
-oppfylle for å etterleve UH-IntArk. Det forventes likevel at institusjoner som
-bruker UH-IntArk setter seg inn i alle relevante dokumenter på dette området.
+Styringsreglene er altså minimumskravene institusjoner som bruker IntArk må
+oppfylle for å etterleve IntArk. Det forventes likevel at institusjoner som
+bruker IntArk setter seg inn i alle relevante dokumenter på dette området.
 
 Gevinstene med styringsreglene er mer kostnadseffektiv og endringsdyktig
 datadeling hos hver institusjon, og sektoren som helhet, ved at alle aktører
@@ -25,7 +25,7 @@ følger de samme kjørereglene for datadeling.
 Styringsreglene forvaltes av Sikt i henhold til sektorens
 tjenestestyringsmodell, med involvering av institusjonene i sektoren. Det må
 forventes at styringsreglene endres over tid basert på erfaringer fra bruk av
-UH-IntArk, utviklingen i teknologiplattformen for fellestjenesten, endringer i
+IntArk, utviklingen i teknologiplattformen for fellestjenesten, endringer i
 nasjonale føringer for datadeling, utviklingen i beste praksis for
 integrasjoner, endringer i markedet, osv. 
 
@@ -195,7 +195,7 @@ hus](https://data.norge.no/guide/veileder-orden-i-eget-hus/), [anbefalinger for
 god datakvalitet](/docs/datadeling/god-praksis/datakvalitet), [sektorens
 API-kataloger](/docs/datadeling/teknisk-plattform/oversikt), [Felles
 datakatalog](https://data.norge.no/), og [anbefalte roller og ansvar i
-UH-IntArk (spesielt rollen «dataforvalter»)](/docs/datadeling/hva-er/roller/).
+IntArk (spesielt rollen «dataforvalter»)](/docs/datadeling/hva-er/roller/).
 
 
 <table>
@@ -262,7 +262,7 @@ UH-IntArk (spesielt rollen «dataforvalter»)](/docs/datadeling/hva-er/roller/).
 
 ### 3 Bruk av data
 
-UH-IntArk legger til rette for datakonsumenter, men det er også noen regler
+IntArk legger til rette for datakonsumenter, men det er også noen regler
 disse konsumentene må følge.
 
 <table>
@@ -332,11 +332,11 @@ Se også de [tekniske retningslinjene](https://www.usit.uio.no/prosjekter/datade
 ### 5 Organisering
 
 Institusjonene styrer selv hvordan de organiserer seg relatert til datadeling,
-men de må oppfylle noen funksjonelle behov for å overholde UH-IntArk. Vi
+men de må oppfylle noen funksjonelle behov for å overholde IntArk. Vi
 *anbefaler* likevel at institusjonene tar i bruk de [anbefalte rollene fra
 referansearkitekturen for deling av data i høyere utdanning og
 forsking](https://unit-norge.github.io/unit-ra/main/B%C3%B8ker/Referansearkitektur%20for%20deling%20av%20data%20i%20h%C3%B8yere%20utdanning%20og%20forsking.html#_roller_og_ansvar_for_informasjonsforvaltning).
-Se også [UH-IntArk sin anbefaling relatert til
+Se også [IntArk sin anbefaling relatert til
 rollene](/docs/datadeling/hva-er/roller/).
 
  
@@ -408,9 +408,9 @@ rollene](/docs/datadeling/hva-er/roller/).
         <tr>
             <th>6.1</th>
             <td>
-                IT-tjenester som anskaffes eller utvikles skal følge UH-IntArk,
+                IT-tjenester som anskaffes eller utvikles skal følge IntArk,
                 inkludert tjenester levert av eksterne leverandører. Hvis en
-                tjeneste i utgangspunktet ikke følger UH-IntArk må kostnadene
+                tjeneste i utgangspunktet ikke følger IntArk må kostnadene
                 for å gjøre den IntArk-kompatibel tas med i evalueringen.
             </td>
             <td>
@@ -442,13 +442,13 @@ rollene](/docs/datadeling/hva-er/roller/).
             <td>
                 Unntak fra arkitekturen må besluttes basert på
                 kost/nytte-vurderinger i et livsløpsperspektiv. Beslutningen må
-                være sporbar. Unntaket må ivareta UH-IntArks formål og kan ikke
+                være sporbar. Unntaket må ivareta IntArks formål og kan ikke
                 bryte med kravet om å tilgjengeliggjøre kildedata, jf.
                 styringsregel nr. 1.1. Unntak bør meldes tilbake til Sikt, for
                 å gi lærdom for videreutvikling av arkitekturen.
             </td>
             <td>
-                Hensikten med UH-IntArk er å gjøre det enklere å integrere i
+                Hensikten med IntArk er å gjøre det enklere å integrere i
                 sektoren, men sektoren er veldig heterogen, og verden er ikke
                 perfekt. I enkeltsituasjoner vil det være mer hensiktsmessig å
                 godta et unntak, typisk i prioriteringen av kostnader, men det

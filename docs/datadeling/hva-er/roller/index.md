@@ -1,12 +1,7 @@
 ---
-description: "En oversikt over rollene som brukes i IntArk.\n\n\nTODO: Denne oversikten\
-  \ vil bli justert, n\xE5r referansearkitekturen for datadeling i UHF-sektoren er\
-  \ klar."
 slug: /datadeling/hva-er/roller/
-title: Rollene i UH:IntArk
+title: Rollene i IntArk
 ---
-
-# Rollene i UH:IntArk
 
 En oversikt over rollene som brukes i IntArk.
 
@@ -65,7 +60,7 @@ Merk at du kan både være tilbyder og konsument, avhengig av hvilke data du ser
 TBD: Denne rollen er ikke bestemt, men er en mulig rolle. Avventer at referansearkitektur og forvaltningsmodell kommer på plass.
 
 
-Øverste organ i UH:IntArk, som "eier av UH:IntArk".
+Øverste organ i IntArk, som "eier av IntArk".
 
 
 * Avklarer og beslutter retningslinjer og styringsregler relatert til IntArk, etter hvert som uavklarte spørsmål aktualiseres.
@@ -76,7 +71,7 @@ TBD: Denne rollen er ikke bestemt, men er en mulig rolle. Avventer at referansea
 ## Institusjonsansvarlig
 
 
-Hver enkelt institusjon har en person som er ansvarlig for at UH:IntArk følges. Institusjonsansvarlig står fritt til å plassere resterende roller og funksjoner i sin institusjon.
+Hver enkelt institusjon har en person som er ansvarlig for at IntArk følges. Institusjonsansvarlig står fritt til å plassere resterende roller og funksjoner i sin institusjon.
 
 
 ### Roller hos institusjonen

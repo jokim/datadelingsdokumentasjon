@@ -1,17 +1,9 @@
 ---
-description: "En beskrivelse av hvordan styringsmodellen til UH:IntArk fungerer, og\
-  \ hva det har \xE5 si for institusjonene.\n\n\nDet er viktig \xE5 se forholdet mellom\
-  \ IT-l\xF8sning og organisasjon, og IT-l\xF8sning og menneskene som skal benytte\
-  \ l\xF8sningen.\n\n\n**TODO: Dette er under diskusjon i Datadelings-prosjektet.\
-  \ Dette vil bli oppdatert n\xE5r referansearkitekturen er satt.**\n\n\n**TBD: Er\
-  \ styringsmodellen klar nok til \xE5 beskrivast?**"
 slug: /datadeling/om/styringsmodellen/
-title: Styringsmodellen til UH:IntArk
+title: Styringsmodellen til IntArk
 ---
 
-# Styringsmodellen til UH:IntArk
-
-En beskrivelse av hvordan styringsmodellen til UH:IntArk fungerer, og hva det har å si for institusjonene.
+En beskrivelse av hvordan styringsmodellen til IntArk fungerer, og hva det har å si for institusjonene.
 
 
 Det er viktig å se forholdet mellom IT-løsning og organisasjon, og IT-løsning og menneskene som skal benytte løsningen.
@@ -25,7 +17,7 @@ Det er viktig å se forholdet mellom IT-løsning og organisasjon, og IT-løsning
 ## Målet med styringsmodellen
 
 
-UH:IntArk skal gjøre integrasjonsarbeidet ryddigere og enklere å forholde seg til, med tydelige ansvarslinjer, samtidig som at rammeverket skal være fleksibelt å bruke.
+IntArk skal gjøre integrasjonsarbeidet ryddigere og enklere å forholde seg til, med tydelige ansvarslinjer, samtidig som at rammeverket skal være fleksibelt å bruke.
 
 
 Rammeverket skal gi hver institusjon autonomitet og selvstyre, men sette føringer der det er hensiktsmessig for UH-sektoren som helhet. Du kan sammenligne det med trafikkreglene: Du er for eksempel pålagt å kjøre på riktig side av veien, slik at alle kan komme seg trygt og effektivt til sitt mål
@@ -86,7 +78,7 @@ TODO: Gammel:
 ## Modellen
 
 
-UH:IntArk sin modell er laget for å fungere i heterogene organisasjoner der beslutninger tas mest mulig lokalt. Mange universiteter og høgskoler er organisert på denne måten. Modellen bestemmer både hvordan beslutninger og ansvar plasseres, og hvordan tekniske komponenter spiller sammen. Modellen prøver også si noe om samspillet mellom IT og virksomhet. TODO: Bedre forklaring.
+IntArk sin modell er laget for å fungere i heterogene organisasjoner der beslutninger tas mest mulig lokalt. Mange universiteter og høgskoler er organisert på denne måten. Modellen bestemmer både hvordan beslutninger og ansvar plasseres, og hvordan tekniske komponenter spiller sammen. Modellen prøver også si noe om samspillet mellom IT og virksomhet. TODO: Bedre forklaring.
 
 
 Modellen er en kombinasjon av:

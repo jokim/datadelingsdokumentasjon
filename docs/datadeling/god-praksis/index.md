@@ -1,14 +1,9 @@
 ---
-description: "Gode praksiser og andre anbefalinger fra UH:IntArk.\n\n\nMerk at ny\
-  \ teknologi kan gj\xF8re at data kan deles p\xE5 enda mer hensiktsmessige m\xE5\
-  ter, som vil f\xF8re til at anbefalinger p\xE5 dette omr\xE5det vil bli oppdaterte."
 slug: /datadeling/god-praksis/
 title: God praksis
 ---
 
-# God praksis
-
-Gode praksiser og andre anbefalinger fra UH:IntArk.
+Gode praksiser og andre anbefalinger fra IntArk.
 
 
 Merk at ny teknologi kan gjøre at data kan deles på enda mer hensiktsmessige måter, som vil føre til at anbefalinger på dette området vil bli oppdaterte.
@@ -18,7 +13,7 @@ Merk at ny teknologi kan gjøre at data kan deles på enda mer hensiktsmessige m
 <div class="vrtx-row">
  <div class="vrtx-box">
 <h2>Integrasjonsmønster</h2> <div class="vrtx-box-content">
-<p>UH:IntArk anbefaler noen integrasjonsmønstre. Hva du velger er veldig avhengig av dine behov.</p>
+<p>IntArk anbefaler noen integrasjonsmønstre. Hva du velger er veldig avhengig av dine behov.</p>
 <p>For system-til-system-integrasjoner:</p>
 <ul>
 <li>Sanntidsoppdatert provisjonering: <a href="/docs/datadeling/god-praksis/integrasjonsmonster/hendelsesbasert">Hendelsesbasert provisjonering</a></li>

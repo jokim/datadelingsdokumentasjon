@@ -1,13 +1,9 @@
 ---
-description: "Teknisk plattform hjelper deg med integrasjonsarbeidet, og utvides ved\
-  \ behov. Verkt\xF8yene bygger p\xE5 de [funksjonelle komponentene i UH:IntArk](/docs/datadeling/hva-er/komponenter)."
 slug: /datadeling/teknisk-plattform/
-title: UH:IntArk sin tekniske plattform
+title: IntArk sin tekniske plattform
 ---
 
-# UH:IntArk sin tekniske plattform
-
-Teknisk plattform hjelper deg med integrasjonsarbeidet, og utvides ved behov. Verktøyene bygger på de [funksjonelle komponentene i UH:IntArk](/docs/datadeling/hva-er/komponenter).
+Teknisk plattform hjelper deg med integrasjonsarbeidet, og utvides ved behov. Verktøyene bygger på de [funksjonelle komponentene i IntArk](/docs/datadeling/hva-er/komponenter).
 
 
 
@@ -86,7 +82,7 @@ Teknisk plattform hjelper deg med integrasjonsarbeidet, og utvides ved behov. Ve
 <div class="vrtx-row">
  <div class="vrtx-box">
 <h2>Konnektorer</h2> <div class="vrtx-box-content">
-<p>Jo flere som følger UH:IntArk for sine integrasjoner, jo mer IntArk-kompatible konnektorer kan gjenbrukes av andre. Se <a href="/docs/datadeling/kode">kodeeksempler</a> og <a href="/docs/datadeling/erfaringer">erfaringsdelingen</a>.</p>
+<p>Jo flere som følger IntArk for sine integrasjoner, jo mer IntArk-kompatible konnektorer kan gjenbrukes av andre. Se <a href="/docs/datadeling/kode">kodeeksempler</a> og <a href="/docs/datadeling/erfaringer">erfaringsdelingen</a>.</p>
 
 </div>
  </div>

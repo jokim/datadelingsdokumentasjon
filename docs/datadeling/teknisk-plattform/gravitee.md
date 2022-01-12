@@ -1,13 +1,9 @@
 ---
-description: UH:IntArk bruker Gravitee som API manager og API gateway.
 image: /prosjekter/datadeling/arbeidsomrader/integrasjonsarkitektur/dokumentasjon/img/gravitee-logo.png
-pictureAlt: 'Bildet kan inneholde: skrift, logo, symbol, sirkel, grafikk.'
 title: Gravitee
 ---
 
-# Gravitee
-
-UH:IntArk bruker Gravitee som API manager og API gateway.
+IntArk bruker Gravitee som API manager og API gateway.
 
 ## Hva er Gravitee?
 

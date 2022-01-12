@@ -1,15 +1,9 @@
 ---
-description: "Oversikt over integrasjonsm\xF8nstrene som omhandles i UH:IntArk.\n\n\
-  \nDette er \"gode praksiser\" som er anbefalt, men merk at dette vil endre seg etterhvert\
-  \ som teknologi og verden endrer seg."
 slug: /datadeling/god-praksis/integrasjonsmonster/
-title: "Integrasjonsm\xF8nstre i UH:IntArk"
+title: "Integrasjonsmønstre i IntArk"
 ---
 
-# Integrasjonsmønstre i UH:IntArk
-
-Oversikt over integrasjonsmønstrene som omhandles i UH:IntArk.
-
+Oversikt over integrasjonsmønstrene som omhandles i IntArk.
 
 Dette er "gode praksiser" som er anbefalt, men merk at dette vil endre seg etterhvert som teknologi og verden endrer seg.
 

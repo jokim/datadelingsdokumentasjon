@@ -1,22 +1,11 @@
 ---
 author:
 - Einar Jerpseth
-description: "Her beskrives det\_hvilken informasjon som b\xF8r finnes i en tjenesteportef\xF8\
-  lje versus en tjenestekatalog for \xE5 underbygge god og kostnadseffektiv integrasjon.\
-  \ Dokumentet er veiledende og det oppfordres til \xE5 ha en pragmatisk holdning\
-  \ i vurderingen av hva som er praktisk informasjon og detaljeringsniv\xE5.\n\n\n\
-  TBD: Korleis forholder vi oss til tjenesteportef\xF8lje i UH:IntArk? Skal det bort?\
-  \ Er det anbefaling? Er det heller berre del av orden-i-eget-hus? Gjeld berre sentralt\
-  \ eller ogs\xE5 hos kvar enkelt institusjon?"
-title: "Tjenesteportef\xF8lje"
+title: "Tjenesteportefølje"
 ---
-
-# Tjenesteportefølje
 
 Her beskrives det hvilken informasjon som bør finnes i en tjenesteportefølje versus en tjenestekatalog for å underbygge god og kostnadseffektiv integrasjon. Dokumentet er veiledende og det oppfordres til å ha en pragmatisk holdning i vurderingen av hva som er praktisk informasjon og detaljeringsnivå.
 
-
-TBD: Korleis forholder vi oss til tjenesteportefølje i UH:IntArk? Skal det bort? Er det anbefaling? Er det heller berre del av orden-i-eget-hus? Gjeld berre sentralt eller også hos kvar enkelt institusjon?
 
 I dette dokumentet er de fire termene tjenesteportefølje, tjenestekatalog, tjenesteoversikt og tjenesteregister definert som følger:
 

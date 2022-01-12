@@ -1,6 +1,6 @@
 ---
 slug: /datadeling/kode
-title: Kode for UH:IntArk
+title: Kode som bruker IntArk
 ---
 
 Kode for å hjelpe deg i gang med IntArk.
@@ -8,7 +8,7 @@ Kode for å hjelpe deg i gang med IntArk.
 ## Enkle eksempler
 
 * Du kan laste ned ferdig python-kode for å produsere og hente notifikasjoner
-  for din applikasjon fra UH-IntArks Selvbetjeningstjeneste for meldingskøer.
+  for din applikasjon fra IntArks Selvbetjeningstjeneste for meldingskøer.
   Disse filene er ferdig satt opp med detaljer som hostname og navn på kø.
 * [Enkel publisering av notifikasjoner for meldingskø (python)](/datadeling/publisering_simpel.py)
 * [Enkel konsumering av notifikasjoner fra meldingskø (python)](/datadeling/konsument_simpel.py)

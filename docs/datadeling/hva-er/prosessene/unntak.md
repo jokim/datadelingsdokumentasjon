@@ -1,15 +1,6 @@
 ---
-description: "Unntak skal gj\xF8res etter en helhetlig kost/nytte vurdering, og ikke\
-  \ kost/nytte for den enkelte tjeneste/systemeier. Institusjonen m\xE5 ha oversikt\
-  \ over hvilken informasjon som flyter mellom IT-tjenester for \xE5 oppfylle lovp\xE5\
-  lagte krav. Derunder skal en person f\xE5 vite all informasjon vi har om denne personen\
-  \ i alle v\xE5re IT-tjenester. Man m\xE5 ta h\xF8yde for dette n\xE5r man beregner\
-  \ merkostnaden av\_ unntak.\n\n\nTBD: Er referansearkitektur og forvaltning konkretisert\
-  \ nok til \xE5 kunne beskrive dette? Kva er krava, lokalt og sentralt?"
-title: "Unntaksh\xE5ndtering i UH:IntArk"
+title: "Unntakshåndtering i IntArk"
 ---
-
-# Unntakshåndtering i UH:IntArk
 
 Unntak skal gjøres etter en helhetlig kost/nytte vurdering, og ikke kost/nytte for den enkelte tjeneste/systemeier. Institusjonen må ha oversikt over hvilken informasjon som flyter mellom IT-tjenester for å oppfylle lovpålagte krav. Derunder skal en person få vite all informasjon vi har om denne personen i alle våre IT-tjenester. Man må ta høyde for dette når man beregner merkostnaden av  unntak.
 

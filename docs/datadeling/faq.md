@@ -2,22 +2,22 @@
 title: "Spørsmål og svar"
 ---
 
-* **Gjelder UH:IntArk også internt i institusjonen?**  
+* **Gjelder IntArk også internt i institusjonen?**
 
-UH:IntArk kan brukes både mellom tjenester intern hos en institusjon, mellom
+IntArk kan brukes både mellom tjenester intern hos en institusjon, mellom
 institusjoner og med andre utenfor sektoren.
-[Styringsreglene](/docs/datadeling/styringsregler) til UH-IntArk fokuserer på
+[Styringsreglene](/docs/datadeling/styringsregler) til IntArk fokuserer på
 datadeling ut av institusjonen, men det er også nyttig å bruke mye av dette
 internt i institusjonen. 
 
-Hver institusjon bestemmer selv i hvor stor grad de skal bruke UH:IntArk
+Hver institusjon bestemmer selv i hvor stor grad de skal bruke IntArk
 internt. Det er likevel en fordel om flest mulig bruker den samme arkitekturen,
 både fordi det øker muligheten for gjenbruk av tjenester og forenkler samarbeid
-om tjenester. UH:IntArk brukes allerede internt hos institusjoner.
+om tjenester. IntArk brukes allerede internt hos institusjoner.
 
-* **Må UH:IntArk følges?**  
+* **Må IntArk følges?**
 
-Ja, føringene fra UH:IntArk må følges av sektoren. Formålet med UH:IntArk er å
+Ja, føringene fra IntArk må følges av sektoren. Formålet med IntArk er å
 gjøre det enklere å dele data, som vil kreve en innsats fra alle parter. Dette
 kan gjøre det mer kostbart for enkelttjenester, men til nytte for hele
 sektoren. Merk at [unntak fra

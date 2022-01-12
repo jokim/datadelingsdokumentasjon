@@ -1,12 +1,6 @@
 ---
-description: "Som systemeier, prosjektleder, innkj\xF8per og\_applikasjonsforvalter\
-  \ er det flere aspekter ved integrasjonsarktitekturen man b\xF8r tenke\_gjennom\
-  \ f\xF8r produkt eller leverand\xF8r velges. Her diskuteres punkter ved integrasjoner\
-  \ som er verdt \xE5 ta med seg."
 title: Vurderinger ved anskaffelse av IT-tjenester og -systemer
 ---
-
-# Vurderinger ved anskaffelse av IT-tjenester og -systemer
 
 Som systemeier, prosjektleder, innkjøper og applikasjonsforvalter er det flere aspekter ved integrasjonsarktitekturen man bør tenke gjennom før produkt eller leverandør velges. Her diskuteres punkter ved integrasjoner som er verdt å ta med seg.
 
@@ -69,7 +63,7 @@ Som nevnt er web service en sekkebetegnelse. Når man vurderer programvare er de
 
 ## Sanntidsoppdatering
 
-Det finnes flere sanntidsteknologier, men den vi har valgt i UH:IntArk bruker Meldingskø (MQ). Illustrasjonen under viser informasjonsflyten. Teknisk implementasjon krever langt flere komponenter.
+Det finnes flere sanntidsteknologier, men den vi har valgt i IntArk bruker Meldingskø (MQ). Illustrasjonen under viser informasjonsflyten. Teknisk implementasjon krever langt flere komponenter.
 
 ![](/datadeling/img/ia-diamond.jpg)
 En hendelse skjer i kildesystemet (produsent). Produsenten sender en melding til meldingskøen. Der lagres den i en kø spesiell for hver konsument. I meldingen er det en internettadresse til hvor informasjonsobjektet er å finne i en WS. Konsumenten har en liten klient som lytter på meldingskøen. Konsumenten avgjør om meldingen har relevans for seg. Den henter meldingen og finner informasjonsobjektet i WS. Den sjekker så med sin eksisterende informasjon hva som er endret og oppdaterer egen informasjon.
