@@ -1,19 +1,16 @@
 ---
-description: "Informasjon for deg som er ansvarlig for data i en tjeneste. Ofte er\
-  \ du ogs\xE5 tjenesteeier."
 slug: /datadeling/malgrupper/dataeier/
 title: UH:IntArk for dataeiere
 ---
 
-# UH:IntArk for dataeiere
+Informasjon for deg som er ansvarlig for data i en tjeneste. Ofte er du også
+tjenesteeier.
 
-Informasjon for deg som er ansvarlig for data i en tjeneste. Ofte er du også tjenesteeier.
 
 ## Hva trenger jeg å vite?
 
-
-Som ansvarlig for data som andre kan ha bruk for, har du plikt til å dele dette i et API.
-
+Som ansvarlig for data som andre kan ha bruk for, har du plikt til å dele dette
+i et API.
 
 1. Les [Hva er UH:IntArk](/docs/datadeling/hva-er)
 2. Se [oversikten over roller og plikter i UH:IntArk](/docs/datadeling/hva-er/roller) som er relevant for deg. Du som dataeier har rollen "Tilbyder".
@@ -21,8 +18,9 @@ Som ansvarlig for data som andre kan ha bruk for, har du plikt til å dele dette
 
 ## Hvordan komme i gang?
 
-
-Det viktigste er at du er kjent med [din rolle i UH:IntArk](/docs/datadeling/hva-er/roller), spesielt hva som er ditt ansvar som dataeier.
+Det viktigste er at du er kjent med [din rolle i
+UH:IntArk](/docs/datadeling/hva-er/roller), spesielt hva som er ditt ansvar som
+dataeier.
 
 
 * Er dine data tilgjengeliggjort i et API, med et åpent grensesnitt?

@@ -1,31 +1,27 @@
 ---
-description: "Hva du som utvikler trenger \xE5 vite om IntArk, enten du lager integrasjoner\
-  \ eller tjenester. Dokumentet fordrer at du har lest det mer generelle [Hva er IntArk](/docs/datadeling/hva-er)."
 title: Hva er IntArk i praksis, for utviklere
 ---
 
-# Hva er IntArk i praksis, for utviklere
-
-Hva du som utvikler trenger å vite om IntArk, enten du lager integrasjoner eller tjenester. Dokumentet fordrer at du har lest det mer generelle [Hva er IntArk](/docs/datadeling/hva-er).
+Hva du som utvikler trenger å vite om IntArk, enten du lager integrasjoner
+eller tjenester. Dokumentet fordrer at du har lest det mer generelle [Hva er
+IntArk](/docs/datadeling/hva-er).
 
 ## Hva er IntArk for meg som utvikler?
 
-
-IntArk består av en del overordnede føringer for hvordan vi skal dele data i sektoren, og noen tekniske verktøy for å gjøre dette enklere. Meningen med IntArk er å gjøre det enklere å dele data i sektoren, for å enklere kunne digitalisere.
-
+IntArk består av en del overordnede føringer for hvordan vi skal dele data i
+sektoren, og noen tekniske verktøy for å gjøre dette enklere. Meningen med
+IntArk er å gjøre det enklere å dele data i sektoren, for å enklere kunne
+digitalisere.
 
 For deg som utvikler finner du det mest praktiske i:
 
-
-* Du må registrere dine API i institusjonens API manager, og styre data via institusjonen API gateway.
+* Du må registrere dine API i institusjonens API manager, og styre data via
+  institusjonen API gateway.
 * Du må få tilgang til andre sine API via institusjonens API manager.
 * Du kan få tilgang til notifikasjoner fra kildesystemer du har tilgang til.
 
 
 Merk at du må også forholde deg til føringene fra IntArk, spesielt hvis du utvikler på en tjeneste som inneholder data som andre vil kunne bruke.
-
-
-TODO: Andre forsøk
 
 
 ## Hva må jeg gjøre i praksis?
