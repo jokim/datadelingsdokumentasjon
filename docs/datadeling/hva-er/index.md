@@ -5,46 +5,65 @@ title: Hva er UH-IntArk?
 
 UH-IntArk er både en integrasjonsarkitektur og en plattform, som muliggjør og
 forenkler samarbeidet rundt integrasjoner og deling av data i
-kunnskapssektoren. UH-IntArk er bygd opp rundt noen
-[prinsipper](/docs/datadeling/prinsippene/), og føringene til arkitekturen
-oppsummeres i [styringsreglene](/docs/datadeling/styringsregler/). I tillegg
-har UH-IntArk en [teknisk plattform](/docs/datadeling/teknisk-plattform) for
-deling av data, og mange [anbefalinger og gode
-praksiser](/docs/datadeling/god-praksis/) for hvordan dele data.
+kunnskapssektoren. UH-IntArk setter felles føringer for hvordan dele data
+enklere og likere, og gir deg verktøy og hjelp til å gjøre dette. Arkitekturen
+fokuserer per nå på integrasjoner, men inkluderer også informasjonsforvaltning.
+
+Arkitekturen baserer seg på [referansearkitekturen for deling av data i høyere
+utdanning og
+forskning](https://unit-norge.github.io/unit-ra/main/B%C3%B8ker/Referansearkitektur%20for%20deling%20av%20data%20i%20h%C3%B8yere%20utdanning%20og%20forsking.html),
+som er et målbilde for sektoren. UH-IntArk er også bygget opp rundt noen
+[prinsipper](/docs/datadeling/prinsippene/).
 
 UH-IntArk er ment å både brukes mellom institusjoner og mot eksterne utenfor
 kunnskapssektoren, men den kan også brukes for datadeling internt hos hver
 institusjon.
-
-UH-IntArk gjør at alle deltagende institusjoner kan dele data enklere. Det
-betyr alle deltagere må dele data på samme måte. Det er likevel rom for lokale
-tilpasninger, der det er hensiktsmessig.
 
 ## Fellestjeneste for Datadeling
 
 Sikt leverer UH-IntArk som en fellestjeneste for Datadeling. Fellestjenesten
 inkluderer:
 
-[ TODO: bilde ]
+| Hva | Inneholder |
+| --- | --- |
+| Føringer for hvordan dele likt | [Referansearkitektur] og [styringsregler] |
+| Hjelp til å dele | Support, rådgivning og [anbefalinger] |
+| Verktøy for å dele | [Teknisk plattform] |
 
+<!-- TODO: sjekk om detaljane stemmer med tidlegare presentasjonar. Vurder å lage figur av det - vert finare. -->
 
+[teknisk plattform]: /docs/datadeling/teknisk-plattform
+[styringsregler]: /docs/datadeling/styringsregler
+[referansearkitektur]: https://unit-norge.github.io/unit-ra/main/B%C3%B8ker/Referansearkitektur%20for%20deling%20av%20data%20i%20h%C3%B8yere%20utdanning%20og%20forsking.html
+[anbefalinger]: /docs/datadeling/god-praksis
 
 
 ## Hvorfor UH:IntArk?
 
 Digitaliseringen krever mer datadeling og flere integrasjoner. En felles
-integrasjonsarkitektur i universitets- og høgskolesektoren gjør det enklere å
-dele data, både internt hos en institusjon, mellom institusjoner og med resten
-av verden.
+integrasjonsarkitektur i universitets- og høgskolesektoren gjør det enklere og
+mer effektivt å dele data, både internt hos en institusjon, mellom
+institusjoner og med resten av verden.
 
+UH-IntArk fokuserer på det som gir mest verdi for UH-sektoren som helhet.
+Løsninger skal kunne samhandle, uavhengig av leverandør og lokasjon.
+Prinsippene bidrar til at sektoren henger med i utviklingen og kan tilby
+tidsriktige løsninger av høy kvalitet.
 
-UH:IntArk fokuserer på det som gir mest verdi for UH-sektoren som helhet. Løsninger skal kunne samhandle, uavhengig av leverandør og lokasjon. Prinsippene bidrar til at sektoren henger med i utviklingen og kan tilby tidsriktige løsninger av høy kvalitet.
+Noen gevinster med bruk av UH-IntArk:
 
+* Enklere å samarbeide med andre om datadeling, både internt hos hver
+institusjon og mellom institusjonene.
 
+* Enklere å finne og ta i bruk data i andre tjenester.
+
+* Enklere å bytte ut tjenester, siden de er løsere koblet.
+
+* Bruk av anbefalte integrasjonsmønster gir raskere oppdaterte tjenester, som
+gjør de mer brukervenlige.
 
 
 ## Mer informasjon
-
 
 * Se [begrepene brukt i UH:IntArk](/docs/datadeling/begreper/).
 * [Om UH:IntArk](/docs/datadeling/om) gir mer bakgrunnsdetaljer om integrasjonsarkitekturen, inkludert føringer for rammeverket.
