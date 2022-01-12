@@ -1,19 +1,17 @@
 ---
-description: "Mer detaljer om bakgrunnen og f\xF8ringer for UH:IntArk.\n\n\nSe [Hva\
-  \ er UH:IntArk](/docs/datadeling/hva-er) for en enklere introduksjon."
 slug: /datadeling/om/
 title: Om UH:IntArk
 ---
 
-# Om UH:IntArk
+Detaljer om bakgrunnen og føringer for UH:IntArk. Se [Hva er
+UH:IntArk](/docs/datadeling/hva-er) for en enklere introduksjon.
 
-Mer detaljer om bakgrunnen og føringer for UH:IntArk.
+UH-IntArk er en integrasjonsarkitektur som bygger på [referansearkitekturen for
+deling av data i høyere utdanning og
+forskning](https://unit-norge.github.io/unit-ra/main/B%C3%B8ker/Referansearkitektur%20for%20deling%20av%20data%20i%20h%C3%B8yere%20utdanning%20og%20forsking.html).
 
-
-Se [Hva er UH:IntArk](/docs/datadeling/hva-er) for en enklere introduksjon.
-
-Datadelingsplattformen baserer seg på referansearkitekturen Datadeling - TODO.
-
+Den tekniske plattformen til UH-IntArk inneholder verktøy for å oppfylle
+behovene til arkitekturen.
 
 TODO: Innhold på dette området:
 
