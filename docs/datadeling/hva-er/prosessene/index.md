@@ -39,7 +39,6 @@ Forvaltningsprosesser: (TODO: Bør slikt utelatast frå dokumentasjonen? Er det 
 * Forvalte teknisk plattform - TODO: Fleire prosessar
 * Forvalte SPoC
 * Forvalte dokumentasjon
-* TODO: Forvalte community
 * Videreutvikle kurs etc
 
 

@@ -86,7 +86,7 @@ Teknisk plattform hjelper deg med integrasjonsarbeidet, og utvides ved behov. Ve
 <div class="vrtx-row">
  <div class="vrtx-box">
 <h2>Konnektorer</h2> <div class="vrtx-box-content">
-<p>Jo flere som følger UH:IntArk for sine integrasjoner, jo mer IntArk-kompatible konnektorer kan gjenbrukes av andre. Se <a href="/docs/datadeling/kode">kodeeksempler</a> og <a href="/docs/datadeling/community">erfaringsdelingen</a>.</p>
+<p>Jo flere som følger UH:IntArk for sine integrasjoner, jo mer IntArk-kompatible konnektorer kan gjenbrukes av andre. Se <a href="/docs/datadeling/kode">kodeeksempler</a> og <a href="/docs/datadeling/erfaringer">erfaringsdelingen</a>.</p>
 
 </div>
  </div>

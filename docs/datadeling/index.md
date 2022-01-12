@@ -74,6 +74,6 @@ For deg som er sluttbruker av UH:IntArk, for eksempel forsker eller student.
 ## Kontakt og hjelp
 
 * [Kontaktinformasjonen til Sikt](https://sikt.no/kontakt-oss)
-* [Community: Erfaringer fra andre](/docs/datadeling/community)
+* [Erfaringer fra andre](/docs/datadeling/erfaringer/)
 * Kurs
 
