@@ -8,11 +8,9 @@ sidebar_position: 1
 ![IntArk](/datadeling/img/logo.png)
 
 IntArk er en fellestjeneste for datadeling i høyere utdanning og forsking,
-levert av [Sikt](https://sikt.no/). Se også [Sikt sine sider om
+levert av [Sikt](https://sikt.no/). Her finner du brukerdokumentasjonen for
+fellestjenesten. Se også [Sikt sine mer overordnede sider om fellestjenesten
 Datadeling](https://www.uninett.no/Intark).
-
-**Merk: Denne dokumentasjonen er under arbeid, og produseres av [prosjekt Unit
-Datadeling](https://www.unit.no/prosjekter/datadeling-i-hoyere-utdanning-og-forskning).**
 
 ## Kom i gang med IntArk!
 
@@ -73,5 +71,5 @@ For deg som er sluttbruker av IntArk, for eksempel forsker eller student.
 
 * [Kontaktinformasjonen til Sikt](https://sikt.no/kontakt-oss)
 * [Erfaringer fra andre](/docs/datadeling/erfaringer/)
-* Kurs
+* [Kurs](/docs/datadeling/kurs)
 

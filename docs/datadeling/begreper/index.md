@@ -7,7 +7,8 @@ Forklaringer og utdypninger av terminologi og begreper brukt i IntArk og
 teknisk plattform. Oversikten inkluderer også begreper brukt andre steder, og
 hvordan de relateres til IntArk, for å unngå misforståelser.
 
-Se også [data.norge.no](https://data.norge.no) for relaterte begreper.
+Se også [data.norge.no](https://data.norge.no) for relaterte begreper. Se også
+[rollene i IntArk](/docs/datadeling/hva-er/roller).
 
 ## Provisjonere
 
