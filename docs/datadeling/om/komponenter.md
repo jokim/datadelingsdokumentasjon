@@ -1,86 +1,84 @@
 ---
-slug: /datadeling/hva-er/komponenter/
+slug: /datadeling/om/komponenter/
 title: Komponentene i IntArk
 ---
 
-IntArk inneholder noen komponenter som bidrar til å oppfylle behovene. Støttetjenestene baserer seg blant annet på integrasjonsprinsippene.
+IntArk inneholder noen komponenter som bidrar til å oppfylle behovene. Dette
+dokumentet er en funksjonell beskrivelse av komponentene - se tekniske detaljer
+på sidene om [teknisk plattform](/docs/datadeling/teknisk-plattform).
 
 
-Videre beskrives funksjonaliteten til disse komponentene. For mer tekniske detaljer om de konkrete systemene som er valgt, se egne sider om [de tekniske komponentene](/docs/datadeling/teknisk-plattform) som implementerer funksjonene beskrevet her. TODO: Vert det vanskelegare å dele det opp slik?
+## Sentral oversikt over data - API-katalog
 
-## Sentral oversikt over datadeling - API manager
+Institusjonen trenger oversikt over sine API og data, og trenger derfor en
+API-katalog.
 
+En API-katalog må blant annet støtte:
 
-En institusjon må ha kontroll på hvem som har tilgang til hvilke data.
-
-
-For å oppfylle dette kravet, har vi behov for en tjeneste som skal gi denne oversikten:
-
-
-* API manager, som gir
-* API gateway, for tilgangskontroll
-* API-katalog, for publisering og beskrivelse av API-er
+- Datatilbyder kan registrere sitt API i en sentral katalog
+- Datatilbyder kan beskrive sitt API og sine data i en sentral katalog
+- At konsumenter kan selv lete etter relevante API
 
 
-Dette kan vere en eller flere tjenester.
+## Sentral kontroll på datadeling - API manager
 
+En institusjon må ha kontroll på hvem som har tilgang til hvilke data. Dette
+gjelder spesielt data med personopplysninger.
 
-Konsumenter må enkelt kunne finne frem til data, og må kunne enkelt skaffe seg tilgang.
+For å oppfylle dette kravet, har vi behov for en tjeneste med funksjonaliteten:
 
-
-Dette dekkes av en API-katalog, med funksjonaliteten:
-
-
-* Produsenter må kunne tilgjengeliggjøre og beskrive sine API
-* Konsumenter må kunne finne fram til tligjengelige API
-* Konsumenter må kunne søke om tilgang tli API
-
-
-TODO: Figur
-
-
-TODO: Utvide med kva leveransen om API manager kjem fram til.
-
-
- 
+- Sentral oversikt over hvem som har tilgang til hvilke API og data
+- Konsument kan selv søke om tilgang til data fra et API
+- Datatilbyder kan godkjenne/avslå søknad om tilgang til sine data
+- Datatilbyder har oversikt over hvem som har tilgang til sine data
+- Datatilbyder kan trekke tilbake tilgang til sine data
 
 
 ## Kontroll over data - API gateway
 
+Tjenester som tilbyr data må ha sikringer på plass for å sikre at bare de som
+har blitt autorisert får tilgang til disse dataene. Dette kan oppfylles av en
+*API gateway*, som står mellom datatilbyders API og konsumenten - en proxy med
+tilgangskontroll.
 
-Tilgang til data må være på plass. TODO: meir innhald
+API gateway må oppfylle behovene:
 
-
-API med data som ikke kan være åpent tilgjengelig må være tilgangsstyrt. Dette bør styres av en *API gateway*.
-
-
-TODO: Funksjonalitet TODO Skriv meir frå funksjonell side. Dette vert fort teknisk.
-
-
-* Et API må av en API gateway
-* API gateway skal respektere de tilgangene som er tildelt av en API manager
-* API gateway må ha *trust* med API manager
+* API gateway må sperre tilgang til API og data hvis dette ikke er godkjendt i
+API manager.
+* API gateway må gi tilgang til API og data når API manager sier dette er
+greit.
+* API gateway må logge hvem som har hentet ut hvilke data fra et API.
 
 
 ## Meldingskø
 
+Sluttbrukerne har en forventning om at tjenester er oppdaterte med relevante
+data, og at en ikke trenger å for eksempel "vente til neste morgen" før
+endringer er trådd i kraft. Dette gir behov for en mer effektiv overføring av
+kildedata til konsumenter - IntArk har valgt å bruke integrasjonsmønsteret
+"hendelsesbasert provisjonering" for å dekke dette behovet, for tjeneste som
+ikke støtter JIT-provisjonering, og landet på tynne meldinger (eNotifikasjoner)
+for hendelser. Dette krever bruk av en meldingskø.
 
-For å gjøre hendelsesbaserte oppdateringer enklere, tilbyr IntArk en sentralisert meldingskø som produsenter kan publisere notifikasjoner i.
+Produsenten skal ikke trenger å forholde seg til hvilke konsumenter som
+abonnerer på meldingene. Dette tar meldingskøen seg av.
 
+For å gjøre hendelsesbasert provisjonering enklere, må IntArk tilby en
+sentralisert meldingskø som datatilbydere kan publisere til, og konsumenter
+abonnere på meldinger fra.
 
-Meldingskøen oppfyller behovene:
+Meldingskøen må oppfyller behovene:
 
-
-* Produsenter kan sende notifikasjoner - tynne meldinger - til meldingskøen.
+* Datatilbydere kan sende notifikasjoner - tynne meldinger - til meldingskøen.
 * Konsumenter kan abonnere og lytte på meldinger fra de produsentene de ønsker.
+* Datatilbydere må selv kunne registrere sin tjeneste
+* Konsumenter må selv kunne lete etter relevante tjenester med meldinger
+* Konsumenter må selv kunne søke om tilgang til meldinger fra en tjeneste
+* Datatilbydere må kunne godkjenne/avslå søknad om tilgang til sine meldinger
+fra konsumenter.
 
 
-Produsenten skal ikke trenger å forholde seg til hvilke konsumenter som abonnerer på meldingene. Dette tar meldingskøen seg av.
-
-
-TODO: Figur
-
-
+TODO: rydd opp i resten
 
 
 # Meldingskø (MQ) for sanntidsoppdatering
