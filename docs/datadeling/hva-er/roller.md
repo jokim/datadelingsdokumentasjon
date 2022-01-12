@@ -3,86 +3,80 @@ slug: /datadeling/hva-er/roller/
 title: Rollene i IntArk
 ---
 
-En oversikt over rollene som brukes i IntArk.
-
-
-TODO: Denne oversikten vil bli justert, når referansearkitekturen for datadeling i UHF-sektoren er klar.
+De fleste av rollene i IntArk kommer fra
+[referansearkitekturen](https://unit-norge.github.io/unit-ra/main/B%C3%B8ker/Referansearkitektur%20for%20deling%20av%20data%20i%20h%C3%B8yere%20utdanning%20og%20forsking.html#_roller_og_ansvar_for_informasjonsforvaltning).
+Se også [styringsreglene](/docs/datadeling/styringsregler) for hva rollene har
+ansvar for.
 
 
 ## IntArk-koordinator
 
+Hver institusjon som innfører IntArk har sin lokale IntArk-koordinator, som tar
+seg av dialogen med Sikt. Under innføringen av IntArk er det denne personen
+Sikt forholder seg til.
 
-Hver institusjon som innfører IntArk har sin lokale IntArk-koordinator, som tar seg av dialogen med Datadelingsprosjektet. Dette er en midlertidig rolle, under innføringen, for å sikre en god innføring av IntArk. IntArk-koordinatoren er ansvarlig for at institusjonen gjør det som er nødvendig for å innføre IntArk.
+IntArk-koordinatoren må sikre at institusjonen innfører IntArk på en
+hensiktsmessig måte, blant annet ved:
 
-
-## Tilbyder
-
-
-En tilbyder av autoritative data. Kan være person, enhet eller IT-tjeneste, avhengig av konteksten.
-
-
-Andre navn på rollen: dataeier og API-eier.
-
-
-Merk at du kan både være tilbyder og konsument, avhengig av hvilke data du ser på.
-
-
-### Plikter og rettigheter
+- Relevante interessenter blir holdt informert (blant annet dataforvaltere,
+  tjenesteeiere, utviklere og anskaffere).
+- Intern dokumentasjon blir oppdatert.
+- Se til at datatilbydere og konsumenter får tilganger i den tekniske
+  plattformen.
+- Holde Sikt oppdatert på innføringen av IntArk.
+- Koordinere opplæringstilbudet fra Sikt internt hos institusjonen.
+- Melde tilbake til Sikt om mangler og behov.
 
 
-* Tilbyder plikter å tilgjengeliggjøre sine autoritative data for andre som trenger det hos institusjonen. Foretrukket teknologi er Web Services.
-* Tilbyder har ansvar for datakvaliteten i sine autoritative data, blant annet:
-	+ At data er komplette
-	+ At data er maskinlesbare
-	+ At data er riktig formaterte
-* Tilbyder plikter **ikke** å gjøre spesialtilpasninger til konsumentene, men tilby data generelt.
+## Datatilbyder
+
+En *datatilbyder* er en person, tjeneste eller enhet som har ansvar for data
+som er brukbare for andre - dvs. kildedata.
+
+I IntArk er datatilbyderens primære ansvar at dataene blir gjort tilgjengelige,
+uavhengig av hvem som er konsument. Datatilbyder må også følge IntArks
+styringsregler, og bør også se på anbefalingene rundt effektiv datadeling.
 
 
 ## Konsument
 
+En person, enhet eller tjeneste som trenger å hente data fra et kildesystem.
+Husk at du kan både være datatilbyder og konsument - dette avhenger av hvilke
+data du ser på.
 
-En person, enhet eller system som trenger å hente data fra kildesystem.
-
-
-Merk at du kan både være tilbyder og konsument, avhengig av hvilke data du ser på.
-
-
-### Plikter og rettigheter
-
-
-* Konsumenter henter data direkte fra autoritativt kildesystem.
-* Konsumenter bør ikke endre på data fra autoritative kildesystem. Hvis det er feil i data, skal det rettes opp i kilden.
+I IntArk er konsumenten pliktig å hente data direkte fra kildesystemet, og å
+rapportere om feil i data til datatilbyder. Konsumenten må også selv håndtere
+systemspesifikke tilpasninger av dataene.
 
 
-## Forvaltningsrådet
+## Tjenesteeier og tjenesteansvarlig
+
+Tjenesteeier er den organisasjon/virksomhet/enhet som eier en tjeneste.
+Tjenesteansvarlig er den som har det operative ansvaret for tjenesten. Disse
+rollene kommer fra referansearkitekturen. Disse rollene kan fylles av samme
+person.
+
+I IntArk er tjenesteeier ansvarlig for at tjenestens data er tilgjengelig for
+andre, og at den følger referansearkitekturens og IntArks føringer.
+Tjenesteansvarlig har ansvar for at tjenesten følger IntArk, for eksempel i
+videreutvikling.
 
 
-TBD: Denne rollen er ikke bestemt, men er en mulig rolle. Avventer at referansearkitektur og forvaltningsmodell kommer på plass.
+## Dataforvalter
 
+Dataforvalter er den enhet/person som har ansvaret for å administrere dataene
+for en datatilbyder.
 
-Øverste organ i IntArk, som "eier av IntArk".
+Dataforvalter sikrer datakvaliteten, dvs:
 
-
-* Avklarer og beslutter retningslinjer og styringsregler relatert til IntArk, etter hvert som uavklarte spørsmål aktualiseres.
-* Koordinerer og prioriterer integrasjoner som skal utvikles i fellesskap for alle involverte.
-* Forvaltningsrådet rapporterer til Unit.
-
-
-## Institusjonsansvarlig
-
-
-Hver enkelt institusjon har en person som er ansvarlig for at IntArk følges. Institusjonsansvarlig står fritt til å plassere resterende roller og funksjoner i sin institusjon.
-
-
-### Roller hos institusjonen
-
-
-* **Dataeiere**, som er ansvarlige for sine kildesystem, og at de oppfyllere kravene i IntArk. Eksempelvis at data blir tilgjengeliggjort. Dataeier er også ansvarlig for tilgangsadministrasjonen til sine API.
-* **Konsumenter**, som er alle som henter data fra kildesystemene.
-* **Anskaffere**. Disse er ansvarlige for at IntArk følges også ved anskaffelser av IT-tjenester fra tredjeparter.
++ At data er komplette
++ At data er maskinlesbare
++ At data er riktig formaterte
 
 
 ## Se også
 
-
 * [Begrepsbruk](/docs/datadeling/begreper)
+* [Rollene i referansearkitekturen](https://unit-norge.github.io/unit-ra/main/B%C3%B8ker/Referansearkitektur%20for%20deling%20av%20data%20i%20h%C3%B8yere%20utdanning%20og%20forsking.html#_roller_og_ansvar_for_informasjonsforvaltning)
+* [Styringsreglene](/docs/datadeling/styringsregler) - her står det hva som må
+følges

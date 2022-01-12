@@ -1,6 +1,7 @@
 ---
 slug: /datadeling/hva-er/
 title: Hva er IntArk?
+sidebar_position: 1
 ---
 
 IntArk er både en integrasjonsarkitektur og en plattform, som muliggjør og
