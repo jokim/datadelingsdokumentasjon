@@ -37,6 +37,9 @@ I IntArk er datatilbyderens primære ansvar at dataene blir gjort tilgjengelige,
 uavhengig av hvem som er konsument. Datatilbyder må også følge IntArks
 styringsregler, og bør også se på anbefalingene rundt effektiv datadeling.
 
+I den tekniske plattformen skal datatilbydere publisere sine API, og registrere
+sin publisering av notifikasjoner.
+
 
 ## Konsument
 
@@ -47,6 +50,10 @@ data du ser på.
 I IntArk er konsumenten pliktig å hente data direkte fra kildesystemet, og å
 rapportere om feil i data til datatilbyder. Konsumenten må også selv håndtere
 systemspesifikke tilpasninger av dataene.
+
+I den tekniske plattformen må konsumenter registrere sin tjeneste for å kunne
+søke om tilgang til datatilbydere sine API, og kunne abonnere på deres
+notifikasjoner.
 
 
 ## Tjenesteeier og tjenesteansvarlig

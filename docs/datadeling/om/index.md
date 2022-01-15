@@ -6,9 +6,10 @@ sidebar_position: 1
 
 IntArk er både en integrasjonsarkitektur og en plattform, som muliggjør og
 forenkler samarbeidet rundt integrasjoner og deling av data i
-kunnskapssektoren. IntArk setter felles føringer for hvordan dele data
-enklere og likere, og gir deg verktøy og hjelp til å gjøre dette. Arkitekturen
-fokuserer per nå på integrasjoner, men inkluderer også informasjonsforvaltning.
+kunnskapssektoren. IntArk setter felles føringer for hvordan dele data enklere
+og likere, og gir deg [verktøy](/docs/datadeling/teknisk-plattform) og hjelp
+til å gjøre dette. Arkitekturen fokuserer per nå på integrasjoner, men
+inkluderer også informasjonsforvaltning.
 
 Arkitekturen baserer seg på [referansearkitekturen for deling av data i høyere
 utdanning og
@@ -56,17 +57,17 @@ Noen gevinster med bruk av IntArk:
 * Enklere å samarbeide med andre om datadeling, både internt hos hver
 institusjon og mellom institusjonene.
 
-* Enklere å finne og ta i bruk data i andre tjenester.
+* Enklere å finne og ta i bruk data fra andre tjenester.
 
 * Enklere å bytte ut tjenester, siden de er løsere koblet.
 
-* Bruk av anbefalte integrasjonsmønster gir raskere oppdaterte tjenester, som
+* Bruk av anbefalte integrasjonsmønstre gir raskere oppdaterte tjenester, som
 gjør de mer brukervenlige.
 
 
-## Føringer for rammeverket
+## Føringer
 
-Rammeverket forholder seg til føringer fra:
+IntArk forholder seg til føringer fra:
 
 * [Digitaliseringsstrategien for offentlig sektor 2019-2025](https://www.regjeringen.no/no/dokumenter/en-digital-offentlig-sektor/id2653874/)
 * [Digitaliseringsdirektoratets overordnede arkitekturprinsipper](https://www.digdir.no/digitalisering-og-samordning/overordnede-arkitekturprinsipper/1065)
@@ -74,10 +75,7 @@ Rammeverket forholder seg til føringer fra:
 * [Digitaliseringsdirektoratets rammeverk for informasjonsforvaltning](https://www.digdir.no/informasjonsforvaltning/informasjonsforvaltning/2113)
 
 
-## Mer informasjon
+## Se også
 
 * Se [begrepene brukt i IntArk](/docs/datadeling/begreper/).
-* [Om IntArk](/docs/datadeling/om) gir mer bakgrunnsdetaljer om integrasjonsarkitekturen, inkludert føringer for rammeverket.
-* [Referansearkitekturen for Datadeling](/docs/datadeling/om/referansearkitektur), som rammeverket bygger på.
-* [Bakgrunnen for IntArk](/docs/datadeling/om/bakgrunn) gir historikken til integrasjonsarkitekturen.
 * [Styringsmodellen til IntArk](/docs/datadeling/om/styringsmodellen) beskriver modellen som ligger bak oppsettet av IntArk.

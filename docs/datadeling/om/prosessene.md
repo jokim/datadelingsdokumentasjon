@@ -3,7 +3,8 @@ slug: /datadeling/hva-er/prosessene/
 title: Prosessene i IntArk
 ---
 
-TBD: Er prosessene klare nok til å beskrives?
+## Operative prosesser
+
 
 Utførende prosesser:
 
