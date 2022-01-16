@@ -1,18 +1,36 @@
 ---
-description: "Selvbetjeningsportalen for RabbitMQ gj\xF8r det enklere for datatilbydere\
-  \ og konsumenter \xE5 forvalte sine tilganger til meldinger."
 image: /prosjekter/datadeling/arbeidsomrader/integrasjonsarkitektur/dokumentasjon/teknisk-plattform/figurer/brom-new-application-overview.png
 pictureAlt: "Skjermskudd fra tjenesten viser oversikt over at du kan abonnere p\xE5\
   \ meldinger, behande abonnenter, publisere notifikasjoner, og administrere applikasjonen."
-pictureCaption: '<p>Skjemskudd fra Selvbetjeningsportalen for RabbitMQ</p>
-
-  '
+pictureCaption: 'Skjemskudd fra Selvbetjeningsportalen for RabbitMQ'
 title: Selvbetjening for RabbitMQ
 ---
 
-# Selvbetjening for RabbitMQ
+Selvbetjeningsportalen for RabbitMQ gjør det enklere for datatilbydere og
+konsumenter å forvalte sine tilganger til meldinger.
 
-Selvbetjeningsportalen for RabbitMQ gjør det enklere for datatilbydere og konsumenter å forvalte sine tilganger til meldinger.
+
+## Kom i gang
+
+For de utålmodige:
+
+1. Logg på Selvbetjeningsportalen med din Feide-bruker. Se [instans-oversikten for
+   lenke hos din institusjons](/docs/datadeling/teknisk-plattform/oversikt).
+2. Registrer din applikasjon. Dette gjelder både datatilbydere og konsumenter.
+2. Konsumenter må søke om tilgang til meldinger fra datatilbydere.
+2. Hent ut tilkoblingsdetaljer for din tjeneste fra selvbetjeningsportalen, og
+   sett det opp i din tjeneste.
+
+I selvbetjeningsportalen kalles både datatilbydere og konsumenter for
+"applikasjoner". En applikasjon kan både tilby meldinger og konsumere meldinger
+fra andre. Dette må naturligvis settes opp i selvbetjeningsportalen.
+
+Anbefalt meldingsprotokoll: [AMQP 0.9.1](http://www.amqp.org/specification/0-9-1/amqp-org-download) på port 5671 (TLS).
+
+Se [kode-eksempler](/docs/datadeling/kode/):
+
+* Hvordan sende notifikasjoner (datatilbyder):  [publisering\_simpel.py](/datadeling/publisering_simpel.py)
+* Hvordan motta notifikasjoner (konsument): [konsument\_simpel.py](/datadeling/konsument_simpel.py)
 
 
 ## Hva gjør Selvbetjeningsportalen for RabbitMQ?
