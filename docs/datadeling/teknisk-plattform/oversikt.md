@@ -25,8 +25,10 @@ like mellom institusjonene, bare med institusjonens forkortelse som forskjell.
 
 ## Gravitee
 
-* API manager (brukergrensesnittet for å administrere API og tilganger) har
+* API-katalog (brukergrensesnittet for å finne API og søke om tilgang) har
 adressen: `https://api-INSTITUSJON.intark.uh-it.no`
+* API manager (brukergrensesnittet for å administrere API og tilganger) har
+adressen: `https://api-mgmt-INSTITUSJON.intark.uh-it.no`
 * API gateway (der konsumentene henter data fra) har adressen:
 `https://gw-INSTITUSJON.intark.uh-it.no`
 * HTTPS er alltid påkrevd

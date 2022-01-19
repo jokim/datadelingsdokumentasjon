@@ -121,6 +121,36 @@ tilgang til akkurat de dataene leverandøren trenger. Det siste er riktignok
 avhengig av hvor godt API-et er designet.
 
 
+## Mer teknisk om Gravitee
+
+IntArk bruker open source versjonen av [Gravitee API
+management](https://gravitee.io). Vi kjører kun komponenten som heter *API
+management*, ikke *Access Management* eller *Alert Engine*. Fra starten av 2022
+kjører vi versjon 3.
+
+Versjon 3 av Gravitee splitter opp administrasjonen av API-er og konsumenter på
+to forskjellige adresser. For å abonnere på et API bruker du
+`api-INSTITUSJON.intark.uh-it.no`. For å opprette API må du først ha fått
+riktige rettigheter i din institusjons Gravitee, og deretter gå til
+`api-mgmt-INSTITUSJON.intark.uh-it.no`.
+
+Ved hjelp av *rolling upgrades* vil Gravitee oppgraderes uten nedetid for *API
+gateway*. Det betyr at integrasjoner ikke vil merke noe til oppgraderingene,
+selv om brukergrensesnittet vil kunne trenge noe nedetid.
+
+For redundans kjører vi 2 eller 3 av alle containere som Gravitee bruker.
+
+Gravitee ble valgt som API manager og API gateway i IntArk fordi det er en av
+få systemer som støtter distribuert tilgangsstyring av API-er, slik at du kan
+bestemme hvem som skal kunne administrere og hat tilgang til ditt API, og ikke
+alle hos institusjonen. I tillegg er den open source og har mindre lock in enn
+andre produkter.
+
+Det er per i dag ikke støtte for å sette opp lokale API gateways. Dette vil
+kunne komme i fremtiden, etter målbildet i referansearkitekturen som IntArk
+baserer seg på.
+
+
 ## Se også
 
 * [Gravitee sine egne nettsider](https://www.gravitee.io/)

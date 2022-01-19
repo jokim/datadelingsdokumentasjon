@@ -3,8 +3,8 @@ image: /prosjekter/datadeling/arbeidsomrader/integrasjonsarkitektur/dokumentasjo
 title: RabbitMQ
 ---
 
-RabbitMQ er tjeneste for å administrere meldingskøer, og forvalte din tjenestes
-meldinger. Så du slipper.
+RabbitMQ tar seg av dine meldingskøer og din tjenestes meldinger. Så du
+slipper.
 
 
 ## Kom i gang
@@ -24,12 +24,17 @@ Se [kode-eksempler](/docs/datadeling/kode/):
 * Hvordan sende notifikasjoner (datatilbyder):  [publisering\_simpel.py](/datadeling/publisering_simpel.py)
 * Hvordan motta notifikasjoner (konsument): [konsument\_simpel.py](/datadeling/konsument_simpel.py)
 
+
 ## Hva er RabbitMQ?
 
 RabbitMQ er en tjeneste for å håndtere meldinger og meldingskøer. Systemet ble
 valgt i IntArk fordi det følger [IntArk sine
 prinsipper](/docs/datadeling/prinsippene), spesielt med god støtte for åpne
 standarder i stedet for sine egne, proprietære løsninger.
+
+De fleste trenger ikke tilgang til RabbitMQ direkte, men bruker det via
+[Selvbetjeningsportalen for RabbitMQ](/docs/datadeling/teknisk-plattform/brom).
+RabbitMQ krever en del teknisk innsikt for å brukes riktig.
 
 Datatilbydere kan sende inn meldinger fra sin tjeneste til RabbitMQ. RabbitMQ
 tar seg av å fordele disse meldingene videre til alle konsumenter som abonnerer
@@ -80,6 +85,7 @@ meldinger fra exchangen, og kopierer disse over til riktige meldingskøer.
 Tjenester som abonnerer på meldinger henter disse fra en meldingskø. Når en
 tjeneste henter ut en melding, må den "ack"-es for å slettes fra meldingskøen.
 
+
 ### AMQP
 
 I IntArk bruker vi primært meldingsprotokollen [AMQP
@@ -120,7 +126,6 @@ metoden **Topic Exchange**.
 
 
 ### Kø
-
 
 En kø (*queue*) er én konsuments samling av meldinger, eller hvilke typer
 notifikasjonar den vil ha (se *Binding*).  *RabbitMQ* videredistribuerer
@@ -163,6 +168,24 @@ der:
 Datatilbyder skal vanligvis dokumentere hvilke verdier de bruker. Dette gjør
 det enklere for konsumenter å ignorere meldinger som ikke er relevante for de.
 
+
+### Om RabbitMQ
+
+IntArk bruker [RabbitMQ](https://www.rabbitmq.com/) for å håndtere
+meldingskøer. 
+
+Hver applikasjon opprettet i selvbetjeningsportalen blir registrert som en
+bruker i RabbitMQ, som du også kan logge på med. Brukernavn og passord finner
+du i selvbetjeningsportalen. Ta kontakt hvis din institusjon trenger egne
+brukere med andre rettigheter.
+
+RabbitMQ kjører som et cluster med 3 noder. Du må ta høyde for at en av nodene
+kan være nede. Det anbefales å bruke køer av typen *Quorum* i produksjon. 
+
+RabbitMQ har ingen direkte kobling med Gravitee, annet enn at de kjører på den
+samme infrastrukturen, og brukes av de samme datatilbydere og konsumenter.
+Dette er to helt uavhengige produkter, og blir blant annet oppgradert uavhengig
+av hverandre.
 
 
 ## Notifikasjoner
