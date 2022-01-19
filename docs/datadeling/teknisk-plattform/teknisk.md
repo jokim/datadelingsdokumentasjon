@@ -29,7 +29,7 @@ baserer seg på.
 ## RabbitMQ
 
 IntArk bruker [RabbitMQ](https://www.rabbitmq.com/) for å håndtere
-meldingskøer. Per 2022 kjører vi versjon 3.8.
+meldingskøer. 
 
 Vi bruker primært AMQPS-protokollen for å sende og motta meldinger.
 
@@ -61,17 +61,15 @@ installert i [NREC](https://nrec.no), i osl-sonen.
 [Red Hat OpenShift](https://www.openshift.com)", og er upstream-versjonen av
 OpenShift. Det blir i dagligtale ofte omtalt som *OpenShift*.
 
-IntArk-plattformen har egne clustre som kjører på NREC i osl-sonen. Per oktober
-2020 brukes versjon 3.11 av OKD, men vi planlegger oppgradere til versjon 4.7 i
-løpet av sommeren 2021 TODO: Sjekk med Ingvar. De er installert med
-*ovs-multitenant SDN plugin*, og hvert prosjekt (namespace) er nettverksmessig
-isolert.
+IntArk-plattformen har egne clustre som kjører på NREC i osl-sonen. De er 
+installert med *ovs-multitenant SDN plugin*, og hvert prosjekt (namespace) er 
+nettverksmessig isolert.
 
 Hver institusjon som bruker IntArk-plattformen har hvert sitt prosjekt hvor
 Gravitee, RabbitMQ og BROM kjører.
 
-Oppgraderinger av OKD er for versjon 3 basert på blue-green-metodikk. Det vil
-si at oppgraderinger skjer ved å installere nytt cluster med nyeste versjon av
+Oppgraderinger av OKD er basert på blue-green-metodikk. Det vil si at 
+oppgraderinger skjer ved å installere nytt cluster med nyeste versjon av
 alle komponenter, og deretter flytte applikasjonene fra et cluster til et
 annet. Dette betyr at alle tjenester vil bytte IP-adresse ved oppgraderinger.
 
