@@ -14,15 +14,16 @@ dekke IntArk sine behov for en enklere og bedre datadeling.
 
 Gravitee kan deles i to komponenter: *API manager* er brukergrensesnittet der
 institusjonen forvalter API og tilganger til data, mens *API gateway* håndterer
-tilgangskontrollen til API.
+tilgangskontrollen til API. Alle tjenester må hente data via API gateway.
 
-Brukergrensesnittet til Gravitee kan igjen deles i to komponenter: en API 
-portal hvor man har en oversikt over alle APIer og man kan sette opp 
-applikasjoner som abbonerer på de. Og en administrasjons side hvor man setter
-opp og administrerer APIene samt har muligheten til å overvåke bruken av de. 
-Tilgangen til denne siden krever riktige rettigheter i Gravitee.
+Brukergrensesnittet til Gravitee kan igjen deles i to komponenter:
 
-Og alle tjenester må hente data via API gateway.
+- En API-katalog som gir oversikt over alle API-er. Du kan her sette opp
+applikasjoner som kan abonnere på disse.
+
+- En administrasjonsside hvor du setter opp og kan overvåke dine API. Du må ha
+riktige rettigheter i Gravitee for å få tilgang til denne siden.
+
 
 ## Gravitee som API manager
 
