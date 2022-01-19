@@ -9,6 +9,11 @@ management](https://gravitee.io). Vi kjører kun komponenten som heter *API
 management*, ikke *Access Management* eller *Alert Engine*. Fra starten av 2022
 kjører vi versjon 3.
 
+Versjon 3 av gravitee splitter opp administrasjonen av APIer og abboneringen 
+på de med to forskjellige addresser. For å abbonere på et API bruker man 
+api-INSTUTIJON.intark.uh-it.no, for å opprette APIer må man ha fått de riktige
+rettighetene i gravitee samt bruke siden api-mgmt-INSTUTIJON.intark.uh-it.no.
+
 Ved hjelp av *rolling upgrades* vil Gravitee oppgraderes uten nedetid for *API
 gateway*. Det betyr at integrasjoner ikke vil merke noe til oppgraderingene,
 selv om brukergrensesnittet vil kunne trenge noe nedetid.
@@ -41,7 +46,7 @@ du i selvbetjeningsportalen. Ta kontakt hvis din institusjon trenger egne
 brukere med andre rettigheter.
 
 RabbitMQ kjører som et cluster med 3 noder. Du må ta høyde for at en av nodene
-kan være nede. Det anbefales å bruke HA-mode i produksjon. TODO: Eller Quorum?
+kan være nede. Det anbefales å bruke Quorum i produksjon. 
 
 RabbitMQ har ingen direkte kobling med Gravitee, annet enn at de kjører på den
 samme infrastrukturen, og brukes av de samme datatilbydere og konsumenter.
