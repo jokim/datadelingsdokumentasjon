@@ -9,10 +9,11 @@ management](https://gravitee.io). Vi kjører kun komponenten som heter *API
 management*, ikke *Access Management* eller *Alert Engine*. Fra starten av 2022
 kjører vi versjon 3.
 
-Versjon 3 av gravitee splitter opp administrasjonen av APIer og abboneringen 
-på de med to forskjellige addresser. For å abbonere på et API bruker man 
-api-INSTUTIJON.intark.uh-it.no, for å opprette APIer må man ha fått de riktige
-rettighetene i gravitee samt bruke siden api-mgmt-INSTUTIJON.intark.uh-it.no.
+Versjon 3 av Gravitee splitter opp administrasjonen av API-er og konsumenter på
+to forskjellige adresser. For å abonnere på et API bruker du
+`api-INSTITUSJON.intark.uh-it.no`. For å opprette API må du først ha fått
+riktige rettigheter i din institusjons Gravitee, og deretter gå til
+`api-mgmt-INSTITUSJON.intark.uh-it.no`.
 
 Ved hjelp av *rolling upgrades* vil Gravitee oppgraderes uten nedetid for *API
 gateway*. Det betyr at integrasjoner ikke vil merke noe til oppgraderingene,
