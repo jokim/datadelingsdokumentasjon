@@ -19,8 +19,8 @@ integrasjoner blir enklere, og dermed billigere, å implementere. Det bør
 påregnes noe kostnad til opplæring ved innføring.
 
 IntArk krever ikke at alle systemer må følge IntArk fullt ut fra starten av.
-[Prinsippet om kost-nytte](/docs/datadeling/prinsippene/fleksibel) følges. Noen
-systemer vil kanskje aldri bli oppgradert for IntArk.
+[Prinsippet om at avvik må begrunnes](/docs/datadeling/prinsippene/#Avvik må begrunnes)
+følges. Noen systemer vil kanskje aldri bli oppgradert for IntArk.
 
 Det vil også være en fordeling av kostnaden ved drift og forvaltning av
 Datadelingsplattformen.

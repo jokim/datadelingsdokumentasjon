@@ -34,7 +34,7 @@ Optimalisering kan gjøres, for eksempel:
 Eksempler på tjenester som bruker dette integrasjonsmønsteret:
 
 
-* Gamle systemer som er vurdert til å være for kostbare å oppgradere, uten at det gir nok gevinst. Dette følger prinsippet [Fleksibel: kost/nyttevurderinger kan legitimere avvik](/docs/datadeling/prinsippene/fleksibel).
+* Gamle systemer som er vurdert til å være for kostbare å oppgradere, uten at det gir nok gevinst. Dette følger prinsippet [Avvik må begrunnes](/docs/datadeling/prinsippene/#Avvik må begrunnes).
 * Gamle systemer som står på vent for oppgradering eller videreutvikling.
 * Rapporteringstjenester med høy toleranse for utdaterte data.
 

@@ -29,7 +29,7 @@ Se [kode-eksempler](/docs/datadeling/kode/):
 
 RabbitMQ er en tjeneste for å håndtere meldinger og meldingskøer. Systemet ble
 valgt i IntArk fordi det følger [IntArk sine
-prinsipper](/docs/datadeling/prinsippene), spesielt med god støtte for åpne
+integrasjonsprinsipper](/docs/datadeling/prinsippene), spesielt med god støtte for åpne
 standarder i stedet for sine egne, proprietære løsninger.
 
 De fleste trenger ikke tilgang til RabbitMQ direkte, men bruker det via

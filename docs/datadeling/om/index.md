@@ -15,7 +15,7 @@ Arkitekturen baserer seg på [referansearkitekturen for deling av data i høyere
 utdanning og
 forskning](https://unit-norge.github.io/unit-ra/main/B%C3%B8ker/Referansearkitektur%20for%20deling%20av%20data%20i%20h%C3%B8yere%20utdanning%20og%20forsking.html),
 som er et målbilde for sektoren. IntArk er også bygget opp rundt noen
-[prinsipper](/docs/datadeling/prinsippene/). Bak IntArk ligger et tankesett som
+[integrasjonsprinsipper](/docs/datadeling/prinsippene/). Bak IntArk ligger et tankesett som
 har sett på hva som er mest hensiktsmessig for institusjoner i
 kunnskapssektoren, både rundt integrasjoner, men også alt som er relatert til
 disse.

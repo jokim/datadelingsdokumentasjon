@@ -1,13 +1,12 @@
 ---
 slug: /datadeling/prinsippene
-title: Prinsippene for IntArk
+title: Integrasjonsprinsippene for IntArk
 ---
 
-Kjernen i IntArk er prinsippene for integrasjonsarkitektur. Resten av
-IntArk er bygget opp rundt disse. IntArk følger generelt [DigDirs
-overordnede
+Kjernen i IntArk er integrasjonsprinsippene nevnt nedenfor. Resten av IntArk er
+bygget opp rundt disse. IntArk følger generelt [DigDirs overordnede
 arkitekturprinsipper](https://www.digdir.no/samhandling/overordnede-arkitekturprinsipper/1065),
-men de spesifikke prinsippene i IntArk er krav som må oppfylles.
+men de spesifikke integrasjonsprinsippene i IntArk er krav som må oppfylles.
 
 
 ## Brukerorientert arkitektur
@@ -39,6 +38,7 @@ Se gjerne:
   - Prinsipp 4.2: Tilby data i tråd med regjeringens «[Retningslinjer ved tilgjengeliggjøring av offentlige data](https://www.regjeringen.no/no/dokumenter/retningslinjer-ved-tilgjengeliggjoring-av-offentlige-data/id2536870/)».
   - Prinsipp 4.3: Gjenbruk data fra autoritative kilder. Bruk kopier kun der det er nødvendig, og sørg for at disse er oppdaterte.
   - Prinsipp 4.5: Unngå innlåsing av data i systemer.
+- [FAIR prinsippene](https://www.go-fair.org/fair-principles/)
 
 ## Gjenbruk av løsninger
 
@@ -50,11 +50,11 @@ Se gjerne [Digitaliseringsdirektoratets arkitekturprinsipp 5: Del og gjenbruk l�
 
 ## Etterrettelig bruk av data
 
-Konsum av APIer skal skje gjennom API Manager. Dette medfører at institusjonen har oversikt over hvem som konsumerer hvilke data.
+Konsum av API-er skal skje gjennom API Manager. Dette medfører at institusjonen har oversikt over hvem som konsumerer hvilke data.
 
 Se også [Digitaliseringsdirektoratets arkitekturprinsipp 7.3: Virksomhetene må ha styring og kontroll som sørger for at informasjonssikkerhet og personvern er ivaretatt i tjenestene](https://www.digdir.no/digitalisering-og-samordning/prinsipp-7-sorg-tillit-til-oppgavelosningen/1064).
 
-## Avvik er tillatt
-Avvik fra prinsippene om Tjenesteorientert arkitektur og Tilgjengelige data er lov, så lenge det er hensiktsmessig for sektoren.
+## Avvik må begrunnes
+Avvik fra prinsippene om Tjenesteorientert arkitektur og Tilgjengelige data er lov, så lenge det kan begrunnes at avviket er hensiktsmessig for sektoren.
 
 Et eksempel er at det kan være hensiktsmessig å bruke en leverandørspesifikk integrasjon, hvis kostnadene ved å innføre en løsere kobling blir høyere enn konsekvensene og risikoen for institusjonen ved å låse seg til en leverandør.
