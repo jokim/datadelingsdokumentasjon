@@ -1,16 +1,19 @@
 ---
 slug: /datadeling/
-title: "IntArk - Datadeling i universitets- og høgskolesektoren"
+title: "Fellestjeneste for Datadeling (IntArk)"
 sidebar_label: "IntArk"
 sidebar_position: 1
 ---
 
 ![IntArk](/datadeling/img/logo.png)
 
-IntArk er en fellestjeneste for datadeling i høyere utdanning og forsking,
-levert av [Sikt](https://sikt.no/). Her finner du brukerdokumentasjonen for
-fellestjenesten. Se også [Sikt sine mer overordnede sider om fellestjenesten
-Datadeling](https://www.uninett.no/Intark).
+Fellestjenesten for datadeling i høyere utdanning og forsking (IntArk) er et
+hjelpemiddel for å gjøre det enklere å dele data i kunnskapssektoren, og
+leveres av [Sikt](https://sikt.no/).
+
+Dette området inneholder teknisk dokumentasjon og med detaljer for de som
+bruker fellestjenesten. Se også [Sikt sine mer overordnede sider om
+Fellestjenesten for datadeling](https://www.uninett.no/Intark).
 
 ## Kom i gang med IntArk!
 
