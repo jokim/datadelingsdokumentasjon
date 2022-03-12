@@ -1,33 +1,36 @@
 ---
 slug: /datadeling/om/
-title: Hva er IntArk?
+title: Hva er Fellestjenesten for Datadeling (IntArk)?
 sidebar_position: 1
 ---
 
-IntArk er både en integrasjonsarkitektur og en plattform, som muliggjør og
-forenkler samarbeidet rundt integrasjoner og deling av data i
-kunnskapssektoren. IntArk setter felles føringer for hvordan dele data enklere
-og likere, og gir deg [verktøy](/docs/datadeling/teknisk-plattform) og hjelp
-til å gjøre dette. Arkitekturen fokuserer per nå på integrasjoner, men
-inkluderer også informasjonsforvaltning.
+Fellestjenesten for Datadeling (IntArk) er både en integrasjonsarkitektur og en
+plattform, som muliggjør og forenkler samarbeidet rundt integrasjoner og deling
+av data i kunnskapssektoren. Fellestjenesten setter felles føringer for hvordan
+dele data enklere og likere, og gir deg
+[verktøy](/docs/datadeling/teknisk-plattform) og hjelp til å gjøre dette.
+
+Fellestjenesten fokuserer per nå på *integrasjoner*, men inkluderer også noe
+informasjonsforvaltning. Målet er å fokusere på deling av *data*, men det
+krever noen steg for å komme dit, blant annet at det blir enklere å integrere
+med institusjonene. Fellestjenesten skal hjelpe med dette.
 
 Arkitekturen baserer seg på [referansearkitekturen for deling av data i høyere
 utdanning og
 forskning](https://unit-norge.github.io/unit-ra/main/B%C3%B8ker/Referansearkitektur%20for%20deling%20av%20data%20i%20h%C3%B8yere%20utdanning%20og%20forsking.html),
-som er et målbilde for sektoren. IntArk er også bygget opp rundt noen
-[integrasjonsprinsipper](/docs/datadeling/prinsippene/). Bak IntArk ligger et tankesett som
-har sett på hva som er mest hensiktsmessig for institusjoner i
+som er et målbilde for sektoren. Fellestjenesten er også bygget opp rundt noen
+[integrasjonsprinsipper](/docs/datadeling/prinsippene/). Bak ligger et
+tankesett som har sett på hva som er mest hensiktsmessig for institusjoner i
 kunnskapssektoren, både rundt integrasjoner, men også alt som er relatert til
 disse.
 
-IntArk er ment å både brukes mellom institusjoner og mot eksterne utenfor
-kunnskapssektoren, men den kan også brukes for datadeling internt hos hver
-institusjon.
+Fellestjenesten er ment å både brukes mellom institusjoner og mot eksterne
+utenfor kunnskapssektoren, men den kan også brukes for datadeling internt hos
+hver institusjon.
 
 ## Fellestjeneste for Datadeling
 
-Sikt leverer IntArk som en fellestjeneste for Datadeling. Fellestjenesten
-inkluderer:
+Sikt leverer fellestjenesten for Datadeling. Fellestjenesten inkluderer:
 
 | Hva | Inneholder |
 | --- | --- |
@@ -43,19 +46,19 @@ inkluderer:
 [anbefalinger]: /docs/datadeling/god-praksis
 
 
-## Hvorfor IntArk?
+## Hvorfor Fellestjeneste for Datadeling?
 
 Digitaliseringen krever mer datadeling og flere integrasjoner. En felles
 integrasjonsarkitektur i universitets- og høgskolesektoren gjør det enklere og
 mer effektivt å dele data, både internt hos en institusjon, mellom
 institusjoner og med resten av verden.
 
-IntArk fokuserer på det som gir mest verdi for UH-sektoren som helhet.
+Fellestjenesten fokuserer på det som gir mest verdi for UH-sektoren som helhet.
 Løsninger skal kunne samhandle, uavhengig av leverandør og lokasjon.
 Prinsippene bidrar til at sektoren henger med i utviklingen og kan tilby
 tidsriktige løsninger av høy kvalitet.
 
-Noen gevinster med bruk av IntArk:
+Noen gevinster med bruk av fellestjenesten:
 
 * Enklere å samarbeide med andre om datadeling, både internt hos hver
 institusjon og mellom institusjonene.
@@ -70,7 +73,7 @@ gjør de mer brukervenlige.
 
 ## Føringer
 
-IntArk forholder seg til føringer fra:
+Fellestjenesten forholder seg til føringer fra:
 
 * [Digitaliseringsstrategien for offentlig sektor 2019-2025](https://www.regjeringen.no/no/dokumenter/en-digital-offentlig-sektor/id2653874/)
 * [Digitaliseringsdirektoratets overordnede arkitekturprinsipper](https://www.digdir.no/digitalisering-og-samordning/overordnede-arkitekturprinsipper/1065)
@@ -80,5 +83,4 @@ IntArk forholder seg til føringer fra:
 
 ## Se også
 
-* Se [begrepene brukt i IntArk](/docs/datadeling/begreper/).
-* [Styringsmodellen til IntArk](/docs/datadeling/om/styringsmodellen) beskriver modellen som ligger bak oppsettet av IntArk.
+* [Begrepsoversikten](/docs/datadeling/begreper/)

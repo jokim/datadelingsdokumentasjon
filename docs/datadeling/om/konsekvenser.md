@@ -1,33 +1,38 @@
 ---
-title: Konsekvenser med IntArk
+title: Konsekvenser med fellestjenesten for Datadeling
 ---
 
-Innføring av en integrasjonsarkitektur påvirker organisasjonen. Her er en
-oversikt over konsekvensene med IntArk.
+Hver institusjon velger selv i hvor stor grad de tar i bruk fellestjenesten. Vi
+anbefaler likevel at institusjonene tar i bruk både målarkitekturen fra
+referansearkitekturen, de tekniske komponentene fra fellestjenesten og alle
+anbefalingene fra fellestjenesten, og innfører alt dette i sin egen
+integrasjonsarkitektur. En slik innføring vil kunne gi noen konsekvenser for
+institusjonen.
 
-Konsekvensene varierer utfra dagens situasjon hos institusjonen.
+Konsekvensene varierer utfra dagens situasjon hos institusjonen, og hva
+institusjonen velger å innføre.
 
 
 ## Økonomiske konsekvenser
 
-IntArk inneholder føringer som setter andre krav til IT-systemer. Dette vil
-kunne føre til kostnader både ved tilpasning av eksisterende systemer, og nye
-systemer får krav til mer funksjonalitet.
+Fellestjenesten inneholder føringer som setter andre krav til IT-tjenestene.
+Dette vil kunne føre til kostnader både ved tilpasning av eksisterende
+systemer, og nye systemer får krav til mer funksjonalitet.
 
 Kostnadene vil være større i innføringsfasen, men vil på sikt føre til at
 integrasjoner blir enklere, og dermed billigere, å implementere. Det bør
 påregnes noe kostnad til opplæring ved innføring.
 
-IntArk krever ikke at alle systemer må følge IntArk fullt ut fra starten av.
-[Prinsippet om at avvik må begrunnes](/docs/datadeling/prinsippene/#Avvik må begrunnes)
-følges. Noen systemer vil kanskje aldri bli oppgradert for IntArk.
+Fellestjenesten krever ikke at alle systemer må følge arkitekturen fullt ut fra
+starten av - kost/nytte-prinsippet er viktig. Noen systemer vil kanskje aldri
+bli oppgradert for å følge ny arkitektur.
 
 Det vil også være en fordeling av kostnaden ved drift og forvaltning av
 Datadelingsplattformen.
 
 Vi forventer mer digitalisering av kunnskapssektoren, og et behov for mye mer
 datadeling. Den totale kostnaden rundt datadeling vil derfor gå opp, men med
-IntArk blir utgiftene brukt mer effektivt.
+fellestjenesten blir utgiftene brukt mer effektivt.
 
 
 ## Organisatoriske konsekvenser
@@ -54,7 +59,7 @@ videreutvikling av tjenesten.
 ## Konsekvenser for utvikling
 
 Utviklere av tjenester må følge IntArks føringer. Hvis du utvikler en tjeneste
-med data som er brukbare for andre, må du:
+med data som er brukbare for andre, er føringen at du må:
 
 * Implementere et API for å tilgjengeliggjøre de data som systemet er
 kildesystem for, og publisere dette i API manager. API-et bør følge
@@ -62,7 +67,8 @@ bransjestandarder der det finnes, eventuelt designes generelt og så uavhengig
 av systemtekniske detaljer som mulig.
 
 * Implementere utsending av notifikasjoner ved endringer i data i systemet, og
-sende disse til en meldingskø.
+sende disse til en meldingskø. Dette er viktigst for data som det forventes at
+er oppdaterte.
 
 
 Kildesystemet er ikke ansvarlig for hvordan konsumenter tar i bruk API-et, og
@@ -82,17 +88,17 @@ men ikke tilpasset din tjeneste.
 
 ## Konsekvenser for anskaffelser/innkjøp
 
-Du som anskaffer tjenester må være klar over føringene fra IntArk. I hovedsak:
+Du som anskaffer tjenester må være klar over føringene for å bruke
+fellestjenesten best mulig. I hovedsak:
 
-* Sikre at tjenester som kjøpes inn følger grunntankene bak IntArk. Det må være
-enkelt å få tilgang til kildedataene, spesielt uten å låse oss til en
-leverandør. Vi ønsker spesielt å unngå "lock in"-situasjoner der en innkjøpt
-tjeneste blir kostbar å bytte ut eller endre på senere.
+* Sikre at IT-tjenester som kjøpes inn kan dele sine data. Det må være enkelt å
+få tilgang til kildedataene, spesielt uten at du er låst til en leverandør. Vi
+ønsker spesielt å unngå "lock in"-situasjoner der en innkjøpt tjeneste blir
+kostbar å bytte ut eller endre på senere.
 
-* Føringene fra IntArk må beskrives i anskaffelser.
+* Føringene fra fellestjenesten bør beskrives i anskaffelser.
 
-* Føringene fra IntArk må vektlegges i valget av løsning.
-
+* Føringene fra fellestjenesten bør vektlegges i valget av løsning.
 
 Til hjelp i vurderingene er det laget en
 [anskaffelsesveiledning](/docs/datadeling/veiledere/annet/anskaffelse).

@@ -1,6 +1,6 @@
 ---
 slug: /datadeling/om/bakgrunn/
-title: Bakgrunnen for IntArk
+title: Bakgrunnen for Fellestjenesten for Datadeling
 ---
 
 ## IT-arkitekturprinsipper for offentlig sektor - 2009
@@ -41,7 +41,8 @@ og demme opp for ulempene med denne organiseringen. IT-siden så fort behovet
 for at det måtte være enklere å dele data på en desentralisert måte.
 
 Flere arbeidsgrupper og prosjekter ble startet, og en ny integrasjonsarkitektur
-ble mer og mer konkretisert og spisset.
+ble mer og mer konkretisert og spisset. Denne arkitekturen fikk etterhvert
+navnet "UiO:IntArk".
 
 Integrasjonsarkitekturen inneholdt mange elementer, fra organisatoriske
 funksjoner til tekniske verktøy, og fra overordnede prinsipper til mer konkrete
@@ -76,27 +77,34 @@ konkretisert, som var system-til-system-integrasjoner for administrativ IT.
 
 ## Uninett sin Dataporten
 
-Uavhengig av IntArk utviklet Uninett sin *Dataporten*, som etterhvert ble en
-del av Feide. Denne fokuserte på protokollen Open ID Connect (OIDC), som ga
-mulighet for en mye enklere og mer standardisert datadeling.
+Uninett utviklet en ny tjeneste, kalt *Dataporten*, for å støtte nye tekniske
+muligheter som kom med OpenID Connect (OIDC). Dette ga mulighet for å en mye
+enklere og mer standardisert datadeling. Dataporten ble etterhvert en integrert
+del av Feide.
 
 Det var noe overlapp av funksjonalitet mellom IntArk og Dataporten, men med
-ulikt fokus.
+ulikt fokus. Dataporten fokuserte på det mer tekniske og praktiske rundt OIDC,
+spesielt på integrasjoner mellom tjeneste og sluttbruker. UiO:IntArk fokuserte
+mest på de interne behovene til institusjonen, og
+system-til-system-integrasjoner.
 
 
 ## Prosjekt Unit Datadeling - 2020-2022
 
-Opprettingen av IntArk for sektoren ble gjort i [prosjekt Unit
-Datadeling](https://www.unit.no/prosjekter/datadeling-i-hoyere-utdanning-og-forskning),
-med Unit som prosjekteier. IntArk var en videreføring av elementer fra UiO sin
-integrasjonsarkitektur, men med nye, mer overordnede elementer fra HKdir,
-konkretisert i referansearkitekturen for deling av data i høyere utdanning og
-forskning.
+[Prosjekt Unit
+Datadeling](https://www.unit.no/prosjekter/datadeling-i-hoyere-utdanning-og-forskning)
+ble startet i 2020, med Unit som prosjekteier. Her ble IntArk, HKdirs og
+Uninetts erfaringer tatt med i opprettelsen av en ny fellestjeneste for
+Datadeling.
 
-IntArk ble i 2021 besluttet etablert som en fellestjeneste for sektoren. Den
+Fellestjenesten var en videreføring av noen elementer fra UiO sin
+integrasjonsarkitektur, men med nye, mer overordnede elementer fra HKdir. Et
+resultat fra prosjektet var referansearkitekturen for deling av data i høyere
+utdanning og forskning.
+
+I 2021 ble fellestjenesten for datadeling besluttet innført for sektoren. Den
 tekniske plattformen ble rullet ut til alle institusjoner i sektoren i 2022.
 
 Prosjektet hadde også anbefalinger for en neste generasjon av en teknisk
-plattform, som blant annet såg på en mer desentralisert håndtering av
-både API og tilgangskontroll, og en mer sentralisert styring av data fra større
-leverandører.
+plattform, som blant annet så på en mer sentralisert styring av data fra større
+leverandører, men også en mer desentralisert håndtering av API gateways.
