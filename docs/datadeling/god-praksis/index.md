@@ -10,13 +10,14 @@ Anbefalingene baserer seg på overordnede føringer, som referansearkitekturen
 for datadeling i kunnskapssektoren, og hva som er utbredt teknologi i dag. Ny
 teknologi kan gjøre at data kan deles på enda mer hensiktsmessige måter, som
 vil føre til at anbefalinger på dette området vil bli oppdaterte. Sikt er
-avhengig av tilbakemeldinger fra institusjonene for å holde dette best
+avhengig av tilbakemeldinger fra institusjonene for å holde dette best mulig
 oppdatert.
 
 
 ## Integrasjonsmønster
 
-IntArk anbefaler noen integrasjonsmønstre. Hva du velger er veldig avhengig av dine behov.
+Anbefalte integrasjonsmønstre i bruk av fellestjenesten. Ved at flere følger
+samme mønstre blir det enklere å samarbeid og gjenbruke integrasjoner.
 
 For system-til-system-integrasjoner:
 
