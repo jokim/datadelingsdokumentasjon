@@ -37,6 +37,18 @@ Vanlig flyt:
 
 Hvis konsumenten selv er tilbyder av andre kildedata, som blir oppdatert basert på dette, vil konsumenten bytte rolle og gå gjennom samme prosessen. Et eksempel er at en navneendring i HR-systemet vil kunne føre til at e-postadressen også vil måtte endres. HR er kildesystem for navn, og IGA kan være kildesystem for e-postadresser.
 
+TODO: Rydd - klippa frå anna dokument (webservice-anbefalingsdokumentet). En
+tenkt flyt i modellen over er:
+
+
+1. Kilde sender notifikasjon med innhold "person 123 er endret" til MQ som følge av at et telefonnummer er endret.
+2. MQ videresender notifikasjonen til de konsumenter som abonnerer på denne typen notifikasjoner fra kilden.
+3. Konsumenten får beskjed om at person 123 har en ukjent endring.
+4. Konsumenten kontakter API manager, som styrer tilgangen til WS-en til kilden, for å spørre om personobjektet 123.
+5. Alle kall til API manager, og som er forhåndsgodkjent, videresendes til WS-en.
+6. WS-en returnerer personobjektet 123, med det oppdaterte telefonnummeret.
+7. Konsumenten sammenligner nye og gamle data og oppdaterer telefonnummeret.
+
 
 ## Når bør dette brukes?
 

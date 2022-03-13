@@ -22,34 +22,55 @@ En API-katalog må blant annet støtte:
 - At konsumenter kan selv lete etter relevante API
 
 
+Å sentralisere forvaltningen av API-er gir noen fordeler:
+
+* Ett sted å forvalte
+	+ bestilling av flere tilganger i flere API-er kun ett sted
+	+ forvaltning av tilganger i flere kilder kun ett sted
+* Sentral oversikt over dataflyt
+	+ bedre sikkerhet
+	+ oversikt over hele virksomheten
+* Ett punkt for integrasjon
+	+ konsumenter må ikke lete etter ulike API-er
+	+ konsumenter kan integrere en gang, ulike kilder gir tilgang
+
+
 ## Sentral kontroll på datadeling - API manager
 
 Institusjonen må ha kontroll på hvem som har tilgang til hvilke data. Dette
-gjelder spesielt data med personopplysninger.
+gjelder spesielt data med personopplysninger. For å oppfylle dette kravet, har
+vi behov for en tjeneste der du kan forvalte hvem som har tilganger til dine
+data. Konsumenter vil også kunne forvalte sine tilganger her.
 
-For å oppfylle dette kravet, har vi behov for en tjeneste med funksjonaliteten:
+API manager må støtte:
 
 - Sentral oversikt over hvem som har tilgang til hvilke API og data
 - Konsument kan selv søke om tilgang til data fra et API
 - Datatilbyder kan godkjenne/avslå søknad om tilgang til sine data
 - Datatilbyder har oversikt over hvem som har tilgang til sine data
 - Datatilbyder kan trekke tilbake tilgang til sine data
+- Datatilbyder kan styre hvilke deler av sitt API konsumenter får tilgang til
 
 
 ## Kontroll over data - API gateway
 
-Tjenester som tilbyr data må ha sikringer på plass for å sikre at bare de som
-har blitt autorisert får tilgang til disse dataene. Dette kan oppfylles av en
-*API gateway*, som står mellom datatilbyders API og konsumenten - en proxy med
-tilgangskontroll.
+Tjenester som tilbyr data må være sikre på at bare autoriserte konsumenter får
+tilgang til dataene. Dette kan oppfylles av en *API gateway*, som står mellom
+datatilbyders API og konsumenten, og som utfører autentisering og
+tilgangskontroll. Du kan se på en *API gateway* som en smart proxy.
 
-API gateway må oppfylle behovene:
+API gateway må støtte:
 
-* API gateway må sperre tilgang til API og data hvis dette ikke er godkjendt i
-API manager.
-* API gateway må gi tilgang til API og data når API manager sier dette er
-greit.
-* API gateway må logge hvem som har hentet ut hvilke data fra et API.
+- Konsumenter må autentiseres.
+
+- Konsumenters forespørsler må tilgangskontrolleres opp mot hva de er blitt
+autorisert for i API manager.
+
+- Datatilbyder må få oversikt over hvem som har hentet ut hvilke data.
+
+
+<!-- TODO: Distribuerte API gateways, for dei større som ønsker det. Legge til
+om dette? -->
 
 
 ## Meldingskø
@@ -77,3 +98,9 @@ Meldingskøen må oppfyller behovene:
 * Konsumenter må selv kunne søke om tilgang til meldinger fra en tjeneste
 * Datatilbydere må kunne godkjenne/avslå søknad om tilgang til sine meldinger
 fra konsumenter.
+
+
+Meldingskøen er primært ment for integrasjoner som følger fellestjenestens
+anbefalte integrasjonsmønstre. Fellestjenesten legger ikke føringer på hva
+institusjonen gjør med eventuelt andre meldingskøer. Institusjonene kan likevel
+også bruke fellestjenestens meldingskøer for andre formål.
