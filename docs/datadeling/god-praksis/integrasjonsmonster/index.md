@@ -1,26 +1,31 @@
 ---
 slug: /datadeling/god-praksis/integrasjonsmonster/
-title: "Integrasjonsmønstre i IntArk"
+title: "Integrasjonsmønstre i fellestjenesten for Datadeling"
 ---
 
-Oversikt over integrasjonsmønstrene som omhandles i IntArk.
+Oversikt over integrasjonsmønstrene som omhandles i fellestjenesten.
 
-Dette er "gode praksiser" som er anbefalt, men merk at dette vil endre seg etterhvert som teknologi og verden endrer seg.
+Dette er "gode praksiser" som er anbefalt. Dette vil kunne endre seg etterhvert
+som teknologi og verden endrer seg. Institusjonene anbefales å melde inn om nye
+integrasjonsmønstre og nye behovs om ikke dekkes her.
+
 
 ## Introduksjon
 
 
-I IntArk har vi noen spesifikke integrasjonsmønstre som anbefales for ulike typer integrasjoner. Disse mønstrene anbefales basert på erfaringer vi har med disse, både i sektoren og andre steder. IntArk både anbefaler disse mønstrene, og støtter de med tekniske verktøy.
+Ulike behov og tjenester har ulike behov for typen integrajon. Mønstrene
+beskrevet her er basert på erfaringer fra sektoren med, og dekker de viktigste
+behovene.
 
-
-IntArk sier ikke at du **må** bruke disse mønstrene, da de bare er anbefalinger, men det er gevinster ved å integrere likt som andre. Det er disse mønstrene IntArk har best støtte for.
-
-
-TBD: Er prosjektet einig i dette, eller er dette berre mi meining?
-
+Fellestjenesten krever ikke at du **må** bruke disse mønstrene, da de bare er
+anbefalinger, men det er gevinster ved å integrere likt som andre. Det gjør det
+enklere å samarbeide om integrasjon, øker sjansen for gjenbruk, og er mønster
+som sektoren har gode erfaringer med. Det er også disse mønstrene
+fellestjenesten har best støtte for.
 
 Vi skiller mellom to forskjellige typer integrasjonsmønstre:
 
-
 * Integrasjoner der sluttbruker er involvert.
 * System-til-system-integrasjoner.
+
+Fokuset i fellestjenesten er system-til-system-integrasjoner.

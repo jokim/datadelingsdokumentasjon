@@ -1,11 +1,7 @@
 ---
-description: "Detaljer om integrasjonsm\xF8nsteret \"hendelsesbasert provisjonering\"\
-  ."
 slug: /datadeling/god-praksis/integrasjonsmonster/hendelsesbasert/
 title: Hendelsesbasert provisjonering
 ---
-
-# Hendelsesbasert provisjonering
 
 Detaljer om integrasjonsmønsteret "hendelsesbasert provisjonering".
 
@@ -15,13 +11,7 @@ Dette er et integrasjonsmønster som anbefales brukt ved provisjonering mellom t
 TODO: Skriv...
 
 
-​
-
-
-![Bildet kan inneholde: diagram, linje, tekst.](/datadeling/img/ws-mq-sirkel.png)Skriv inn bildetekst her...Skriv inn bildetekst her...
-
-
-​
+![Bildet kan inneholde: diagram, linje, tekst.](/datadeling/img/ws-mq-sirkel.png)
 
 
 Vanlig flyt:
@@ -35,11 +25,14 @@ Vanlig flyt:
 6. Konsumenten oppdaterer interne data med oppdaterte data fra tilbyderen.
 
 
-Hvis konsumenten selv er tilbyder av andre kildedata, som blir oppdatert basert på dette, vil konsumenten bytte rolle og gå gjennom samme prosessen. Et eksempel er at en navneendring i HR-systemet vil kunne føre til at e-postadressen også vil måtte endres. HR er kildesystem for navn, og IGA kan være kildesystem for e-postadresser.
+Hvis konsumenten selv er tilbyder av andre kildedata, som blir oppdatert basert
+på dette, vil konsumenten bytte rolle og gå gjennom samme prosessen. Et
+eksempel er at en navneendring i HR-systemet vil kunne føre til at
+e-postadressen også vil måtte endres. HR er kildesystem for navn, og IGA kan
+være kildesystem for e-postadresser.
 
-TODO: Rydd - klippa frå anna dokument (webservice-anbefalingsdokumentet). En
-tenkt flyt i modellen over er:
 
+Et tenkt eksempel fra flyten over:
 
 1. Kilde sender notifikasjon med innhold "person 123 er endret" til MQ som følge av at et telefonnummer er endret.
 2. MQ videresender notifikasjonen til de konsumenter som abonnerer på denne typen notifikasjoner fra kilden.
@@ -47,34 +40,47 @@ tenkt flyt i modellen over er:
 4. Konsumenten kontakter API manager, som styrer tilgangen til WS-en til kilden, for å spørre om personobjektet 123.
 5. Alle kall til API manager, og som er forhåndsgodkjent, videresendes til WS-en.
 6. WS-en returnerer personobjektet 123, med det oppdaterte telefonnummeret.
-7. Konsumenten sammenligner nye og gamle data og oppdaterer telefonnummeret.
+7. Konsumenten lagrer telefonnummeret.
 
 
 ## Når bør dette brukes?
 
 
-Dette mønsteret passer når du trenger å provisjonere et endesystem med kildedata fra en tilbyder, uten at sluttbrukeren er involvert.
+Dette mønsteret passer når du trenger å provisjonere et endesystem med
+kildedata fra en tilbyder, uten at sluttbrukeren er involvert.
 
 
 ## Fordeler
 
 
-* Data blir oppdatert raskere i mange systemer.
-* Mye mindre ressurskrevende enn det eldre mønsteret der du henter **alle** data fra kilden, og oppdaterer konsumenten.
+* Data blir oppdatert raskere i mange systemer - "tilnærmet umiddelbart".
+
+* Mye mindre ressurskrevende enn det eldre mønsteret der du henter **alle**
+data fra kilden, og oppdaterer konsumenten.
 
 
 ## Ulemper
 
 
 * Passer best for system-til-system-integrasjoner.
-* Har du veldig mange konsumenter vil det sette høyere krav til ytelsen hos tilbyderen. Dette kan kompenseres ved for eksempel caching i API manager.
+
+* Har du veldig mange konsumenter vil det sette høyere krav til ytelsen hos
+tilbyderen. Dette kan kompenseres ved for eksempel caching i API manager.
+
+* Å implementere notifikasjonsutsending kan vere krevende å implementere. Det
+kan også være ukjent teknologi for utviklere.
 
 
 ## Fallgruver
 
 
 * Uthenting
-* Kildesystemet bør bare sende ut notifikasjoner når data faktisk er endret. Falske positive notifikasjoner vil føre til mer ressursbruk. I verste fall vil du kunne få evige meldingsløkker, for eksempel hvis to systemer som trenger data fra hverandre sender ut notifikasjoner fordi de har mottatt en notifikasjon fra det andre systemet, uten å se på om data faktisk har blitt endret.
+
+* Kildesystemet bør bare sende ut notifikasjoner når data faktisk er endret, og
+ikke sende ut notifikasjoner bare fordi tjenesten har mottat notifikasjoner fra
+andre. Falske positive notifikasjoner vil føre til mer ressursbruk. I verste
+fall vil du kunne få evige meldingsløkker hvis to systemer som snakker sammen
+gjør samme feilen - de vil sende samme notifikasjonen fram og tilbake.
 
 
 ## Se også
