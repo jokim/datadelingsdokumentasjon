@@ -19,7 +19,14 @@ DFØ tilbyr flere ulike API-er for ulike data, som ansattinformasjon, stillingsd
 TODO: For å kunne bruke DFØs API må din institusjon bli "oppgradert" hos DFØ. Mange institusjoner må i dag forholde seg til CSV-filer fra DFØ. Dette må gjøres i dialog med DFØ, og dette vil kunne ta tid.
 
 
-DFØ krever autentisering via [Maskinporten](https://samarbeid.digdir.no/maskinporten/maskinporten/25) i sin kommunikasjon, så institusjonen må registrere seg der før integrasjonen kan påbegynnes. Maskinporten bruker sertifikater for autentisering, så institusjonen må ha virkssomhetssertifikat tilgjengelig, enten for å bruke det direkte til autentisering eller for å laste opp privat serfifikat som brukes av den enkelte integrasjon. Mot produksjonsystem brukes det vanlige virksomhetsertifikatet og mot test brukes testsertifikat.
+DFØ krever autentisering via
+[Maskinporten](https://samarbeid.digdir.no/maskinporten/maskinporten/25) i sin
+kommunikasjon, så institusjonen må registrere seg der før integrasjonen kan
+påbegynnes. Maskinporten bruker sertifikater for autentisering, så
+institusjonen må ha virkssomhetssertifikat tilgjengelig, enten for å bruke det
+direkte til autentisering eller for å laste opp privat serfifikat som brukes av
+den enkelte integrasjon. Mot produksjonsystem brukes det vanlige
+virksomhetsertifikatet og mot test brukes testsertifikat.
 
 
 Som de fleste andre APIene settes APIet opp med autentisering mot vår API gateway, og deretter sendes requesten videre til backend-APIet. I API gatewayen legger vi på token og evt. API-nøkkel som brukes mot DFØs APIer. Tjenesten som utsteder token kan enten settes opp i Gravitee ([se bruksanvisning her](/docs/datadeling/teknisk-plattform/api/maskinporten)) eller hos den enkelte institusjon
@@ -57,7 +64,7 @@ DFØ er en fellestjeneste, og må/bør derfor settes opp likt hos alle institusj
 		3. Om IntArk-koordinator ikke har nødvendige rettigheter i rabbitMQ fra før,  kontakt support som oppretter bruker med nødvendinge rettigheter.
 		4. Sørg for å ha tilkoblingsinformasjon (brukernavn, passord, vhost, kø-navn, hostnavn) tilgjengelig
 		5. Logg inn i rabbitMQ med bruker som har rettigheter til å opprette shovel. I BROM er det link til innloggingsiden her: ![applikasjonsinfo i BROM](/datadeling/img/image-20211006190506-1.png)
-		6. Naviger til siden "Admin" og undemenyen "Shovel Management"
+		6. Naviger til siden "Admin" og undemenyen "Shovel Management" ![webside for Shovel management i rabbitmq](/datadeling/img/rabbitmq-shovel-1.png)
 		7. Under Add shovel, fyll ut:
 			+ Velg vhost med samme navn som applikasjonen i punkt 1 (ikke nødvendig, men gjør det lettere å holde oversikt senere)
 			+ Gi et godt navn
@@ -69,7 +76,7 @@ DFØ er en fellestjeneste, og må/bør derfor settes opp likt hos alle institusj
 			+ destination URI: her er det samme rabbimtmq som vi er logget inn på, så denne er lettere Fyll inn amqp:///VHOST (hvor vhost er navnet på applikasjonen fra punkt 1) *OBS: merk at det er 3 skråstreker!*
 			+ Endre fra queue til exchange
 			+ fyll inn navn på exchange. Det er outgoing\_APPLIKASJONSNAVN (altså outgoing + underscore + navn på appliasjon. Du kan og se det under tilkoblingsdetaljer på publiseringsiden i brom)
-			+ routing key: # (# er wildcard og beyr alle meldinger. Ikke endre denne med mindre du vet hva du gjør) ![webside for Shovel management i rabbitmq](/datadeling/img/image-20211006193113-2.png)
+			+ routing key: La denne være blank. (Da vil meldingene beholde routing key som de har i kilden. Om du setter en verdi her til denne verdien overskrive eksisterende routing key) 
 			+ Til sist trykk på "add shovel" Gå til siden "Shovel status" og se at shovlen du har laget endrer status til Started. Om den ikke endrer seg fra Starting til Started ila. et par minutter: sjekk tilkoblingsdetaljene, slett shovelen og opprett på nytt
 
 
