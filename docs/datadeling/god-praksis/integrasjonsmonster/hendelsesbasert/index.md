@@ -74,13 +74,13 @@ kan også være ukjent teknologi for utviklere.
 ## Fallgruver
 
 
-* Uthenting
-
-* Kildesystemet bør bare sende ut notifikasjoner når data faktisk er endret, og
-ikke sende ut notifikasjoner bare fordi tjenesten har mottat notifikasjoner fra
-andre. Falske positive notifikasjoner vil føre til mer ressursbruk. I verste
-fall vil du kunne få evige meldingsløkker hvis to systemer som snakker sammen
-gjør samme feilen - de vil sende samme notifikasjonen fram og tilbake.
+Kildesystemet bør bare sende ut notifikasjoner når data faktisk er **endret**,
+og ikke sende ut notifikasjoner bare fordi tjenesten har mottat notifikasjoner
+fra andre. Falske positive notifikasjoner vil føre til mer ressursbruk, siden
+tjeneste sender ut notifikasjoner som kan føre til unødvendige API-oppslag fra
+konsumenter. I verste fall vil du kunne få evige meldingsløkker hvis to
+systemer som snakker sammen gjør samme feilen - de vil sende samme
+notifikasjonen fram og tilbake.
 
 
 ## Se også
