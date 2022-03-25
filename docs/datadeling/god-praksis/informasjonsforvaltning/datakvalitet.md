@@ -5,8 +5,8 @@ title: Anbefalinger for god datakvalitet
 
 ## Ansvar og plikter
 
-Det er dataforvalter som er ansvarlig for at sine autoritative data holder god
-datakvalitet.
+Datatilbyder er ansvarlig for at sine autoritative data holder god
+datakvalitet. Som oftest blir dette plassert hos *dataforvalter*.
 
 
 ## Hva er datakvalitet?
@@ -49,7 +49,7 @@ Konsumenter må:
 dataene, og ikke via tredjeparter. Katalogtjenester, som AD og LDAP, er mulige
 å bruke så lenge de ikke har endret på de autoritative dataene.
 
-* Varsle/informere dataeier ved dårlig datakvalitet.
+* Varsle/informere dataeier ved dårlig datakvalitet, for eksempel feil i data.
 
 ## Se også
 

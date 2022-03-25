@@ -19,16 +19,19 @@ vi spesielt:
 * Hvis kildedataen er autoritative, skal feltet `dqvno:isAuthoritative` brukes.
 (I DCAT-AP-NO er dett bare valgfritt).
 
+* Lisensiering er *sterkt anbefalt* å si noe om, da det gjør det enklere for
+konsumentene å bruke dataene riktig.
 
-<!-- TODO: Lisensiering: Vi bør alltid sei noko om lisensiering. Spesielt for
-åpne data, men også for andre data, sidan dei bør kunne delast. HAr vi ein
-passande default-lisens å henvise til, for meir begrensa data? Til dømes
-https://data.norge.no/nlod/no/ -->
+<!-- TODO: Lisensiering: HAr vi ein passande default-lisens å henvise til, for
+meir begrensa data? Til dømes https://data.norge.no/nlod/no/ -->
 
 
 ## Hvordan beskrive datasett i fellestjenesten?
 
-Dagens API-katalog støtter ikke DCAT sine filformat ut av boksen. Vi anbefaler
-derfor å bruke tjenester som data.norge.no, og lenke til denne fra
-API-katalogen. Datasett kan også beskrives i et vanlig, enkelt dokument på
-API-ets dokumentasjonsområde i API-katalogen.
+Dagens API-katalog støtter ikke DCAT sine filformat ut av boksen. Det er to
+måter å beskrive datasettet i API-katalogen:
+
+* Beskriv datasettet på [data.norge.no](https://data.norge.no) eller
+tilsvarende tjenester, og lenk til denne fra API-katalogen.
+
+* Beskriv datasettet i et vanlig dokument under API-et i API-katalogen.

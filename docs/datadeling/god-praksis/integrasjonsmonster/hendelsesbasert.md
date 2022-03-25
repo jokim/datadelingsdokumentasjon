@@ -45,9 +45,11 @@ Et tenkt eksempel fra flyten over:
 
 ## Når bør dette brukes?
 
-
 Dette mønsteret passer når du trenger å provisjonere et endesystem med
 kildedata fra en tilbyder, uten at sluttbrukeren er involvert.
+
+Dette mønsteret bør brukes når noen forventer at data er tilgjengelig tilnærmet
+umiddelbart, eller når fortløpende oppdateringer gir en bedre brukeropplevelse.
 
 
 ## Fordeler

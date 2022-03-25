@@ -31,15 +31,11 @@ Anbefalinger rundt API.
 
 * [Design av API](/docs/datadeling/god-praksis/api-design)
 * [Anbefalt bruk av Web Services](/docs/datadeling/god-praksis/bruk-av-webservice)
-* TODO: Autentiseringsanbefalinger (headers, basic, oauth2 etc)
-* TODO: Sikkerhet best practice (personvern, begrense endepunkt, caching, utlevering av data)
 
 ## Bruk av meldingskø
 
 * [Hvordan designe dine notifikasjoner](/docs/datadeling/god-praksis/notifikasjonsdesign)
-* TBD: Event streaming?
 
 ## Datakvalitet
 
 * [Generelt om god datakvalitet](/docs/datadeling/god-praksis/datakvalitet)
-* TODO: Informasjonsforvaltning

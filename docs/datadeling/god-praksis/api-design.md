@@ -6,10 +6,15 @@ title: API-design
 Anbefalinger rundt utforming av API. Både for deg som utvikler en tjeneste som
 skal dele data, og deg som skal anskaffe en tjeneste.
 
-Det er ikke enkelt å lage et godt API-design. Du bør ofte ta noen iterasjoner
+Det er ikke enkelt å lage et godt API-design. Du trenger ofte noen iterasjoner
 før du har et API som er generelt og fungerer godt for alle konsumenter, og som
-følger institusjonens og sektorens behov. For lite tid brukt på designet kan
-føre til uheldige valg, som kan gi ulemper flere år fremover.
+følger institusjonens, og sektorens, behov. For lite tid brukt på designet kan
+føre til uheldige valg, som kan gi ulemper i lang tid fremover.
+
+En vanlig fallgruve er å ikke involvere konsumentene i diskusjonen. Brukerne av
+API-et vil kunne gi nyttige tilbakemeldinger for å gjøre API-et brukbart og
+forståelig. En annen fallgruve er å bare involvere en konsument i diskusjonen.
+Det er vanskelig å designe noe generelt nok.
 
 
 ## Prinsipper for godt API-design
@@ -17,6 +22,8 @@ føre til uheldige valg, som kan gi ulemper flere år fremover.
 Utformingen av API bør følge
 [integrasjonsprinsippene](/docs/datadeling/prinsippene), som blant annet sier
 at du bør ha et åpent grensesnitt og det bør være så løst koblet som mulig.
+Dette følger også Digitaliseringsdirektoratets føringer, blant annet at data
+skal deles *som de er*, og ikke tilpasset enkelte konsumenter.
 
 
 Andre anbefalinger:
@@ -30,16 +37,14 @@ integrasjon er.
 det så enkelt som mulig å bytte ut tjenester på begge sider av en integrasjon.
 For eksempel:
 
-  * Bruk API-standarder, hvis det finnes
+  * Bruk API-standarder, der det finnes
   * Bruk bransjestandarder, for eksempel RESTful
   * Hold API-et på funksjonelt nivå, og unngå systemspesifikke detaljer.
   * Bruk felles semantikk, hvis det finnes.
   * Unngå skreddersøm for en enkelt konsument.
 
 * **Tilgjengelig**: Lag et åpent grensesnitt, som vil si at spesifikasjonen av
-ditt API må være fritt tilgjengelig og leverandøruavhengig. Motsetningen er
-proprietære grensesnitt som bare enkelte leverandører kan integrere mot, som
-reduserer fleksibiliteten til institusjonen.
+ditt API må være fritt tilgjengelig, dokumentert og leverandøruavhengig.
 
 * **Oversiktlig**: Registrer ditt API i din institusjons API-katalog, og
 dokumenter den. Du bør som minimum følge
@@ -114,7 +119,7 @@ dataelementer beskrives.
 
 Datasett kan med fordel beskrives i API-katalogen. Dagens API manager støtter
 ikke statens anbefalte format for beskrivelser av datasett (DCAT), men kan
-legges inn i et dokument.
+beskrives i et dokument, eller med en lenke til beskrivelsen.
 
 
 ## Personopplysninger
@@ -126,30 +131,39 @@ deles.
 
 Et eksempel: Et API gir oversikt over institusjonens organisasjonsenheter.
 Dette kan enkelt deles ut med hvem som helst, siden det er offentlige data.
-Hvis dette API-et i samme utplukk også lister ut hvilke ansatte og studenter
-som er aktiv på enheten, blir det straks vanskeligere å gi tilgang.
+Men, hvis dette API-et i samme utplukk også lister ut hvilke ansatte og
+studenter som er aktiv på hver enhet, blir det straks mer utfordrende å gi
+tilgang.
 
 Å dele personopplysninger til konsumenter utenfor egen institusjon krever blant
 annet en databehandleravtale. Å dele personopplysninger internt hos
 institusjonen kan kreve en oppdatering av hjemmelsgrunnlaget for
-personpplysningene - følger datadelingen opprinnelig formål og hjemmel?
+personpplysningene - følger datadelingen opprinnelig formål og hjemmel for den
+nye behandlingen?
 
 
 ## Anskaffelse av tjenester
 
 Også ved anskaffelse av IT-tjenester gjelder anbefalingene rundt deling av
-data, på samme måte som ved egen utvikling. Alle IT-tjenester med data som
-kan/bør deles, er anbefalt å ha et API som følger anbefalingene fra
+data, på samme måte som ved egen utvikling. Alle IT-tjenester med data som kan
+eller bør deles er anbefalt å ha et API som følger anbefalingene fra
 fellestjenesten.
 
 Ofte kommer innkjøpte IT-tjenester med et API, men det er ikke sikkert dette
-gir gevinstene vi ønsker med fellestjenesten, for eksempel at det er løst nok
-koblet og gir institusjon og sektor nok fleksibilitet. Hvor lukket og
-leverandørspesifikt er API-et? Kan andre konsumenter bruke det? Følger det noen
-standarder? Er det mulig for institusjonen å få inn endringer i API-et?
+gir gevinstene du ønsker.
+
+- Er API-et godt nok dokumentert?
+
+- Følger det prinsippet om løse koblinger? Hvor lukket og leverandørspesifikt
+er API-et? Kan andre konsumenter bruke det? Følger det noen standarder?
+
+- Kan institusjonen få inn endringer i API-et?
+
+- Hva er lovnaden til ytelse og oppetid? Hvor mange konsumenter ville kunne
+brukt API-et samtidig?
 
 I anbud er det nyttig å legge inn krav til datadelingen, spesielt krav til API.
-For viktige tjenester kan det til og med være nyttig å definere hvilket API
+For viktige tjenester kan det også være nyttig å definere hvilket API
 leverandøren må oppfylle, og hvis det ikke finnes en (bransje)standard til og
 med designe API-et på forhånd. Dette kan gjøre datadelingen enklere etter at
 IT-tjenesten er kjøpt inn.
@@ -159,8 +173,8 @@ IT-tjenesten er kjøpt inn.
 
 Konsumenter trenger forutsigbarhet. Når et API lanseres, bør konsumenter
 forvente at det fungerer i lang tid før konsumenten må gjøre endringer.
-Anbefalingen er som regel at en versjon av et API bør støttes i minst seks
-måneder.
+Anbefalingen er som regel at en versjon av et API bør støttes i **minst seks
+måneder**.
 
 Dette gjør at versjonering bør vere med i designet av et API. Hvordan skal
 tjenesten din støtte å tilgjengeliggjøre data både i et API for eksisterende
@@ -184,7 +198,7 @@ Hvis du designer et API:
 * Er API-et på funksjonelt nok nivå?
 * Følger API-et prinsippene til RESTful?
 * Inneholder API teknisk terminologi som egentlig burde vært systeminterne?
-* Trenger konsumenter å kjenne til datamodellen for å kunne bruke API-et?
+* Trenger konsumenter å kjenne til interne detaljer om systemet bak for å kunne bruke API-et?
 * Må du endre på API-et hvis du gjør endringer i tjenestens datamodell?
 * Klarer du å unngå å eksponere personpplysninger, og likevel klare å
 tilgjengeliggjøre andre opplysninger?
