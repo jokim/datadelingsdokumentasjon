@@ -1,7 +1,7 @@
 ---
 slug: /datadeling/
 title: "Fellestjeneste for Datadeling (IntArk)"
-sidebar_label: "IntArk"
+sidebar_label: "Datadeling"
 sidebar_position: 1
 ---
 

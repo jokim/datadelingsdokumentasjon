@@ -2,17 +2,36 @@
 title: Vurderinger ved anskaffelse av IT-tjenester og -systemer
 ---
 
-Som systemeier, prosjektleder, innkjøper og applikasjonsforvalter er det flere aspekter ved integrasjonsarktitekturen man bør tenke gjennom før produkt eller leverandør velges. Her diskuteres punkter ved integrasjoner som er verdt å ta med seg.
+Som systemeier, prosjektleder, innkjøper og applikasjonsforvalter er det flere
+aspekter ved integrasjonsarktitekturen man bør tenke gjennom før produkt eller
+leverandør velges. Her diskuteres punkter ved integrasjoner som er verdt å ta
+med seg.
 
 ## Moderne og gammeldags programvare
 
-Det viktigste først: Når man kjøper ferdig programvare, såkalt hyllevare, må man aldri falle for fristelsen til å kjøpe tjenester for å tilpasse programvaren til organisasjonen. Dette er alltid det dyreste valget. Disse tilpasningene vil medføre store merkostnader ved hver endring. Tilpass i stedet organisasjonens prosesser etter programvaren.
+Det viktigste først: Når du kjøper ferdig programvare, såkalt hyllevare, må du
+ikke falle for fristelsen til å kjøpe tjenester for å tilpasse programvaren til
+organisasjonen. Dette er som oftest det dyreste valget, siden tilpasninger av
+hyllevare ofte gire store merkostnader. Tilpass heller organisasjonens
+prosesser etter programvaren, med mindre det er del av primærvirksomheten eller
+et strategisk valg å følge egne prosesser. For administrative prosesser er det
+ofte bedre å tilpasse seg tjenesten, mens det innen forskning og utdanning er
+en vanskeligere vurdering.
 
-Når du som systemeier anskaffer programvare, så er det gjerne programvare en bruker, et menneske, skal sitte å jobbe i. Med integrasjonsøyne er det da i hovedsak fire forhold som må vurderes:
+Når du som systemeier anskaffer programvare, så er det gjerne programvare en
+bruker, et menneske, skal sitte å jobbe i. Med integrasjonsøyne er det da i
+hovedsak fire forhold som må vurderes:
 
 ### 1. Provisjonering
 
-At programvaren på forhånd får informasjon om sine brukere eller andre ressurser, som rom. Nesten alle kjøpte webapplikasjoner med brukerinnlogging havner i denne kategorien, sammen med andre, som FS eller adgangskortsystemet. Vi er opptatt av om tjenesten kan oppdateres i sanntid eller ikke. Her snakker vi da om den kan få eller avgi informasjon fra/til andre IT-tjenester kontinuerlig eller periodisk. Periodisk, typisk oppdatering en gang i døgnet, kaller vi for batch. Provisjonering kan også skje manuelt ved at man taster inn navn, adresse eller lignende.
+At programvaren på forhånd får informasjon om sine brukere eller andre
+ressurser, som rom. Nesten alle kjøpte webapplikasjoner med brukerinnlogging
+havner i denne kategorien, sammen med andre, som FS eller adgangskortsystemet.
+Vi er opptatt av om tjenesten kan oppdateres i sanntid eller ikke. Her snakker
+vi da om den kan få eller avgi informasjon fra/til andre IT-tjenester
+kontinuerlig eller periodisk. Periodisk, typisk oppdatering en gang i døgnet,
+             kaller vi for batch. Provisjonering kan også skje manuelt ved at
+             man taster inn navn, adresse eller lignende.
 
 [Les mer om provisjonering her.](/docs/datadeling/veiledere/annet/anskaffelse/provisjonering)
 

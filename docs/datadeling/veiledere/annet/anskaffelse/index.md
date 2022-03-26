@@ -3,33 +3,77 @@ slug: /datadeling/veiledere/annet/anskaffelse/
 title: Veileder for anskaffelser av IT-tjenester
 ---
 
-En veileder for å hjelpe deg som systemeier, prosjektleder, innkjøper eller applikasjonsforvalter før du velger et produkt eller leverandør.
+En veileder for å hjelpe deg som systemeier, prosjektleder, innkjøper eller
+applikasjonsforvalter før du velger et produkt eller leverandør. Dette gjelder
+både om din tjeneste vil kunne inneholde data som kan være nyttig for andre, og
+om din tjeneste skal hente data fra andre av institusjonens tjenester.
 
-Dette så du anskaffer en IT-tjeneste som kan integreres og samarbeide med andre IT-tjenester.
+<!-- TODO: Denne veilederen kan med fordel revideres sammen med innkjøpere fra
+Sikt -->
 
-TBD TODO: Denne veilederen må skrives om etter at arkitekturen er satt, og bør deretter revideres sammen med noen med god innkjøpserfaring (noen hos Unit?).
+## Hvorfor følge fellestjenesten sine anbefalinger?
 
-## Hvorfor følge IntArk?
+Med fellestjenesten for Datadeling prøver vi å gjøre det enklere å dele data,
+men også heve kvaliteten på datadelingen. Et av fokusområdene er å gjøre
+integrasjoner endringsdyktige. IT-tjenester som kjøpes inn påvirker også
+institusjonens evne til å dele data.
 
-En av IntArk sine mål er å gjøre det enklere å integrere IT-tjenester i UH-sektoren. Dette krever at IT-tjenester oppfyller felles krav satt i IntArk.
+- Ved å kjøpe inn en billig IT-tjenester som ikke kan dele sine data, mister du
+muligheter. Vil besparelsen ved å kjøpe en dyrere IT-tjeneste veie opp for
+mulighetene og gevinstene ved gjenbruk av dataene?
 
-For mer informasjon om IntArk, se [Hva er IntArk](/docs/datadeling/hva-er/), som inkluderer en kort video.
+- Ved å kjøpe en IT-tjeneste som bare kan integreres med andre tjenester fra
+samme leverandør, låser du deg fort til å bruke leverandøren sine produkter -
+en såkalt *lock in*-situasjon. Dette går spesielt utover institusjonens
+endringsdyktighet - hva blir kostnaden av å innføre en ny tjeneste, når du ikke
+kan gjenbruke data, eller må samtidig bytte ut mange andre tjenester?
 
-## Hvilke krav må følges?
+Anskaffede IT-tjenester må også kunne integreres og samarbeide med andre
+IT-tjenester. Vi prøver hjelpe med dette.
 
-Alle IT-tjenester med data vil potensielt kunne være nyttig å integrere med. IntArk vil derfor måtte vektlegges selv om IT-tjenesten ikke har behov for integrasjoner fra starten av.
 
-Alle IT-tjenester må følge de overordnede [integrasjonsprinsippene](/docs/datadeling/prinsippene), så du bør kjenne til disse. IntArk har også noen [vedtak](/docs/datadeling/vedtak) som må følges, og [anbefalte gode praksiser](/docs/datadeling/god-praksis) som også bør vektlegges.
+## Hva bør følges?
 
-Det er bare noen få av kravene fra IntArk som er harde og konkrete, for eksempel at IT-tjenesten må ha et API vi kan bruke. De fleste av kravene og behovene fra IntArk er noe man ikke kan svare ja eller nei på, men trenger å vurdere. Krav og behov bør derfor vektlegges i anskaffelser likt med mye annet, men husk på kravet om mer digitalisering som igjen setter høyere krav til IT-tjenesters evne til datadeling.
+Alle IT-tjenester med data vil potensielt kunne være nyttig å integrere med.
+Anbefalingene fra fellestjenesten bør derfor vektlegges selv om IT-tjenesten
+ikke har behov for integrasjoner fra starten av.
 
-## Hvilke vurderinger bør du gjøre?
+- [Integrasjonsprinsippene](/docs/datadeling/prinsippene) er overordnede
+føringer som ligger til grunn for fellestjenesten. Disse er nyttige å kjenne
+til, selv om de er mindre konkrete.
 
-Se [Vurderinger ved anskaffelse av IT-tjenester og -systemer](/docs/datadeling/veiledere/annet/anskaffelse/detaljert) for betraktninger som kan være aktuelt for anskaffelser.
+- Referansearkitekturen for deling av data i kunnskapssektoren er et målbilde
+for hvor vi ønsker at sektoren skal være om noen år.
 
-Vi har også laget en oversikt over [hjelpespørsmål ved anskaffelser](/docs/datadeling/veiledere/annet/anskaffelse/hjelpesporsmal) som bør tas i betraktning ved anskaffelser, både i utlysninger og i evalueringer.
+- [Styringsreglene for fellestjenesten](/docs/datadeling/styringsreglene) er
+hva institusjonen må følge for å bruke fellestjenesten. Også anskaffede
+IT-tjenester må følge disse.
+
+
+En utfordring er at det er få konkrete krav, men elementer som bør med i
+helhetsvurderinger. For eksempel er et krav at IT-tjenesten må tilby data via
+et API med et åpent grensesnitt, men hvor godt er API-et? [Anbefalte gode
+praksiser](/docs/datadeling/god-praksis) inneholder også anbefalinger som kan
+tas med.
+
+Krav og behov fra fellestjenesten bør vektlegges i anskaffelser likt med mye
+annet. Bare husk på kravet til sektoren om mer digitalisering, som igjen setter
+høyere krav til IT-tjenesters evne til datadeling.
+
+
+## Hvordan kommer jeg i gang som innkjøper?
+
+Se oversikt over [vurderinger ved anskaffelse av IT-tjenester og
+-systemer](/docs/datadeling/veiledere/annet/anskaffelse/detaljert) som du kan
+ta med dei i din anskaffelse. Dette gir deg ikke konkrete svar, men
+betrakninger fra tidligere erfaringer.
+
+Se også [hjelpespørsmål ved
+anskaffelser](/docs/datadeling/veiledere/annet/anskaffelse/hjelpesporsmal) som
+kan hjelpe deg i anskaffelsen, både i utlysninger og i evalueringer.
+
 
 ## Mer informasjon
 
-* [Hva er IntArk](/docs/datadeling/hva-er/)
+* TODO: [Hva er IntArk](/docs/datadeling/hva-er/)
 * TODO: Orden i eget hus
