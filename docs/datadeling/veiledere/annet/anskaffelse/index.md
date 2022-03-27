@@ -1,6 +1,7 @@
 ---
 slug: /datadeling/veiledere/annet/anskaffelse/
 title: Veileder for anskaffelser av IT-tjenester
+sidebar_position: 1
 ---
 
 En veileder for å hjelpe deg som systemeier, prosjektleder, innkjøper eller
@@ -75,5 +76,5 @@ kan hjelpe deg i anskaffelsen, både i utlysninger og i evalueringer.
 
 ## Mer informasjon
 
-* TODO: [Hva er IntArk](/docs/datadeling/hva-er/)
-* TODO: Orden i eget hus
+* [Hva er Fellestjenesten for Datadeling (IntArk)?](/docs/datadeling/om/)
+* [Veileder for orden i eget hus (digir.no)](https://data.norge.no/guide/veileder-orden-i-eget-hus/)
