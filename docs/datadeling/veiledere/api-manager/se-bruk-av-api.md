@@ -1,9 +1,6 @@
 ---
-description: "Hvordan du f\xE5r innsikt i bruken av ditt API."
 title: Se bruken av ditt API
 ---
-
-# Se bruken av ditt API
 
 Hvordan du får innsikt i bruken av ditt API.
 
