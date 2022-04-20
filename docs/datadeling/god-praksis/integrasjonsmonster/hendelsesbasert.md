@@ -27,8 +27,13 @@ bli oppdatert umiddelbart. Dette uten behov for å hente absolutt alle data fra
 tilbyderen, eller at datatilbyder må selv dytte data ut til hver enkelt
 konsument.
 
-Dette er et mønster som er godt nok for de vanligste tjenestene i sektoren som
-trenger å bli provisjonert, med lite kompleksitet.
+Tradisjonelt har man brukt tunge, filbaserte
+[batch-oppdateringer](/docs/datadeling/god-praksis/integrasjonsmonster/gammeldags-batch)
+for å provisjonere tjenester. Dette er ikke en effektiv måte å integrere
+på, fordi produsenten må samle og overføre komplette datasett, og konsumenten
+må sammenligne det komplette datasettet i hver runde. Det hendelsesbaserte
+mønsteret effektiviserer integrasjonen, og gjør at bare nødvendige data kan
+overføres, raskere.
 
 Mønsteret er ikke designet for tjenester som trenger historiske data eller
 trenger å "spille av" tidligere endringer. Slike tjenester vil fort kunne ha
@@ -78,12 +83,12 @@ Et eksempel fra flyten over:
 
 1. En saksbehandler endrer mobilnummeret til en ansatt i personalsystemet
    (datatilbyderen).
-2. Personalsystemet sender notifikasjonen "person med id 123 er endret" til
-   RabbitMQ.
+2. Personalsystemet sender notifikasjonen "person-objekt med id 123 er endret"
+   til RabbitMQ.
 3. RabbitMQ sender notifikasjonen videre til konsumentene som abonnerer på de.
    En av disse kan være et CMS med personpresentasjoner.
 4. CMS mottar notifikasjon om at person 123 er endret. CMS ser at denne
-   personen er registrert.
+   personen er registrert hos seg, og trenger derfor å reagere.
 5. CMS kaller på API-et til tjenesten, via API manager, og henter ut data om
    personen. Avhengig av granulariteten til datatilbyder, vil CMS enten få
    returnert mobilnummeret eller flere personopplysninger.
@@ -126,6 +131,19 @@ implementere. Det kan også være ukjent teknologi for mange utviklere.
 * Mønsteret koster mer å implementere enn en gammeldags fullsynk.
 
 
+## Eksempler
+
+* [DFØ sine API](https://api-portal.dfo.no/) støtter utsending av hendelser når
+det skjer endringer i deres API. Overføring av notifikasjoner fra DFØ til din
+institusjon må settes opp - ta kontakt.
+
+* Flere IGA-løsninger, som Rapid Identity og Cerebrum, støtter utsending av
+hendelser når det skjer endringer på brukerkontoer og grupper.
+
+Flere og flere tjenester i sektoren støtter utsending av notifikasjoner ved
+endringer i sine data, spesielt de som utvikles av sektoren selv.
+
+
 ## Fallgruver
 
 Datatilbyder skal bare sende ut notifikasjoner når data faktisk er **endret**
@@ -150,100 +168,3 @@ bak datatilbyders API.
 
 
 * [Utforming av notifikasjoner](/docs/datadeling/god-praksis/notifikasjonsdesign)
-
-
-
-
-
-
-TODO: Gammel:
-
-
-## Hendelsesbasert oppdatering
-
-
-### Provisjonering – Need to Know
-
-
-Provisjonering er det å sende en mengde data fra en applikasjon til en annen.
-Hvorfor man ønsker å gjøre dette kan være mange, men tradisjonelt har man
-basert integrasjoner på provisjonering fordi integrasjoner har vært tunge,
-filbaserte batch-oppdateringer. Man har laget store filer med komplette
-datasett, flyttet disse til konsumenten og der sammenligner man den store filen
-med konsumentens database for å se etter endringer. Dette er ikke en effektiv
-måte å integrere på. Isteden kan slik provisjonering være hendelsesdrevne:
-
-
-![](/datadeling/img/ws-mq-sirkel.png)
-
-En entitet X oppdateres i Kilde. Kilde sender en notifikasjon til MQ om at
-entitet X er oppdatert. MQ sender en notifikasjon til konsumenter som abonnerer
-på denne typen notifikasjoner om at entitet X er oppdatert. Konsument vet
-ingenting om hva endringer består i, så Konsument kontakter API manager for å
-få tilgang til Kildens WS for å spørre om data om entitet X.
-
-Mange applikasjoner, som i dag er baserte på gamle integrasjoner med
-provisjonering, trenger ikke å provisjonere data i den nye arkitekturen.
-Likevel er det et behov for provisjonering i de tilfeller der man lager moderne
-applikasjoner og integrasjoner. Eksempel: Når en ny person registreres i
-HR-systemet så er ikke HR-systemet ansvarlig for å utstede en brukerkonto til
-personen. Dette er IAM-kjernen (tidligere BAS, IdM) ansvarlig for. IAM-kjernen
-vet ikke at det er registrert en ny person i HR-systemet før HR-systemet gir
-beskjed. IAM-kjernen vil ikke kopiere alle data om personen fra HR-systemet,
-    men den trenger data om personen for å lage en brukerkonto til vedkommende
-    og da vil IAM-kjernen provisjonere noe data. IAM-kjernen vil beholde
-    oversikt over hvem som er eier for brukerkonti f.eks. Disse eierne er
-    provisjonert fra HR-systemet.
-
-
-Man kan tenke seg et annet eksempel der flyten er lik som i figuren over, men
-man ikke provisjonerer – integrasjonen er basert på Need to Know. Forskjellen
-på provisjonering og Need to Know ligger i om konsumenten lagrer kopier av data
-fra kilden i sine datalagre. Distinksjonen mellom de to er minimal, men
-generelt skal man forsøke å unngå mellomlagring av data fra et kildesystem og
-heller hente disse dataene fra kilden ved behov. Av ulike årsaker kan dette
-vise seg vanskelig så provisjonering vil forekomme også i den nye arkitekturen.
-
-
-#### Forskjell fra DiFis eNotifikasjon
-
-
-Selv om *Need to know* kan ligne veldig på eNotifikasjon-mønsteret fra DiFis
-[referansearkitektur for
-datautveksling](https://doc.difi.no/nasjonal-arkitektur/nab_referanse_arkitekturer_datautveksling/),
-er det til dels store avvik i mønstrene:
-
-
-
-
-|  | Need To Know | eNotifikasjon |
-| --- | --- | --- |
-| 1 | Får tilsendt en notifikasjon.
-
-
-Konsumenten kan være tilstandsløs, da konsumenten ikke trenger å ha begrep om hvilke notifikasjoner som er prosessert.
-
- | Må hente en liste over notifikasjoner.
-
-
-Konsumenten må lagre tilstand, da eNotifikasjon-mønsteret forutsetter at konsumenter vet hvilke notifikasjoner som er prosessert.
-
- |
-| 2 | Notifikasjonen inneholder kun nok informasjon til å identifisere hva som har endret seg.
-
-
-Konsumenten må utføre [eOppslag](https://doc.difi.no/nasjonal-arkitektur/nab_referanse_arkitekturer_datautveksling/#_eoppslag_generelt_arkitekturm%C3%B8nster) mot kildesystem før det kan avgjøres om det skal utføres en operasjon.
-
- | Notifikasjonen inneholder informasjon om hva som har endret seg, og en identifikator til et *hendelsesdokument* som inneholder endrede data.
-
-
-eNotifikasjonen bærer nok data til å avgjøre om det skal utføres en operasjon.
-
- |
-| 3 | Rekkefølgen notifikasjoner ankommer i er ikke garantert å være velordnet og sekvensiell. | Rekkefølgen notifikasjoner ankommer i er alltid velordnet og sekvensiell. |
-| 4 | Ingen autorisasjon er nødvendig da notifikasjoner kun har informasjon om *hva* som er endret. Produsenter har ikke begrep om hvem som er konsumenter. | Autorisasjon kan være nødvendig da notifikasjoner kan inneholde data.  
-
-  
-
- I tilfeller der autorisasjon er nødvendig, må produsenter ha et begrep om hvem som skal kunne konsumere hvilke data. |
-| 5 | Need To Know er en implementasjon av [Fire And Forget](https://www.enterpriseintegrationpatterns.com/patterns/conversation/FireAndForget.html) og [eOppslag](https://doc.difi.no/nasjonal-arkitektur/nab_referanse_arkitekturer_datautveksling/#_eoppslag_generelt_arkitekturm%C3%B8nster) mønstrene. | eNotifikasjon er en implementasjon av [Event Sourcing](https://martinfowler.com/eaaDev/EventSourcing.html) mønsteret. |
