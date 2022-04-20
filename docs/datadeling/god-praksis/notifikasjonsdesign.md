@@ -3,37 +3,30 @@ slug: /datadeling/god-praksis/notifikasjonsdesign/
 title: Hvordan designe dine notifikasjoner
 ---
 
-# Hvordan designe dine notifikasjoner
-
-TODO: Legg inn forklaringar, erfaringar og anna god praksis rundt notifikasjonar
-
-
-Med "notifikasjoner" mener vi her "tynne meldinger" som går via en meldingskø.
-Se mer i [begrepsoversikten](/docs/datadeling/begreper). Disse notifikasjonene
-brukes i hovedsak i integrasjonsmønsteret [hendelsesbasert
+Med "notifikasjoner" mener vi her "tynne meldinger" som går via en meldingskø
+eller meldingsformidler. Se mer i
+[begrepsoversikten](/docs/datadeling/begreper/notifikasjon). Disse
+notifikasjonene brukes i hovedsak i integrasjonsmønsteret [hendelsesbasert
 provisjonering](/docs/datadeling/god-praksis/integrasjonsmonster/hendelsesbasert).
+
+En notifikasjon forteller deg bare at "noe har skjedd", på et maskinlesbart
+format. Den inneholder også nok detaljer til at du kan vite hvor du kan få tak
+i mer informasjon.
 
 
 ## Anbefalt standard
 
-Hver tilbyder står selv fritt til å velge format på sine notifikasjoner, men i
-IntArk anbefaler vi bruk av standarden [CloudEvent](https://cloudevents.io/).
-Dette fordi det er system- og leverandøruavhengig standard som kan brukes av
-alle, og inneholder mange av de samme slutningene som vi har erfart i IntArk.
+Hver tilbyder står selv fritt til å velge format på sine notifikasjoner, men vi
+anbefaler standarden [CloudEvent](https://cloudevents.io/). Dette fordi det er
+en system- og leverandøruavhengig standard som kan brukes av alle, og
+inneholder mange av de samme slutningene som vi har erfart.
 
-Merk at også notifikasjoner bør følge samme prinsippene som [utforming av
-API](/docs/datadeling/god-praksis/api-design): Vi fraråder å lage egne
+Notifikasjoner bør også følge de samme føringene som ved [utforming av
+API](/docs/datadeling/god-praksis/api-design). Vi fraråder å lage egne
 notifikasjoner som er skreddersydde for spesifikke konsumenter, men lage
 notifikasjoner som er generelle og standardiserte nok til å kunne brukes av
-alle som ønsker det.
+alle konsumenter.
 
-
-### Forskjeller i IntArk
-
-I IntArk har vi noen erfaringer som vi anbefaler at blir tatt hensyn til:
-
-* TODO: Framtidige hendingar? anna frå cloudevents? Sjekk kva som vart landa i
-OrgReg, og legg ut dømer!
 
 ## Hva bør en notifikasjon inneholde?
 
@@ -46,40 +39,48 @@ Notifikasjonen trenger som minimum å fortelle konsumentene:
 
 * Hvilket system, instans eller API dette gjelder. Så konsumenten vet hvor data
 skal hentes fra.
-* Hvilken entitet eller endepunkt endringen gjelder for.
 
-Det er også en fordel at notifikasjonen også forteller konsumentene:
+* Hvilket endepunkt, entitet eller objekt endringen gjelder for.
 
-* Hvilken type endring det er snakk om. Er det for eksempel oppretting, endring eller sletting av en entitet?
-* Hvilket tidspunkt gjelder endringen for
-* Hvilke attributter som blir påvirket. Dette gjør det enklere for konsumenter å filtrere bort endringer som ikke er relevante for de.
+Det er også en fordel om notifikasjonen inneholder:
 
-Mye av denne ekstra informasjonen er detaljer som konsumenten kan bruke for å
-redusere antal oppslag som må gjøres. Det er med andre ord optimalisering.
+* Hvilken type endring det er snakk om. Er det for eksempel oppretting, endring
+eller sletting av en entitet?
+
+* Hvilket tidspunkt gjelder endringen for.
+
+* Hvilke attributter har blitt endret.
+
+Dette er optimalisering. Mer metadata om en endring gjør det enklere for
+konsumenter å filtrere bort endringer som er irrelevante for de. Dette skaper
+igjen mindre last på produsenten, siden færre konsumenter trenger å slå opp for
+å sjekke.
 
 
 ### Framtidige hendelser
 
-I noen tilfeller vil en endring ikke kunne være gydlig før etter et tidspunkt
-fram i tid. Et eksempel på dette er at en saksbehandler oppretter en ny ansatt
-som ikke skal starte før neste uke.
+I noen tilfeller vil en endring ikke være gyldig før på et senere tidspunkt.
+For eksempel at en saksbehandler oppretter en ny ansatt, men som ikke skal
+starte før om to uker.
 
-Tilbyderen må sende ut notifikasjon om dette på tidspunktet registreringen
-skjedde. Tilbyderen har **ikke** ansvar for å sende ut noen notifikasjon på
-tidspunktet slike endringer trer i kraft - dette må konsumenten selv ta ansvar
-for. Bakgrunnen for dette er at det er ulikt hvordan konsumentene forholder seg
-til dette - et IGA-system vil for eksempel kunne ha behov for å registrere den
-ansatte en dag før tidspunktetn, mens et rapporteringssystem kanskje vil ha med
-nye data uavhengig av starttidspunkt.
+Tilbyderen sender en notifikasjon på tidspunktet registreringen skjedde, i
+dette tilfellet når den ansatte ble registrert. Tilbyderen har **ikke** ansvar
+for å sende ut en ny notifikasjon på tidspunktet endringen trer i kraft, selv
+om tilbyder gjerne må gjøre det. Det er konsumenten som er ansvarlig for å
+reagere på riktig tidspunkt, ikke tilbyder.
+
+Bakgrunnen for ansvarsfordelingen er at tidspunkt for reaksjon er ulik hos
+konsumentene - det er forretningslogikk som ikke bør ligge hos tilbyder. I
+eksempelet med nyansatte kan for eksempel personpresentasjonsløsningen trenge å
+publisere personen samme dag som startdato i avtalen, mens IGA vil måtte
+opprette en brukerkonto kanskje fem dager før startdato. Andre konsumenter
+trenger kanskje ikke å forholde seg til startdato i det hele tatt, men
+provisjonere den nyansatte umiddelbart.
 
 
-TODO: Skriv bedre.
+## Eksempler på notifikasjoner
 
-
-## Eksempler
-
-
-Eksempel på hvordan en notifikasjon som bruker CloudEvents-standarden:
+Eksempel på en notifikasjon som bruker CloudEvents-standarden:
 
     {
         "specversion" : "1.0",
@@ -92,30 +93,61 @@ Eksempel på hvordan en notifikasjon som bruker CloudEvents-standarden:
 
 
 Dette eksempelet er en typisk "tynn melding", som forteller deg at en
-brukerkonto har blitt opprettet, men ikke stort mer. For å vite mer om
-brukerkontoen må du snakke med API-et som subject-feltet lenker til.
+brukerkonto har blitt opprettet, men ikke så mye annet. For å vite mer om
+brukerkontoen må du snakke med API-et som `subject` peker til.
 
-Eksempel på en enklere melding:
+Eksempel på en mye enklere notifikasjon:
 
     accounts/123456
 
-For enkle tjenester kan dette være godt nok, men de fleste tjenester vil ønske
-å eksponere mer detaljer, spesielt for å redusere antal spørringer fra
-konsumentene.
+For enkle tjenester kan dette være godt nok. De fleste tilbydere er likevel
+tjent med å eksponere mer detaljer, spesielt for å redusere antal spørringer
+fra konsumentene.
+
+
+## Eksempler på tjenester
+
+* NTNU sin OrgReg gir ut notifikasjoner som følger CloudEvents-standarden.
+
+* IGA-løsninger, som Rapid Identity og Cerebrum, gir ut notifikasjoner.
+
+Se gjerne i institusjonenes API-kataloger for detaljer om notifikasjoner fra de
+enkelte tjenestene.
 
 
 ## Hvorfor tynne meldinger?
 
-Tynne meldinger gir en enklere flyt for provisjoneringsløsninger, som er fokus
-på status her og nå. Meldingen er tynne for å redusere for eksempel mengden
-personopplysninger. Det unngår også at konsumenter blir forvirret og anser
-innholdet i meldingen som kildedata - meldingen kan nemlig være forsinket og
-vil derfor kunne inneholde utdaterte data.
+Tynne meldinger gir en enklere flyt for provisjoneringsløsninger, som har fokus
+på status her og nå. Meldingene er tynne for å redusere mengden
+personopplysninger, og unngår at konsumentene behandler det som kildedata.
+Meldinger kan bli forsinket, for eksempel at de ligger på vent i meldingskøen
+mens konsumenten er nede, og vil fort kunne inneholde utdaterte data.
 
+
+## Fallgruver
+
+Notifikasjonene gir bare informasjon om at noe har skjedd, og ikke hva som har
+skjedd. Ikke se på notifikasjoner som kildedata - kildedata må du få fra
+tilbyders API. Faren med å bruke innholdet i notifikasjoner som kildedata er at
+du kan ende opp med utdaterte data - for eksempel hvis konsument ikke har
+hentet ut nye notifikasjoner fra sin meldingskø på en dag.
+
+API og notifikasjoner bør vere i synk, dvs. snakke om de samme entitetene.
+Gjøres dette ulikt blir det fort komplisert hos alle konsumenter som må tolke
+og oversette.
+
+API-et bør tilby data konsistent. Hvis en entitet finnes, bør det eksponeres i
+API-et uavhengig av tidspunktet spørringen skjer på. Hvis data for eksempel
+blir begrenset før et tidspunkt, og etter en viss tid, er det stor fare for at
+tilbyder utfører en forretningslogikk som bør ligge hos konsumentene. Plutselig
+dukker det opp en konsument med behov for data på et enda senere tidspunkt, som
+da plutselig ikke blir mulig.
 
 ## Se også
 
+* [Integrasjonsmønsteret hendelsesbasert
+provisjonering](/docs/datadeling/god-praksis/integrasjonsmonster/hendelsesbasert),
+  som bruker notifikasjoner.
 
-* [Integrasjonsmønsteret hendelsesbasert provisjonering](/docs/datadeling/god-praksis/integrasjonsmonster/hendelsesbasert), som bruker notifikasjoner
-* TODO: Detaljer om meldingskø, td routing topologi
-* TODO: lenke til BROM
+* [Selvbetjening for RabbitMQ](/docs/datadeling/teknisk-plattform/brom), som er
+  der du administrerer hvem som har tilgang til hvilke notifikasjoner.
