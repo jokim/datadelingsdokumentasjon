@@ -1,5 +1,5 @@
 ---
-description: "Hjelp til oppsett av Inspera sitt API.\n\n\nTODO: Uavklart, m\xE5 lages"
+description: "Hjelp til oppsett av Inspera sitt API.\n\n\nTODO: test/verifisering"
 title: Inspera
 ---
 
@@ -8,7 +8,6 @@ title: Inspera
 Hjelp til oppsett av Inspera sitt API.
 
 
-TODO: Uavklart, må lages
 
 ## Om API-ene
 
@@ -25,28 +24,19 @@ TODO: For å kunne bruke DFØs API må din institusjon bli "oppgradert" hos DFØ
 ## Standardoppsett
 
 
-DFØ er en fellestjeneste, og må/bør derfor settes opp likt hos alle institusjoner. Du kan sette dette opp ved å laste inn fil med standardoppsett:
-
-
-**TODO.json**
-
+[Last ned template for API-definisjonen for Inspera.](/docs/datadeling/teknisk-plattform/api/Inspera-api-template.json)
 
 ## Hvordan sette opp API-ene
 
 
 1. Last ned standardoppsettet over, og opprett tjenesten i API manager. Se [veileder for å registrere en tjeneste i API manager via fil](/docs/datadeling/veiledere/api-manager/importer-api).
-2. Registrer DFØ SAP som tjeneste i *Selvbetjeningsportalen for RabbitMQ* (se [veileder for å registrere tjenesten](/docs/datadeling/veiledere/meldingsk%C3%B8/opprett-tjeneste)). Hent ut tilkoblingsdetaljene som det blir opplyst om.
-3. Du som er lokal tjenesteier for DFØ må kontakte DFØ om API-et. Vanligvis gjøres dette ved å sende en e-post til integrasjon@dfo.no med:
-	1. Be om å få API-nøkkel som gir full tilgang til din institusjons data i DFØs API-er.
-	2. Send med tilkoblingsdetaljene for publisering av notifikasjoner fra selvbetjeningsportalen. Passordet bør sendes på andre måter enn via e-post.
-4. Når du har fått API-nøkler, må du legge de inn i API manager. (TODO: Lag veileder for dette?)
-	1. Logg på API manager
-	2. Gå til ditt DFØ-API
-	3. Gå til siden "meta" TODO
-	4. Legg inn API-nøklene i feltet **value**, der name-feltet heter "DFØ ansatt", "DFØ stilling", og "DFØ organisasjon", etc.
+2. Opprett client-id og client-secret i Inspera med riktige rettigheter
+3. client-id og client-secret laget som properties. Endre disse ved å navigere til design og properties (link til properties er oppe til høyre) og endre der
+**hvis test** endre entrypoint fra /inspera til /test/inspera . Endre navn på properties. Husk at dette må endres i callout-policy slik at det blir likt
+4. Sett riktig URL backend (under proxy og backend endpoint) og i callout-policy (Design - policy -> klikke på policy som heter Callout) Husk i lagre
+5. Når alt er endret, klikk på redeploy (gul linje øverst) og start APIet
 
-
-API-et og meldingshåndtering er nå satt opp.
+API-et er nå satt opp.
 
 
 ### Hvordan verifisere at API-et fungerer:
@@ -60,7 +50,7 @@ API-et og meldingshåndtering er nå satt opp.
 	 
 	```
 	
-	curl --include -H "X-Gravitee-Api-Key: **API-nøkkel**" https://gw-**INSTANS**.intark.uh-it.no/**lonn**/v1/organisasjoner/v1/
+	curl --include -H "X-Gravitee-Api-Key: **API-nøkkel**" https://gw-**INSTANS**.intark.uh-it.no/**inspera**/v1/
 	
 	```
 	
@@ -72,7 +62,7 @@ API-et og meldingshåndtering er nå satt opp.
 	  'Accept' = 'application/json'
 	  'X-Gravitee-Api-Key' = **API-nøkkel**
 	}
-	Invoke-WebRequest -Headers $headers -Uri "https://gw-**INSTANS**.intark.uh-it.no/**lonn**/v1/organisasjoner/v1"    
+	Invoke-WebRequest -Headers $headers -Uri "https://gw-**INSTANS**.intark.uh-it.no/**inspera**/v1"    
 	```
 	
 	* Hvis alt er ok kan du forvente å få tilbake noe som starter med "HTTP 200" og JSON-data.
