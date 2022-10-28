@@ -84,3 +84,13 @@ I tillegg er de registrert som applikasjoner i API manager. Disse har og fått t
   * Legg til Header X-Gravitee-Api-Key. Verdien er API-nøkkelen fra forrige punkt
   * Legg til Context variabel med navn = Token og value = {#jsonPath(#calloutResponse.content, '$.access\_token')}
 * Dra så policyen Transform Header inn i midten. Under Add/update headers, legg til en med navn Authorization og verdi Bearer {#context.attributes['token']}
+
+Ønsker man å sende med multiple scopes til maskinporten så støttes dette, men formatet på strengen med scopes bestemmes utifra hvordan man sender med scopes til maskinporten APIet.
+* Sender man scopet med som en del av URI som eksempelet ovenfor gjør så må man selv huske på å manuelt urlencode strenger som inneholder scopene i Assign Content for den aktuelle planen så de blir sende slik ut:
+```
+dfo:scope1+dfo:scope_nr2+dfo:scope3
+```
+* Sender man scopet med som en header så skriver man navnene på scopene rett ut med mellomrom imellom i Assign Content for riktig plan. Eksempelet over blir nå da seende slikt ut:
+```
+dfo:scope1 dfo:scope/nr2 dfo:scope3
+```
