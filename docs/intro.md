@@ -4,6 +4,9 @@ sidebar_position: 1
 
 # Test av dokumentasjonen til prosjekt Datadeling
 
+**Dette området er nedlagt, då alt er flytta til https://docs.uninett.no (i
+repoet https://github.com/sikt-no/docs/)**
+
 Dette er eit **midlertidig område** for Unit sitt prosjekt Datadeling sin
 dokumentasjon. Denne skal på sikt over til https://docs.uninett.no/datadeling/.
 

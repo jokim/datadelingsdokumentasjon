@@ -1,5 +1,10 @@
 # Midlertidig datadelingsdokumentasjon
 
+**Alt dette er flytta til https://github.com/sikt-no/docs/**
+
+**This repo is deprecated, as it's moved to https://github.com/sikt-no/docs/**
+
+
 Midlertidig område for prosjekt Unit Datadeling sin dokumentasjon. Denne ligg
 midlertig på https://jokim.github.io/datadeling-docs-tmp/, men skal på sikt
 migrerast til https://docs.uninett.no/docs/datadeling/.
